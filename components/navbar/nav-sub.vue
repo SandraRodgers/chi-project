@@ -9,11 +9,11 @@
                 <p class="hover:text-blueJeans cursor-default">DONATE</p>
             </div>
             <div 
-            :class="{'opacity-0': !isOpen, 'flex flex-col opacity-100': isOpen}" 
+            :class="{'opacity-0': !this.$store.state.showAdoptDropdown, 'flex flex-col opacity-100': this.$store.state.showAdoptDropdown}" 
             class="absolute z-10 bg-white top-28 left-0 border border-opacity-25 border-davysGrey transition-opacity duration-300 ease-in">
                 <div @mouseleave="hideDropdown" class="pt-8 pb-2 px-4">
                 <p class="py-2 border-b">MIDWEST DOGS</p>
-                <p class="py-2 border-b">SOUTHEAST DOGS</p>
+                <p class="py-2 border-b cursor-pointer">SOUTHEAST DOGS</p>
                 <nuxt-link :to="{ path: `/adopt/southwest` }"><p class="py-2 border-b">SOUTHWEST DOGS</p></nuxt-link>
                 </div>
             </div>
@@ -23,19 +23,27 @@
 </template>
 
 <script>
+    import { mapMutations } from 'vuex'
     export default {
+        // computed: {
+        //     showMobileMenu () {
+        //         return this.$store.state.showMobileMenu
+        //     },
+        //     showAdoptDropdown () {
+        //         return this.$store.state.showAdoptDropdown
+        //     }
+        // },
         data(){
             return {
                 isOpen: false
             }
         },
         methods: {
-            showDropdown(){
-                this.isOpen = true;
-            },
-            hideDropdown(){
-                this.isOpen = false;
-            }
+            ...mapMutations({
+            toggleMobileMenu: 'toggle',
+            showDropdown: 'show',
+            hideDropdown: 'hide'
+            }),  
         }
     }
 </script>

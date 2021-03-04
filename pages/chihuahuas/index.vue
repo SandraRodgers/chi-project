@@ -29,11 +29,6 @@ import sanity from "../../sanityClient"
 import imageUrlBuilder from "@sanity/image-url";
 const imageBuilder = imageUrlBuilder(sanity);
 
-
-    const query = groq`
-  *[_type == "chihuahua"]
-`
-
     export default {
         methods: {
             imageUrlFor(source) {
