@@ -1,6 +1,6 @@
 <template>
 <div class="bg-alibaster flex flex-col items-center w-screen">
-    <h2 class="text-starCommandBlue font-bold text-2xl md:text-3xl lg:text-4xl py-2">Chihuahuas most in need</h2>
+    <h2 class="title text-black font-bold text-2xl md:text-3xl lg:text-4xl py-2">Chihuahuas most in need</h2>
     
     <div class="cards-container items-center md:justify-center lg:justify-center  py-3 flex flex-col md:flex-row lg:flex-row xl:flex-row w-4/6 md:w-4/6 lg:w-screen">
         <div class="card w-6/6 md:w-1/6 lg:w-1/6 flex flex-col m-3">

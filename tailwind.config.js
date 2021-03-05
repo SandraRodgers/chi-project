@@ -63,8 +63,8 @@ module.exports = {
       pink: colors.pink,
     },
     fontFamily: {
-      sans: ['Libre Franklin', 'serif'],
-      serif: ['Libre Baskerville', 'sans-serif']
+      sans: ['Poppins', 'sans'],
+      serif: ['Playfair Display', 'serif']
     },
   },
   variants: {

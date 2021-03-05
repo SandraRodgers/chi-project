@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="nav-main">
 
         <!-- Mobile Menu Closed -->
         <div class="fixed w-full bg-transparent z-0 lg:hidden">
@@ -22,13 +22,14 @@
         </div>
         <!-- Desktop -->
         <div class="nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden w-full" @mouseenter="hideDropdown">
-            <div class="flex space-x-20 text-lg font-extrabold">
+            <div class="flex space-x-20 text-lg">
                 <nuxt-link :to="'/'">
                     <img src="~assets/images/logo-transparent.png" class="mr-4 mt-4 absolute left-0 top-0 bg-white h-32 shadow-lg rounded-xl left-12 top-6 z-20 mt-2 border border-opacity-25 border-davysGrey"/>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative">ABOUT</p></nuxt-link>
                 <p>EVENTS</p>
                 <p>REGIONS</p>
+                <nuxt-link :to="{ path: `/success` }"><p>SUCCESS STORIES</p></nuxt-link>
                 <p>CONTACT US</p>
             </div>
         </div>
@@ -55,5 +56,9 @@
 </script>
 
 <style scoped>
+.nav-main {
+    font-family: "Poppins";
+    font-weight: 400;
+}
 
 </style>

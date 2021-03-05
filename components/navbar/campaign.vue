@@ -1,8 +1,8 @@
 <template>
-    <div class="w-full fixed z-40">
+    <div class="campaign w-full fixed z-40">
         <!-- desktop -->
         <div class="bg-black text-center py-2 sm:flex hidden">
-            <p class="font-sans text-white justify-center w-full">TEST Save Shala. Be her Christmas miracle. CLICK HERE to donate now!</p>
+            <p class="text-white justify-center w-full text-xl">Save Shala. Be her Christmas miracle. CLICK HERE to donate now!</p>
         </div>
         <!-- mobile -->
         <div class="bg-black text-center py-2 sm:hidden">
@@ -18,5 +18,9 @@
 </script>
 
 <style scoped>
+.campaign {
+    font-family: "Poppins";
+    font-weight: 300;
+}
 
 </style>

@@ -12,4 +12,13 @@ export default {
 .body {
   height: 150vh;
 }
+
+html {
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.title {
+    font-family: "Playfair Display";
+}
 </style>

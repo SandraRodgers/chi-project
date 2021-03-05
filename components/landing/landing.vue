@@ -25,6 +25,6 @@ import FeaturedVolunteer from './featuredVolunteer.vue'
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

@@ -5,7 +5,7 @@
             
             <div class="volunteer-card h-96 flex bg-white w-5/6 ">
                 <div class="flex flex-col items-center justify-center border-t-8 border-b-8 border-tan w-3/6 py-6">
-                    <h3 class="volunteer-heading text-2xl md:text-3xl lg:text-4xl pb-3">Featured Volunteer</h3>
+                    <h3 class="title volunteer-heading text-2xl md:text-3xl lg:text-4xl pb-3">Featured Volunteer</h3>
                     <h5 class="text-xl">Name</h5>
                     <p class="p-6 px-11 text-center overflow-scroll text-sm md:text-base lg:text-base ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.</p>
                 </div>

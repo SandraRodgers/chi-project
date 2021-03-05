@@ -1,7 +1,7 @@
 <template>
-    <div class="absolute z-20">
+    <div class="nav-sub absolute z-20">
         <div class="pt-24 lg:flex flex-row-reverse content-around bg-transparent right-0 hidden fixed mt-2">
-            <div class="relative z-20 flex space-x-12 text-lg bg-starCommandBlue  px-4 text-white rounded-b-lg font-extrabold border-b border-opacity-25 border-davysGrey">
+            <div class="relative z-20 flex space-x-12 text-lg bg-starCommandBlue  px-4 text-white rounded-b-lg border-b border-opacity-25 border-davysGrey">
                 <p @mouseenter="showDropdown" class="hover:text-blueJeans cursor-default">ADOPT <span class="icon"><font-awesome-icon :icon="['fas', 'caret-down']"/></span></p>
                 <p class="hover:text-blueJeans cursor-default">FOSTER</p>
                 <p class="hover:text-blueJeans cursor-default">SPONSOR</p>
@@ -48,6 +48,11 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+
+.nav-sub {
+    font-family: "Poppins";
+    font-weight: 400;
+}
 
 </style>

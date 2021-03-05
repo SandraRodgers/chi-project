@@ -19,7 +19,7 @@
             <div class="banner-text flex flex-col justify-center items-center">
                 <p class="banner-main-text text-center sm:text-4xl md:text-4xl lg:text-7xl xl:text-7xl text-gray-900 p-4 mt-10">Saving chihuahuas</p>
                 <p class="text-3xl">for 25 years</p>
-                <button class="bg-yellowCrayola text-lg p-1 mt-4 text-black w-40 font-bold">DONATE NOW</button>
+                <button class="button-text bg-yellowCrayola text-lg p-2 mt-4 text-black w-40 font-bold">Donate Now</button>
             </div>
         </div>
     
@@ -64,6 +64,10 @@
 }
 
 .banner-text {
+    font-family: "Playfair Display"
+}
+
+.button-text {
     font-family: "Lato"
 }
 
@@ -72,14 +76,16 @@
     
     /* padding-right: 2vw; */
     /* width: 50vw; */
-    font-family: "Roboto Slab";
+    font-family: "Playfair Display";
     font-weight: 500;
+    /* font-style: italic; */
     /* padding-:10vh; */
 }
 
 .banner-text-mobile-main {
-    font-family: "Roboto Slab";
+    font-family: "Playfair Display";
     font-weight: 500;
+    /* font-style: italic; */
 }
 
 .banner-text-mobile {
