@@ -19,6 +19,7 @@
     "@sanity/image-url": "^0.140.22",
     "core-js": "^3.8.2",
     "groq": "^2.2.6",
+    "moment": "^2.29.1",
     "nuxt": "^2.14.12",
     "sanity-blocks-vue-component": "^0.1.0"
   },
