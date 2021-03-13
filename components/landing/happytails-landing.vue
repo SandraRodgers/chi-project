@@ -3,12 +3,12 @@
         <!-- desktop -->
         <div class="sm:flex hidden justify-center">
             
-            <div class="volunteer-card h-96 flex bg-white w-5/6 ">
+            <div class="h-96 flex bg-white w-5/6 ">
                 <div class="flex flex-col items-center justify-center border-t-8 border-b-8 border-tan w-3/6 py-6">
                     <h3 class="title volunteer-heading text-2xl md:text-3xl lg:text-4xl pb-3">Happy Tails</h3>
                     <h5 class="text-xl">PB and Sandra</h5>
                     <p class="p-6 px-11 text-center overflow-scroll text-sm md:text-base lg:text-base ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.</p>
-                    <button class="text-sm w-3/6 text-davysGrey font-extralight border border-opacity-25 border-davysGrey py-1 px-2">Read More</button>
+                    <nuxt-link :to="{ path: `/happy-tails`}" :tag="button" class="text-sm w-3/6 text-davysGrey text-center font-extralight border border-opacity-25 border-davysGrey py-1 px-2 my-2">Read More</nuxt-link>
                 </div>
                 <div class="flex justify-center items-center border-t-8 border-b-8 border-starCommandBlue w-3/6 py-6">
                 <img class="volunteer-pic h-64 md:h-72 lg:h-80" src="~assets/images/MeandPB.jpg"/>
@@ -29,6 +29,7 @@
             </div>
             <p class="flex flex-col items-center text-center w-10/12 py-4 px-6 bg-white text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.
             </p>
+            <button class="text-sm w-3/6 text-davysGrey font-extralight border border-opacity-25 border-davysGrey my-4 py-1 px-2">Read More</button>
             
         </div>
         <div class="flex justify-center w-10/12">
@@ -46,12 +47,5 @@
 </script>
 
 <style scoped>
-.volunteer-pic h-80 {
-    /* height: 350px; */
-    /* object-fit: cover; */  
-}
 
-.volunteer-card h-96 {
-    /* height: 400px */
-}
 </style>

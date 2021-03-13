@@ -96,8 +96,7 @@ const imageBuilder = imageUrlBuilder(sanity);
 import moment from 'moment';
 
 export default {
-    components: {
-    },
+
     methods: {
         imageUrlFor(source) {
             return imageBuilder.image(source);
@@ -124,7 +123,6 @@ export default {
         }
     },
     
-    
     async asyncData({ $sanity }) {
         const querySouthwest = groq`*[_type == 'event'&& region=='southwest']`
         const queryMidwest = groq`*[_type == 'event'&& region=='midwest']`
@@ -133,22 +131,13 @@ export default {
         const southWestEvents = await $sanity.fetch(querySouthwest)
         const southEastEvents = await $sanity.fetch(querySoutheast)
         return { southWestEvents, midWestEvents, southEastEvents }
-  },
-
-
-
-  
-
-
-    }
+    },
+}
 </script>
 
 <style scoped>
 p {
- padding-bottom: 14px;
+    padding-bottom: 14px;
 }
-
-
-
 
 </style>

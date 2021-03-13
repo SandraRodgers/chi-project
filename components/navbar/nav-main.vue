@@ -4,7 +4,7 @@
         <!-- Mobile Menu Closed -->
         <div class="fixed w-full bg-transparent z-0 lg:hidden">
             <div class="absolute h-24 w-full flex items-end bg-white">
-                <div @click="open" class="flex justify-center items-end pb-5 w-16 h-full relative">
+                <div @click="toggleMobileMenu" class="flex justify-center items-end pb-5 w-16 h-full relative">
                     <div class="">
                         <svg class="fill-current text-black" viewBox="0 0 100 70" width="40" height="20">
                             <rect width="70" height="10"></rect>

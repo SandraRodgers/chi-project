@@ -22,9 +22,7 @@
                 
               </div>
             </div>
-           
-     
-    
+
     <div class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12">
         <hr class="bg-starCommandBlue h-2 w-7/12">
         <hr class="bg-tan h-2 w-7/12 bg-clip-padding">
@@ -40,10 +38,11 @@ const imageBuilder = imageUrlBuilder(sanity);
 
 export default {
     methods: {
-            imageUrlFor(source) {
-                return imageBuilder.image(source);
-        },
-        },
+      imageUrlFor(source) {
+        return imageBuilder.image(source);
+      },
+    },
+    
   async asyncData({ params, $sanity }) {
     const query = groq`*[_type == "chihuahua" && slug.current == "${params.slug}"][0]`
     const chihuahua = await $sanity.fetch(query)

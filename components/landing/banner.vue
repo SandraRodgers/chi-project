@@ -19,7 +19,7 @@
             <div class="banner-text flex flex-col justify-center items-center">
                 <p class="banner-main-text text-center sm:text-4xl md:text-4xl lg:text-7xl xl:text-7xl text-gray-900 p-4 mt-10">Saving chihuahuas</p>
                 <p class="text-3xl">for 25 years</p>
-                <button class="button-text bg-yellowCrayola text-lg p-2 mt-4 text-black w-80 font-bold">Donate Now</button>
+                <nuxt-link :to="{ path: `/donate-general`}" :tag="button" class="button-text bg-yellowCrayola text-lg text-center p-2 mt-4 text-black w-80 font-bold">Donate Now</nuxt-link>
             </div>
         </div>
     
