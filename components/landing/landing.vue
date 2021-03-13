@@ -3,7 +3,7 @@
         <banner/>
         <mission/>
         <most-in-need/>
-        <featured-volunteer/>
+        <happytails-landing/>
         <footer/>
     </div>
 </template>
@@ -12,11 +12,10 @@
 import mission from './mission.vue'
 import banner from './banner.vue'
 import MostInNeed from './mostInNeed.vue'
-import FeaturedVolunteer from './featuredVolunteer.vue'
 
 
     export default {
-        components: { banner, mission, MostInNeed, FeaturedVolunteer },
+        components: { banner, mission, MostInNeed },
         computed: {
             hidePage () {
                 return this.$store.state.showMobileMenu

@@ -28,9 +28,9 @@
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative">ABOUT</p></nuxt-link>
                 <nuxt-link :to="{ path: `/events` }"><p>EVENTS</p></nuxt-link>
-                <p>REGIONS</p>
+                <nuxt-link :to="{ path: `/regions` }"><p>REGIONS</p></nuxt-link>
                 <nuxt-link :to="{ path: `/success` }"><p>SUCCESS STORIES</p></nuxt-link>
-                <p>CONTACT US</p>
+                <nuxt-link :to="{ path: `/contact` }"><p>CONTACT US</p></nuxt-link>
             </div>
         </div>
     </div>
