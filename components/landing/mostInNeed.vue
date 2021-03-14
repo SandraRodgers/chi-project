@@ -1,5 +1,5 @@
 <template>
-<div class="bg-alibaster flex flex-col items-center w-screen">
+<div class="bg-whitesmoke flex flex-col items-center w-screen">
     <h2 class="title text-black font-bold text-2xl md:text-3xl lg:text-4xl py-2">Chihuahuas most in need</h2>
     
     <div class="cards-container items-center md:justify-center lg:justify-center  py-3 flex flex-col md:flex-row lg:flex-row xl:flex-row w-4/6 md:w-5/6 sm-6/6 lg:w-screen">

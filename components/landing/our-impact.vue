@@ -1,0 +1,85 @@
+<template>
+    <div class="bg-carolinaBlue pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center mt-16">
+       
+        <div class="flex items-center justify-center flex-col bg-carolinaBlue bg-clip-padding w-full">
+            <h1 class="title text-white flex justify-center w-full md:w-9/12 lg:w-9/12 text-xl md:text-xl lg:text-4xl pt-8 md:pt-4 lg:pt-8 font-extrabold">Our Impact</h1>
+            <div class="flex justify-center items-center text-center md:w-9/12 lg:w-9/12 md:py-6 lg:py-8 px-6 text-xs md:text-sm lg:text-lg font-light">
+                <div class="flex flex-col items-center w-full">
+                    <div class="flex w-full">
+                        <div class="flex flex-col items-center px-4 mx-4 w-3/4">
+                            <img @mouseenter="displayFactOne" class="h-48 w-48 rounded-full object-cover border-4 border-white hover:shadow-2xl hover:scale-90 transform transition-transform  ease-in" :src="imageUrlFor(ourImpact.impactOneImage)"/>
+                            <h3 class="text-white text-2xl font-semibold my-4">{{ourImpact.impactOneHeader}}</h3>
+                            <h4
+                            :class="{'opacity-0': !factIsVisibleOne, 'flex flex-col opacity-100': factIsVisibleOne}" class="text-white font-extralight my-4 text-sm transition-opacity duration-1000 ease-in">{{ourImpact.impactOneFact}}</h4>
+                        </div>
+                        <div class="flex flex-col items-center px-4 mx-4 w-3/4">
+                            <img @mouseenter="displayFactTwo" class="h-48 w-48 rounded-full object-cover border-4 border-white hover:shadow-2xl hover:scale-90 transform transition-transform  ease-in" :src="imageUrlFor(ourImpact.impactTwoImage)"/>
+                            <h3 class="text-white text-2xl font-semibold my-4">{{ourImpact.impactTwoHeader}}</h3>
+                            <h4
+                            :class="{'opacity-0': !factIsVisibleTwo, 'flex flex-col opacity-100': factIsVisibleTwo}" class="text-white font-extralight my-4 text-sm transition-opacity duration-1000 ease-in">{{ourImpact.impactTwoFact}}</h4>
+                        </div>
+                    </div>
+                    <div class="flex w-full">
+                        <div class="flex flex-col items-center px-4 mx-4 w-3/4">
+                            <img @mouseenter="displayFactThree" class="h-48 w-48 rounded-full object-cover border-4 border-white hover:shadow-2xl hover:scale-90 transform transition-transform  ease-in" :src="imageUrlFor(ourImpact.impactThreeImage)"/>
+                            <h3 class="text-white text-2xl font-semibold my-4">{{ourImpact.impactThreeHeader}}</h3>
+                            <h4
+                            :class="{'opacity-0': !factIsVisibleThree, 'flex flex-col opacity-100': factIsVisibleThree}" class="text-white font-extralight my-4 text-sm transition-opacity duration-1000 ease-in">{{ourImpact.impactThreeFact}}</h4>
+                        </div>
+                        <div class="flex flex-col items-center px-4 mx-4 w-3/4">
+                            <img @mouseenter="displayFactFour" class="h-48 w-48 rounded-full object-cover border-4 border-white hover:shadow-2xl hover:scale-90 transform transition-transform ease-in" :src="imageUrlFor(ourImpact.impactFourImage)"/>
+                            <h3 class="text-white text-2xl font-semibold my-4">{{ourImpact.impactFourHeader}}</h3>
+                            <h4
+                            :class="{'opacity-0': !factIsVisibleFour, 'flex flex-col opacity-100': factIsVisibleFour}" class="text-white font-extralight my-4 text-sm transition-opacity duration-1000 ease-in">{{ourImpact.impactFourFact}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center w-11/12 md:w-9/12 lg:w-9/12">
+        </div>
+    </div>
+</template>
+
+
+<script>
+import sanity from "../../sanityClient"
+import imageUrlBuilder from "@sanity/image-url";
+const imageBuilder = imageUrlBuilder(sanity);
+
+export default {
+    props: ['ourImpact'],
+    data(){
+        return {
+            factIsVisibleOne: false,
+            factIsVisibleTwo: false,
+            factIsVisibleThree: false,
+            factIsVisibleFour: false,
+
+        }
+    },
+    methods: {
+        imageUrlFor(source) {
+            return imageBuilder.image(source);
+        },
+        displayFactOne(){
+            this.factIsVisibleOne = true;
+        },
+        displayFactTwo(){
+            this.factIsVisibleTwo = true;
+        },
+        displayFactThree(){
+            this.factIsVisibleThree = true;
+        },
+        displayFactFour(){
+            this.factIsVisibleFour = true;
+        },
+
+},
+
+    }
+</script>
+
+<style scoped>
+
+</style>

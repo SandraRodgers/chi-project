@@ -2,7 +2,7 @@
     <!-- <div>
 <p>Copyright &#169; {{getYear}}</p>
     </div> -->
-   <footer :class="{'hidden': hideFooter, 'flex flex-col': !hideFooter}"  class="footer bg-starCommandBlue relative pt-1  text-white px-14 lg:px-56">
+   <footer :class="{'hidden': hideFooter, 'flex flex-col': !hideFooter}"  class="footer bg-black opacity-90 relative pt-1  text-white px-14 lg:px-56">
     <div class="">
 
         <div class="sm:flex sm:mt-8">
@@ -18,11 +18,14 @@
                     <span class="my-2"><a href="#" class=" text-md hover:text-blue-500">link 1</a></span>
                     <span class="my-2"><a href="#" class="text-md hover:text-blue-500">link 1</a></span>
                 </div> -->
-                <div class="flex flex-col">
-                    <span class="font-bold uppercase mt-4 md:mt-0 mb-2">Footer header 3</span>
-                    <span class="my-2"><a href="#" class=" text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class=" text-md hover:text-blue-500">link 1</a></span>
-                    <span class="icon"><font-awesome-icon :icon="['fab', 'google']"/></span>
+                <div class="flex flex-col items-center w-3/6 mx-4">
+                    <span class="font-bold uppercase mt-4 md:mt-0 mb-2">Connect</span>
+                    <div class="flex items-center justify-around w-3/6">
+                        <span class="my-2 fa-3x"><font-awesome-icon :icon="['fab', 'facebook']"/></span><span>Facebook</span>
+                    </div>
+                    <div class="flex items-center justify-around w-3/6">
+                        <span class="my-2 fa-3x"><font-awesome-icon :icon="['fab', 'instagram']"/></span><span>Instagram</span>
+                    </div>
                 </div>
             </div>
         </div>

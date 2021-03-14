@@ -1,5 +1,8 @@
 <template>
-  <landing :missionFirstParagraph="missionFirstParagraph"/>
+  <landing 
+    :missionFirstParagraph="missionFirstParagraph"
+    :ourImpact="ourImpact" 
+  />
 </template>
 
 <script>
@@ -10,9 +13,18 @@ export default {
   components: {  },
 
   async asyncData({ $sanity }) {
-            const queryMissionFirstParagraph = groq`*[_type == 'information'&& name=='mission'][0] {description[0]}`
-            const missionFirstParagraph = await $sanity.fetch(queryMissionFirstParagraph)
-            return { missionFirstParagraph }
+    //Mission First Paragraph
+    const queryMissionFirstParagraph = groq`*[_type == 'information'&& name=='mission'][0] {description[0]}`
+    const missionFirstParagraph = await $sanity.fetch(queryMissionFirstParagraph)
+
+    //Our Impact
+    const queryOurImpact = groq`*[_type == 'ourImpact'][0] {
+  impactOneHeader, impactTwoHeader, impactThreeHeader, impactFourHeader,
+  impactOneFact, impactTwoFact, impactThreeFact, impactFourFact,
+  impactOneImage, impactTwoImage, impactThreeImage, impactFourImage, title
+}`
+  const ourImpact = await $sanity.fetch(queryOurImpact)
+    return { missionFirstParagraph, ourImpact}
         }, 
   }
 </script>

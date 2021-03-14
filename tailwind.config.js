@@ -20,6 +20,11 @@ module.exports = {
         DEFAULT: '#eae7dc',
         dark: '',
       },
+      whitesmoke: {
+        light: '',
+        DEFAULT: '#f5f5f5',
+        dark: '',
+      },
       tan: {
         light: '',
         DEFAULT: '#d8c385',
@@ -30,9 +35,9 @@ module.exports = {
         DEFAULT: '#5b5b5b',
         dark: '#3D3D3D',
       },
-      blueJeans: {
+      carolinaBlue: {
         light: '',
-        DEFAULT: '#10aff9',
+        DEFAULT: '#13A3DC',
         dark: '',
       },
       starCommandBlue: {
@@ -40,9 +45,9 @@ module.exports = {
         DEFAULT: '#057cb3',
         dark: '',
       },
-      yellowCrayola: {
+      middleYellow: {
         light:'',
-        DEFAULT: '#fce622',
+        DEFAULT: '#FEEA00',
         dark: '',
       },
       maroon: {

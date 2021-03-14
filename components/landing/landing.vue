@@ -1,9 +1,14 @@
 <template>
-    <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-white">
+    <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-whitesmoke">
         <banner/>
-        <mission :missionFirstParagraph="missionFirstParagraph"/>
+        <mission 
+            :missionFirstParagraph="missionFirstParagraph"
+        />
         <most-in-need/>
         <happytails-landing/>
+        <our-impact
+            :ourImpact="ourImpact" 
+        />
         <footer/>
     </div>
 </template>
@@ -16,7 +21,7 @@ import MostInNeed from './mostInNeed.vue'
 
     export default {
         components: { banner, mission, MostInNeed },
-        props: ['missionFirstParagraph'],
+        props: ['missionFirstParagraph', 'ourImpact'],
         computed: {
             hidePage () {
                 return this.$store.state.showMobileMenu

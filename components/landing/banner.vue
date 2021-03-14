@@ -8,7 +8,7 @@
             <div class="banner-text-mobile flex flex-col justify-center items-center">
                 <p class="banner-text-mobile-main text-center text-2xl text-gray-900 bold p-1 mr-2 mt-4">Saving chihuahuas</p>
                 <p class="text-md">for 25 years</p>
-                <button class="bg-yellowCrayola text-sm p-2 mt-4 text-black w-32 font-bold">DONATE NOW</button>
+                <button class="bg-middleYellow text-sm p-2 mt-4 text-black w-32 font-bold">DONATE NOW</button>
             </div>
         </div>
         <!-- banner desktop -->
@@ -19,7 +19,7 @@
             <div class="banner-text flex flex-col justify-center items-center">
                 <p class="banner-main-text text-center sm:text-4xl md:text-4xl lg:text-7xl xl:text-7xl text-gray-900 p-4 mt-10">Saving chihuahuas</p>
                 <p class="text-3xl">for 25 years</p>
-                <nuxt-link :to="{ path: `/donate-general`}" :tag="button" class="button-text bg-yellowCrayola text-lg text-center p-2 mt-4 text-black w-80 font-bold">Donate Now</nuxt-link>
+                <nuxt-link :to="{ path: `/donate-general`}" tag="button" class="button-text bg-middleYellow text-lg text-center p-2 mt-4 text-black w-80 font-bold">Donate Now</nuxt-link>
             </div>
         </div>
     

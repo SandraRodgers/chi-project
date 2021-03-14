@@ -35,29 +35,28 @@ import sanity from "../../sanityClient"
 import imageUrlBuilder from "@sanity/image-url";
 const imageBuilder = imageUrlBuilder(sanity);
 
-    export default {
-        methods: {
-            imageUrlFor(source) {
-                return imageBuilder.image(source);
-        }},
-        data() {
+export default {
+  methods: {
+    imageUrlFor(source) {
+      return imageBuilder.image(source);
+    }
+  },
+  data() {
     return {
       aboutEntries: [],
     }
   },
-    async asyncData({ $sanity }) {
-        
-    const query = groq`*[_id == "c9e2c609-ad0b-47cd-98c1-ccf2a65e22ee"]`
-    const informationEntries = await $sanity.fetch(query)
-    console.log({ informationEntries })
-    return { informationEntries }
+
+  async asyncData({ $sanity }) {
+  const query = groq`*[_id == "c9e2c609-ad0b-47cd-98c1-ccf2a65e22ee"]`
+  const informationEntries = await $sanity.fetch(query)
+  return { informationEntries }
   },
-
-
-    }
+}
 </script>
 
 <style scoped>
+
 p {
  padding-bottom: 14px;
 }
