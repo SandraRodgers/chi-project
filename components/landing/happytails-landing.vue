@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col items-center bg-whitesmoke py-6 w-full">
         <!-- desktop -->
-        <hr class="flex items-center h-2 w-5/6 bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <hr class="sm:flex hidden items-center h-2 w-5/6 bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         <div class="sm:flex hidden justify-center">
             
             
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <hr class="flex items-center h-2 w-5/6 bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <hr class="sm:flex hidden items-center h-2 w-5/6 bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         <!-- mobile -->
         <div class="sm:hidden flex flex-col items-center">
             <div class="flex justify-center w-10/12">
@@ -30,10 +30,12 @@
             </div>
             <p class="flex flex-col items-center text-center w-10/12 py-4 px-6 bg-white text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.
             </p>
+            <div class="flex justify-center w-10/12 bg-white">
             <button class="text-sm w-3/6 text-davysGrey font-extralight border border-opacity-25 border-davysGrey my-4 py-1 px-2">Read More</button>
+            </div>
             
         </div>
-        <div class="flex justify-center w-10/12">
+        <div class="flex sm:hidden justify-center w-10/12">
             <hr class="h-2 w-full bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         </div>
         </div>
