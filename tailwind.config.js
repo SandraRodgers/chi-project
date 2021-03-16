@@ -71,6 +71,15 @@ module.exports = {
       sans: ['Poppins', 'sans'],
       serif: ['Playfair Display', 'serif']
     },
+    extend: {
+      backgroundImage: theme => ({
+       'blue-dots-pattern': "url('~assets/images/blue_dots.jpg')",
+       'blue-white-yellow': "url('~assets/images/bluewhiteyellow.jpg')",
+       'yellow-stars': "url('~assets/images/yellowstars.jpg')",
+       'blue-yellow-dots': "url('~assets/images/blue-yellow-dots.jpg')",
+
+      })
+    }
   },
   variants: {
     extend: {

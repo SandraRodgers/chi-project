@@ -11,6 +11,8 @@ import sanity from "../sanityClient"
 
 export default {
   components: {  },
+  mounted(){
+  },
 
   async asyncData({ $sanity }) {
     //Mission First Paragraph

@@ -32,8 +32,9 @@ const imageBuilder = imageUrlBuilder(sanity);
     export default {
         methods: {
             imageUrlFor(source) {
-                return imageBuilder.image(source);
-        }},
+              return imageBuilder.image(source);
+            }
+        },
         data() {
     return {
       chihuahuas: [],

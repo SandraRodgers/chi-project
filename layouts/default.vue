@@ -7,6 +7,19 @@
   </div>
 </template>
 
+<script>
+
+export default {
+  components: {  },
+  data(){
+    return {
+      logo: {}
+    }
+  },
+  
+  }
+</script>
+
 <style>
 html {
   margin: 0;
