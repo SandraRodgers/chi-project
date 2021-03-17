@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/foster/foster", {data:[{}],fetch:[],mutations:[]});
