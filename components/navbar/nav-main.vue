@@ -69,7 +69,7 @@
               return imageBuilder.image(source);
             },
             async fetchLogo() {
-                let res = await this.$axios.get(`${process.env.API_URL}data/query/production?query=*[_type == 'landingBannerAndLogo']{imageFile}`)
+                let res = await this.$axios.get(`https://05mmi4eq.api.sanity.io/v1/data/query/production?query=*[_type == 'landingBannerAndLogo']{imageFile}`)
                 this.logo = res.data.result[0].imageFile;
                 console.log(this.logo)
                 return res;
