@@ -4,7 +4,13 @@ export default {
     height: '10px'
   },
   env: {
+    
+  },
+  publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    apiUrl: process.env.API_URL
+  },
+  privateRuntimeConfig: {
     sanityProjectId: process.env.SANITY_PROJECT_ID,
     apiUrl: process.env.API_URL
   },
@@ -43,7 +49,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/dotenv'],
+  buildModules: ['@nuxtjs/tailwindcss',],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
