@@ -69,14 +69,14 @@
               return imageBuilder.image(source);
             },
             async fetchLogo() {
-                let res = await this.$axios.get(`${process.env.API_URL}data/query/production?query=*[_type == 'landingBannerAndLogo']{imageFile}`)
+                let res = await this.$axios.get(`${process.env.API_URL}data/query/production?query=*[_type == 'landingBannerAndLogo']{imageFile}&$bannerOrLogo="logo"&$current=true`)
                 this.logo = res.data.result[0].imageFile;
-                console.log(this.logo)
                 return res;
             }, 
         },
         mounted(){
             this.fetchLogo()
+        
         }   
     }
 </script>
