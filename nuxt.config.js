@@ -3,13 +3,6 @@ export default {
     color: 'blue',
     height: '10px'
   },
-  static: {
-    setHeaders(res) {
-      res.setHeader('Access-Control-Allow-Origin', '*')
-      res.setHeader('Access-Control-Allow-Methods', 'GET')
-      res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-    }
-  },
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sanityProjectId: process.env.SANITY_PROJECT_ID,
