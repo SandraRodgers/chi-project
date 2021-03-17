@@ -45,6 +45,7 @@ export default {
   async asyncData({ params, $sanity }) {
     const query = groq`*[_type == "chihuahua" && slug.current == "${params.slug}"][0]`
     const chihuahua = await $sanity.fetch(query)
+    console.log(chihuahua)
     return { chihuahua }
   }
 }
