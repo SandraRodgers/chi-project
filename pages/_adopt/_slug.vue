@@ -19,7 +19,6 @@
                 <img class="h-80" :src="imageUrlFor(chihuahua.mainImage)"/>
                   </div>
                   </div>
-                
               </div>
             </div>
 

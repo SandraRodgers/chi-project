@@ -1,4 +1,8 @@
 export default {
+  loading: {
+    color: 'blue',
+    height: '10px'
+  },
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sanityProjectId: process.env.SANITY_PROJECT_ID
@@ -8,7 +12,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mobile-chi-tw',
+    title: 'Chihuahua',
     htmlAttrs: {
       lang: 'en'
     },
