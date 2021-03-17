@@ -12,7 +12,8 @@ export default {
   },
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    sanityProjectId: process.env.SANITY_PROJECT_ID
+    sanityProjectId: process.env.SANITY_PROJECT_ID,
+    apiUrl: process.env.API_URL
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -61,21 +62,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.API_URL,
-    proxy: true,
-    credentials: false 
-  },
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
-    }
-  },
 
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL,
-      sanityProjectId: process.env.SANITY_PROJECT_ID
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
