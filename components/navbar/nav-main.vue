@@ -15,16 +15,17 @@
                 </div>
             <span class="fixed flex lg:justify-start justify-center w-full bg-transparent">
                 <nuxt-link :to="'/'">
-                    <img :src="imageUrlFor(this.logo)" class="h-36 absolute mx-auto inset-x-0 -top-20"/>
+                    <img :src="imageUrlFor(setLogo)" class="h-36 absolute mx-auto inset-x-0 -top-20"/>
                 </nuxt-link>
             </span>
             </div>
         </div>
+
         <!-- Desktop -->
         <div class="nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden w-full font-semibold" @mouseenter="hideDropdown">
             <div class="flex space-x-20 text-lg">
                 <nuxt-link :to="'/'">
-                    <img :src="imageUrlFor(this.logo)" class="mr-4 mt-4 absolute top-0 h-64 left-6 z-20"/>
+                    <img :src="imageUrlFor(setLogo)" class="mr-4 mt-4 absolute top-0 h-64 left-6 z-20"/>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative">ABOUT</p></nuxt-link>
                 <nuxt-link :to="{ path: `/events` }"><p>EVENTS</p></nuxt-link>
@@ -43,41 +44,29 @@
     import imageUrlBuilder from "@sanity/image-url";
     const imageBuilder = imageUrlBuilder(sanity);
 
-
     export default {
-        data(){
-            return {
-                logo:{}
-            }
-        },
         props: ['assetId'],
         computed: {
             showMobileMenu() {
                 return this.$store.state.showMobileMenu
             },
-            sanityProjectId() {
-                return process.env.SANITY_PROJECT_ID
-            }
+            setLogo() {
+                if(this.$store && this. $store.state.logo && this.$store.state.logo[0] && this.$store.state.logo[0].imageFile){
+                    return this.$store.state.logo[0].imageFile
+                }
+            },
         },
         methods: {
             ...mapMutations({
                 toggleMobileMenu: 'toggle',
                 showDropdown: 'show',
-                hideDropdown: 'hide'
+                hideDropdown: 'hide',
+                setLogo: 'setLogo'
                 }),
             imageUrlFor(source) {
               return imageBuilder.image(source);
             },
-            async fetchLogo() {
-                let res = await this.$axios.get(`${this.$config.apiUrl}data/query/production?query=*[_type == 'landingBannerAndLogo']{imageFile}`)
-                this.logo = res.data.result[0].imageFile;
-                console.log(this.$config)
-                return res;
-            }, 
-        },
-        mounted(){
-            this.fetchLogo()
-        }   
+        }, 
     }
 </script>
 

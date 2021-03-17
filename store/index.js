@@ -1,6 +1,7 @@
 export const state = () => ({
   showMobileMenu: false,
-  showAdoptDropdown: false
+  showAdoptDropdown: false,
+  logo: {}
 })
 
 export const mutations = {
@@ -12,5 +13,16 @@ export const mutations = {
   },
   hide (state) {
     state.showAdoptDropdown = false;
+  },
+  setLogo(state, logo) {
+    state.logo = logo
   }
+}
+
+export const getters = {
+  getLogo: (state) => state.logo
+}
+
+export const actions = {
+
 }

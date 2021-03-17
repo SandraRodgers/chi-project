@@ -2,17 +2,14 @@
   <landing 
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
+    :logo="logo"
   />
 </template>
 
 <script>
 import groq from 'groq'
-import sanity from "../sanityClient"
 
 export default {
-  components: {  },
-  mounted(){
-  },
 
   async asyncData({ $sanity }) {
     //Mission First Paragraph
@@ -21,12 +18,16 @@ export default {
 
     //Our Impact
     const queryOurImpact = groq`*[_type == 'ourImpact'][0] {
-  impactOneHeader, impactTwoHeader, impactThreeHeader, impactFourHeader,
-  impactOneFact, impactTwoFact, impactThreeFact, impactFourFact,
-  impactOneImage, impactTwoImage, impactThreeImage, impactFourImage, title
-}`
-  const ourImpact = await $sanity.fetch(queryOurImpact)
-    return { missionFirstParagraph, ourImpact}
+      impactOneHeader, impactTwoHeader, impactThreeHeader, impactFourHeader,impactOneFact, impactTwoFact, impactThreeFact, impactFourFact,
+      impactOneImage, impactTwoImage, impactThreeImage, impactFourImage, title
+      }`
+      const ourImpact = await $sanity.fetch(queryOurImpact)
+
+    //Logo
+    const queryLogo = groq`*[_type == 'landingBannerAndLogo']{imageFile}`
+    const logo = await $sanity.fetch(queryLogo)
+
+    return { missionFirstParagraph, ourImpact, logo}
         }, 
   }
 </script>

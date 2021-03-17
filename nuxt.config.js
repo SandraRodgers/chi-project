@@ -8,7 +8,6 @@ export default {
   },
   publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    apiUrl: process.env.API_URL
   },
   privateRuntimeConfig: {
     sanityProjectId: process.env.SANITY_PROJECT_ID,

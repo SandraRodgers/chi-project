@@ -18,15 +18,17 @@ import mission from './mission.vue'
 import banner from './banner.vue'
 import MostInNeed from './mostInNeed.vue'
 
-
     export default {
         components: { banner, mission, MostInNeed },
-        props: ['missionFirstParagraph', 'ourImpact'],
+        props: ['missionFirstParagraph', 'ourImpact', 'logo'],
         computed: {
             hidePage () {
                 return this.$store.state.showMobileMenu
             }
-        },  
+        }, 
+        mounted(){
+            this.$store.commit('setLogo', this.logo)
+        } 
     }
 </script>
 
