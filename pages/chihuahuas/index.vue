@@ -49,8 +49,9 @@ const imageBuilder = imageUrlBuilder(sanity);
         
     const query = groq`*[_type == "chihuahua"]`
     const chihuahuas = await $sanity.fetch(query)
-    console.log({ chihuahuas })
-    return { chihuahuas }
+    if(chihuahuas) {
+      return { chihuahuas }
+    }
   },
 
 

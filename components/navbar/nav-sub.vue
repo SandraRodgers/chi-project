@@ -6,8 +6,8 @@
                     ADOPT 
                     <span class="icon"><font-awesome-icon :icon="['fas', 'caret-down']"/></span>
                 </p>
-                <nuxt-link :to="{ path: `/foster` }" @mouseenter="hideDropdown">
-                    <p class="hover:text-black curosor-pointer">FOSTER/VOLUNTEER</p>
+                <nuxt-link :to="{ path: `/foster` }">
+                    <p @mouseenter="hideDropdown" class="hover:text-black cursor-pointer">FOSTER/VOLUNTEER</p>
                 </nuxt-link>
                 <p class="hover:text-black cursor-pointer">BEST FRIENDS</p>
                 <p class="hover:text-black cursor-pointer">NEWSLETTER</p>

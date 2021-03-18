@@ -11,7 +11,7 @@
             </div>
         </div>
         <!-- banner desktop -->
-        <div class="h-full bg-yellow-stars bg-contain relative z-0 hidden sm:flex border-b border-opacity-25 border-davysGrey w-screen">
+        <div @mouseenter="hideDropdown" class="h-full bg-yellow-stars bg-contain relative z-0 hidden sm:flex border-b border-opacity-25 border-davysGrey w-screen">
             <!-- <div class="banner-image-container bg-blue-dots-pattern bg-contain flex"> -->
             <img class="relative inset-x-72" src="~assets/images/chi_tongueout_outline.png"/>
             <div class="flex flex-col justify-start">
@@ -24,7 +24,13 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
     export default {
+        methods: {
+            ...mapMutations({
+            hideDropdown: 'hide'
+            }),  
+        }
         
     }
 </script>
