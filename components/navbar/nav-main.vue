@@ -50,6 +50,19 @@
             showMobileMenu() {
                 return this.$store.state.showMobileMenu
             },
+            // setLogo:{
+            //     get(){
+            //         if(this.$store && this. $store.state.logo && this.$store.state.logo[0] && this.$store.state.logo[0].imageFile){
+            //             return this.$store.state.logo[0].imageFile
+            //     }
+            //     },
+            //     set(logo){
+            //         if(logo){
+            //             this.$store.state.logo = logo
+            //         }
+                    
+            //     }
+            // },
             setLogo() {
                 if(this.$store && this. $store.state.logo && this.$store.state.logo[0] && this.$store.state.logo[0].imageFile){
                     return this.$store.state.logo[0].imageFile
