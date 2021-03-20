@@ -1,5 +1,5 @@
 <template>
-    <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-white w-full">
+    <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-whitesmoke w-full">
         <banner/>
         <mission 
             :missionFirstParagraph="missionFirstParagraph"

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center justify-center mt-16 bg-blue-dots bg-cover bg-no-repeat bg-blend-lighten bg-clip-padding">
+    <div class="flex flex-col items-center justify-center mt-8 bg-blue-dots bg-cover bg-no-repeat bg-blend-lighten bg-clip-padding">
 
         <div class="flex items-center justify-center flex-col w-full bg-carolinaBlue bg-opacity-50" >
             <h1 class="title text-black flex justify-center w-full md:w-9/12 lg:w-9/12 text-xl md:text-xl lg:text-4xl pt-8 md:pt-4 lg:pt-8 font-extrabold">Our Impact</h1>
@@ -30,14 +30,12 @@
                             <img @mouseenter="displayFactFour" class="h-24 lg:h-48 sm:h-24 lg:w-48 w-24 sm:w-24 rounded-full object-cover border-4 border-white hover:shadow-2xl hover:scale-90 transform transition-transform ease-in" :src="imageUrlFor(ourImpact.impactFourImage)"/>
                             <h3 class="text-black lg:text-2xl sm:text-lg text-lg font-semibold my-4">{{ourImpact.impactFourHeader}}</h3>
                             <h4
-                            :class="{'opacity-0': !factIsVisibleFour, 'flex flex-col opacity-100': factIsVisibleFour}" class="text-black font-light my-4 lg:text-med text-xs sm:text-xs transition-opacity duration-1000 ease-in">{{ourImpact.impactFourFact}}</h4>
+                            :class="{'opacity-0': !factIsVisibleFour, 'flex flex-col opacity-100': factIsVisibleFour}" class="text-black font-light lg:text-med text-xs sm:text-xs transition-opacity duration-1000 ease-in">{{ourImpact.impactFourFact}}</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <!-- <div class="flex justify-center w-11/12 md:w-9/12 lg:w-9/12">
-    </div> -->
     </div>
 </template>
 
