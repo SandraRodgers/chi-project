@@ -4,7 +4,9 @@
         <mission 
             :missionFirstParagraph="missionFirstParagraph"
         />
-        <most-in-need/>
+        <most-in-need
+            :mostInNeed="mostInNeed"
+        />
         <happytails-landing/>
         <our-impact
             :ourImpact="ourImpact" 
@@ -20,7 +22,7 @@ import MostInNeed from './mostInNeed.vue'
 
     export default {
         components: { banner, mission, MostInNeed },
-        props: ['missionFirstParagraph', 'ourImpact', 'logo'],
+        props: ['missionFirstParagraph', 'ourImpact', 'logo', 'mostInNeed'],
         computed: {
             hidePage () {
                 return this.$store.state.showMobileMenu

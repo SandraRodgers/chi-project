@@ -3,7 +3,7 @@
         <div class="flex justify-center pt-5 md:pt-14 lg:pt-16 w-11/12 md:w-9/12 lg:w-9/12">
             <hr class="h-2 w-full" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         </div>
-        <div class="flex items-center justify-center flex-col bg-whitesmoke  bg-clip-padding">
+        <div class="flex items-center justify-center flex-col bg-whitesmoke bg-clip-padding">
             <h1 class="title flex justify-center w-11/12 md:w-9/12 lg:w-9/12 text-xl md:text-xl lg:text-3xl bg-white pt-4 md:pt-6 lg:pt-8 font-bold">Our Mission</h1>
             <div class="flex flex-col items-center text-center w-11/12 md:w-9/12 lg:w-9/12 py-4 md:py-6 lg:py-8 px-6 bg-white text-xs md:text-sm lg:text-lg font-light">
                 <block-content :blocks="child" v-for="child in missionFirstParagraph" :key="child._id" /> 

@@ -11,12 +11,12 @@
             </div>
         </div>
         <!-- banner desktop -->
-        <div @mouseenter="hideDropdown" class="h-full bg-yellow-stars bg-contain relative z-0 hidden sm:flex border-b border-opacity-25 border-davysGrey w-screen">
+        <div @mouseenter="hideDropdown" class="h-full bg-banner2 bg-cover relative z-0 hidden sm:flex border-b border-opacity-25 border-davysGrey w-screen">
             <!-- <div class="banner-image-container bg-blue-dots-pattern bg-contain flex"> -->
-            <img class="relative inset-x-72" src="~assets/images/chi_tongueout_outline.png"/>
+            
             <div class="flex flex-col justify-start">
-            <h2 class="h-20 relative left-72 sm:text-4xl md:text-4xl lg:text-6xl xl:text-6xl text-gray-900 mt-24 font-semibold">Saving chihuahuas</h2>
-            <h2 class="h-20 relative left-72 sm:text-4xl md:text-4xl lg:text-6xl xl:text-6xl text-gray-900 font-semibold ml-10">for 25 years</h2>
+            <h2 class="h-20 left-40 relative sm:text-4xl md:text-4xl lg:text-6xl xl:text-6xl text-gray-900 mt-40 font-semibold">Saving chihuahuas</h2>
+            <h2 class="h-20 left-40 relative sm:text-4xl md:text-4xl lg:text-6xl xl:text-6xl text-gray-900 font-semibold ml-10">for 25 years</h2>
             </div>
         </div>    
     </div>

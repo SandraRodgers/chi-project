@@ -3,6 +3,7 @@
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
     :logo="logo"
+    :mostInNeed="mostInNeed"
   />
 </template>
 
@@ -27,7 +28,11 @@ export default {
     const queryLogo = groq`*[_type == 'landingBannerAndLogo']{imageFile}`
     const logo = await $sanity.fetch(queryLogo)
 
-    return { missionFirstParagraph, ourImpact, logo}
+    //Most in Need
+    const queryMostInNeed = groq`*[_type == 'mostInNeed' && current==true]`
+    const mostInNeed = await $sanity.fetch(queryMostInNeed)
+
+    return { missionFirstParagraph, ourImpact, logo, mostInNeed}
         }, 
   }
 </script>
@@ -38,11 +43,12 @@ export default {
 }
 
 html {
+  background-color: #13A3DC;
   font-family: "Poppins";
   font-weight: 300;
 }
 
 .title {
-    font-family: "Playfair Display";
+    font-family: "Poppins";
 }
 </style>
