@@ -75,9 +75,8 @@ module.exports = {
       backgroundImage: theme => ({
         'banner1': "url('~assets/images/banner_1.png')",
         'banner2': "url('~assets/images/banner_2.png')",
-       'blue-dots-pattern': "url('~assets/images/blue_dots.jpg')",
-       'blue-dots2': "url('~assets/images/blue-dots2.jpg')",
-       'blue-white-yellow': "url('~assets/images/bluewhiteyellow.jpg')",
+        'banner3a': "url('~assets/images/banner3a.png')",
+       'blue-dots': "url('~assets/images/bluebackground.png')",
        'yellow-stars': "url('~assets/images/yellowstars.jpg')",
 
       })
@@ -85,7 +84,11 @@ module.exports = {
   },
   variants: {
     extend: {
+      
     },
+    
   },
-  plugins: [],
+  plugins: [
+
+  ],
 }

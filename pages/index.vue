@@ -1,5 +1,6 @@
 <template>
-  <landing 
+  <landing
+    class="w-screen" 
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
     :logo="logo"
@@ -38,14 +39,20 @@ export default {
 </script>
 
 <style>
+* {
+
+}
+
 .body {
   height: 150vh;
 }
 
 html {
-  background-color: #13A3DC;
+  background-color: black;
   font-family: "Poppins";
   font-weight: 300;
+  width: 100vw;
+
 }
 
 .title {

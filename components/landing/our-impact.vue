@@ -1,9 +1,9 @@
 <template>
-    <div class="flex flex-col items-center justify-center mt-16 bg-carolinaBlue">
+    <div class="flex flex-col items-center justify-center mt-16 bg-blue-dots bg-cover bg-no-repeat bg-blend-lighten bg-clip-padding">
 
-        <div class="flex items-center justify-center flex-col bg-blue-dots2 bg-contain bg-clip-padding w-full">
+        <div class="flex items-center justify-center flex-col w-full bg-carolinaBlue bg-opacity-50" >
             <h1 class="title text-black flex justify-center w-full md:w-9/12 lg:w-9/12 text-xl md:text-xl lg:text-4xl pt-8 md:pt-4 lg:pt-8 font-extrabold">Our Impact</h1>
-            <div class="flex justify-center items-center text-center md:w-9/12 lg:w-9/12 md:py-6 lg:py-8 px-6 text-xs md:text-med lg:text-lg font-light">
+            <div class="flex justify-center items-center text-center md:w-9/12 lg:w-9/12 md:py-6 lg:py-8 text-xs md:text-med lg:text-lg font-light">
                 <div class="flex flex-col items-center w-full">
                     <div class="flex w-full">
                         <div class="flex flex-col items-center px-4 mx-4 w-3/4">

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-screen">
 <campaign/>
 <nav-main/>
 <nav-sub/>

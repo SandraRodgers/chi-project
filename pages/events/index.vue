@@ -1,9 +1,6 @@
 <template>
-    <div class="bg-alibaster pt-28 lg:pt-40 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-        <div class="flex justify-center pt-5 md:pt-14 lg:pt-16 w-11/12 md:w-11/12 lg:w-11/12">
-            <hr class="bg-starCommandBlue h-2 w-7/12">
-            <hr class="bg-tan h-2 w-7/12 bg-clip-padding">
-        </div>
+    <div class="bg-whitesmoke pt-28 lg:pt-40 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
+        <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         <div class="flex justify-center bg-white w-11/12 pt-10">
             <h1 class="title text-xl md:text-xl lg:text-3xl">Upcoming Events</h1>
         </div>
@@ -81,10 +78,7 @@
         </div>
         </div>
     </div>
-    <div class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12">
-        <hr class="bg-starCommandBlue h-2 w-7/12">
-        <hr class="bg-tan h-2 w-7/12 bg-clip-padding">
-    </div>
+    <hr class="h-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
 </template>
 

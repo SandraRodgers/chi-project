@@ -1,31 +1,31 @@
 <template>
-    <div>
+    <div class="w-screen">
 
         <!-- Mobile Menu Closed -->
-        <div class="fixed w-full bg-transparent z-0 lg:hidden">
-            <div class="absolute h-24 w-full flex items-end bg-white">
-                <div @click="toggleMobileMenu" class="flex justify-center items-end pb-5 w-16 h-full relative">
+        <div class="fixed bg-transparent z-20 lg:hidden w-screen">
+            <div class="w-screen absolute h-24 flex items-end bg-white">
+                <div @click="toggleMobileMenu" class="flex justify-center items-end pl-4 pb-5 w-16 h-full relative">
                     <div class="">
                         <svg class="fill-current text-black" viewBox="0 0 100 70" width="40" height="20">
-                            <rect width="70" height="10"></rect>
-                            <rect y="30" width="70" height="10"></rect>
-                            <rect y="60" width="70" height="10"></rect>
+                            <rect width="90" height="10"></rect>
+                            <rect y="30" width="90" height="10"></rect>
+                            <rect y="60" width="90" height="10"></rect>
                         </svg>
                     </div>
                 </div>
-            <span class="fixed flex lg:justify-start justify-center w-full bg-transparent">
-                <nuxt-link :to="'/'">
-                    <img :src="imageUrlFor(setLogo)" class="h-36 absolute mx-auto inset-x-0 -top-20"/>
-                </nuxt-link>
-            </span>
+                <span class="w-screen flex justify-center bg-transparent mr-16 z-40">
+                    <nuxt-link :to="'/'">
+                        <img :src="imageUrlFor(setLogo)" class="h-36 relative top-16"/>
+                    </nuxt-link>
+                </span>
             </div>
         </div>
 
         <!-- Desktop -->
-        <div class="nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden w-full font-semibold" @mouseenter="hideDropdown">
+        <div class="w-full nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden  font-semibold" @mouseenter="hideDropdown">
             <div class="flex space-x-20 text-lg">
                 <nuxt-link :to="'/'">
-                    <img :src="imageUrlFor(setLogo)" class="mr-4 mt-4 absolute top-0 h-64 left-6 z-20"/>
+                    <img :src="imageUrlFor(setLogo)" class="mr-4 mt-4 absolute top-0 h-72 left-6 z-20"/>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative">ABOUT</p></nuxt-link>
                 <nuxt-link :to="{ path: `/events` }"><p>EVENTS</p></nuxt-link>
