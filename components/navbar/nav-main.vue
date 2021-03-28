@@ -15,7 +15,7 @@
                 </div>
                 <span class="w-screen flex justify-center bg-transparent mr-16 z-40">
                     <nuxt-link :to="'/'">
-                        <img :src="imageUrlFor(setLogo)" class="sm:h-40 md:h-56 h-40 relative top-20 md:top-36 sm:top-20"/>
+                        <img :src="imageUrlFor(logo)" class="sm:h-40 md:h-56 h-40 relative top-20 md:top-36 sm:top-20"/>
                     </nuxt-link>
                 </span>
             </div>
@@ -25,7 +25,7 @@
         <div class="w-full nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden  font-semibold" @mouseenter="hideDropdown">
             <div class="flex space-x-20 text-lg">
                 <nuxt-link :to="'/'">
-                    <img :src="imageUrlFor(setLogo)" class="mr-4 mt-4 absolute top-0 h-72 left-6 z-20"/>
+                    <img :src="imageUrlFor(logo)" class="mr-4 mt-4 absolute top-0 h-72 left-6 z-20"/>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative">ABOUT</p></nuxt-link>
                 <nuxt-link :to="{ path: `/events` }"><p>EVENTS</p></nuxt-link>
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-    import { mapMutations } from 'vuex';
+    import { mapMutations, mapState } from 'vuex';
     import sanity from "../../sanityClient"
     import imageUrlBuilder from "@sanity/image-url";
     const imageBuilder = imageUrlBuilder(sanity);
@@ -50,24 +50,10 @@
             showMobileMenu() {
                 return this.$store.state.showMobileMenu
             },
-            // setLogo:{
-            //     get(){
-            //         if(this.$store && this. $store.state.logo && this.$store.state.logo[0] && this.$store.state.logo[0].imageFile){
-            //             return this.$store.state.logo[0].imageFile
-            //     }
-            //     },
-            //     set(logo){
-            //         if(logo){
-            //             this.$store.state.logo = logo
-            //         }
-                    
-            //     }
-            // },
-            setLogo() {
-                if(this.$store && this. $store.state.logo && this.$store.state.logo[0] && this.$store.state.logo[0].imageFile){
-                    return this.$store.state.logo[0].imageFile
-                }
-            },
+            logo(){
+                console.log('hit logo', this.$store.state.logo)
+                return this.$store.state.logo
+            }
         },
         methods: {
             ...mapMutations({
@@ -79,7 +65,15 @@
             imageUrlFor(source) {
               return imageBuilder.image(source);
             },
-        }, 
+        },
+ 
+        // updated(){
+        //     return this.setLogo
+        // },
+        
+        // asyncData({from}){
+        // console.log(from)
+// } 
     }
 </script>
 

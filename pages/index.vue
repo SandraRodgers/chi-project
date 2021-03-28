@@ -3,7 +3,6 @@
     class="w-screen" 
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
-    :logo="logo"
     :mostInNeed="mostInNeed"
   />
 </template>
@@ -26,15 +25,17 @@ export default {
       const ourImpact = await $sanity.fetch(queryOurImpact)
 
     //Logo
-    const queryLogo = groq`*[_type == 'landingBannerAndLogo']{imageFile}`
-    const logo = await $sanity.fetch(queryLogo)
+    // const queryLogo = groq`*[_type == 'landingBannerAndLogo']{imageFile}`
+    // const logo = await $sanity.fetch(queryLogo)
 
     //Most in Need
     const queryMostInNeed = groq`*[_type == 'mostInNeed' && current==true]`
     const mostInNeed = await $sanity.fetch(queryMostInNeed)
 
-    return { missionFirstParagraph, ourImpact, logo, mostInNeed}
-        }, 
+    return { missionFirstParagraph, ourImpact, mostInNeed}
+        },
+        
+  
   }
 </script>
 

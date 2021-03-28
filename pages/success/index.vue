@@ -81,7 +81,6 @@ const imageBuilder = imageUrlBuilder(sanity);
     const querySuccessIntro = groq`*[_type == 'information'&& name=='success-stories-intro']`
     const successStories = await $sanity.fetch(querySuccessStories)
     const successIntro = await $sanity.fetch(querySuccessIntro)
-    console.log(successIntro[0])
     return { successStories, successIntro }
   },
 

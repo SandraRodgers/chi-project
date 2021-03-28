@@ -102,7 +102,7 @@ export default {
             return moment(date).format('h:mm a');
         },
         showRegion(){
-            console.log(this.region)
+            // console.log(this.region)
         },
     },
         

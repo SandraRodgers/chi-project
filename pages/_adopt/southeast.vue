@@ -72,7 +72,6 @@ const imageBuilder = imageUrlBuilder(sanity);
         
     const query = groq`*[_type == 'chihuahua' && region == 'southwest'] {_id, age, chihuahua, description, gender, weight, mainImage, slug, tagline}`
     const chihuahuas = await $sanity.fetch(query)
-    console.log({ chihuahuas })
     return { chihuahuas }
   },
 

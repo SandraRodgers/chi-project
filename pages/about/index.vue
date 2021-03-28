@@ -53,7 +53,6 @@ export default {
   const queryMission = groq`*[_type == 'information'&& name=='mission'][0]`
   const aboutUs = await $sanity.fetch(queryAboutUs)
   const mission = await $sanity.fetch(queryMission)
-  console.log(aboutUs)
   return { aboutUs, mission }
   },
 }

@@ -31,9 +31,6 @@ const imageBuilder = imageUrlBuilder(sanity);
                 return imageBuilder.image(source);
             },
         },
-        mounted() {
-            console.log()
-        }
         
     }
 </script>
