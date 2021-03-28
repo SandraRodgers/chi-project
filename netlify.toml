@@ -3,10 +3,5 @@
 
 [build]
   command = "yarn generate"
-  publish = "dist"
+  publish = "dist/"
   functions = "functions"
-
-[[headers]]
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
