@@ -11,7 +11,9 @@
                 </nuxt-link>
                 <p class="hover:text-black cursor-pointer">BEST FRIENDS</p>
                 <p class="hover:text-black cursor-pointer">NEWSLETTER</p>
-                <p class="hover:text-black cursor-pointer">DONATE</p>
+                <nuxt-link :to="{ path: '/donate' }">
+                    <p class="hover:text-black cursor-pointer">DONATE</p>
+                </nuxt-link>
             </div>
             <div :class="{'opacity-0 invisible': !this.$store.state.showAdoptDropdown, 'flex flex-col opacity-100 visible': this.$store.state.showAdoptDropdown}" 
             class="absolute z-10 bg-white top-28 left-0 border border-opacity-25 border-davysGrey transition-opacity duration-300 ease-in">

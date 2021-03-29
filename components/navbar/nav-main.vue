@@ -51,7 +51,6 @@
                 return this.$store.state.showMobileMenu
             },
             logo(){
-                console.log('hit logo', this.$store.state.logo)
                 return this.$store.state.logo
             }
         },
