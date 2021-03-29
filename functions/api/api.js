@@ -14,7 +14,7 @@ const handler = async function (event, context) {
   }
   const { identity, user } = context.clientContext
   try {
-    const response = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=' + process.env.OMDB_API_KEY)
+    const response = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=c1708920')
     if (!response.ok) {
       // NOT res.status >= 200 && res.status < 300
       return { statusCode: response.status, body: response.statusText }
