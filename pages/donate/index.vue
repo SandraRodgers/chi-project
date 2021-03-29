@@ -13,7 +13,7 @@
 
 export default {
     async fetch() {
-    this.test = await fetch('https://distracted-ardinghelli-630150.netlify.app/.netlify/functions/test?name=John%20You%27re%20Dumb').then(res => res.json())
+    this.test = await fetch('https://distracted-ardinghelli-630150.netlify.app/.netlify/functions/api').then(res => res.json())
     
   },
   data: () => ({ test: '' }),
