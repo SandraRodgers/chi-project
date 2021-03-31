@@ -61,7 +61,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/fontawesome',
-    "@nuxtjs/sanity"
+    "@nuxtjs/sanity",
+    '@nuxt/http'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
