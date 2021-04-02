@@ -19,9 +19,11 @@
 import mission from './mission.vue'
 import banner from './banner.vue'
 import MostInNeed from './mostInNeed.vue'
+import happytailsLanding from './happytails-landing'
+import ourImpact from './our-impact'
 
     export default {
-        components: { banner, mission, MostInNeed },
+        components: { banner, mission, MostInNeed, happytailsLanding, ourImpact },
         props: ['missionFirstParagraph', 'ourImpact', 'logo', 'mostInNeed'],
         computed: {
             hidePage () {
