@@ -22,11 +22,11 @@
         </div>
 
         <!-- Desktop -->
-        <div class="w-full nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden  font-semibold" @mouseenter="hideDropdown">
+        <div class="w-full nav-main pt-14 fixed z-30 lg:flex flex-row-reverse content-around border-b border-opacity-25 border-davysGrey py-5 pr-8 bg-white hidden font-semibold" @mouseenter="hideDropdown">
             <div class="flex space-x-20 text-lg">
-                <nuxt-link :to="'/'">
-                    <img :src="imageUrlFor(logo)" class="mr-4 mt-4 absolute top-0 h-72 left-6 z-20"/>
-                </nuxt-link>
+                <!-- <nuxt-link :to="'/'">
+                    <img :src="imageUrlFor(logo)" class="mr-4 -mt-4 absolute top-0 h-72 -left-4 z-50 bg-davysGrey"/>
+                </nuxt-link> -->
                 <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative">ABOUT</p></nuxt-link>
                 <nuxt-link :to="{ path: `/events` }"><p>EVENTS</p></nuxt-link>
                 <nuxt-link :to="{ path: `/regions` }"><p>REGIONS</p></nuxt-link>
