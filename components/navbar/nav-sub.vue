@@ -3,13 +3,15 @@
         <div class="pt-24 lg:flex flex-row-reverse content-around bg-transparent right-0 hidden fixed mt-2">
             <div class="relative z-20 flex space-x-12 text-lg bg-carolinaBlue  px-4 text-white rounded-b-lg border-b border-opacity-25 border-davysGrey">
                 <p @mouseenter="showDropdown" class="hover:text-black cursor-pointer">
-                    ADOPT 
+                    CHIHUAHUAS 
                     <span class="icon"><font-awesome-icon :icon="['fas', 'caret-down']"/></span>
                 </p>
                 <nuxt-link :to="{ path: `/foster` }">
                     <p @mouseenter="hideDropdown" class="hover:text-black cursor-pointer">FOSTER/VOLUNTEER</p>
                 </nuxt-link>
-                <p class="hover:text-black cursor-pointer">BEST FRIENDS</p>
+                <nuxt-link :to="{ path: `/adopt` }">
+                <p class="hover:text-black cursor-pointer">ADOPT</p>
+                    </nuxt-link>
                 <p class="hover:text-black cursor-pointer">NEWSLETTER</p>
                 <nuxt-link :to="{ path: '/donate' }">
                     <p class="hover:text-black cursor-pointer">DONATE</p>

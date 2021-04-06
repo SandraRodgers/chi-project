@@ -1,18 +1,57 @@
 <template>
-<div 
-        class="bg-alibaster pt-28 lg:pt-40 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-        <div class="flex justify-center pt-5 md:pt-14 lg:pt-16 w-11/12 md:w-11/12 lg:w-11/12">
-            <hr class="bg-starCommandBlue h-2 w-7/12">
-            <hr class="bg-tan h-2 w-7/12 bg-clip-padding">
-        </div>
-        <div class="flex items-center justify-center flex-col bg-white w-11/12">
-            <h1 class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-xl md:text-xl lg:text-3xl bg-white pt-4 md:pt-6 lg:pt-8 ">{{chihuahua.chihuahua}}</h1>
+    <div class="bg-whitesmoke pt-28 lg:pt-40 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
+    <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+      <div class="flex items-center justify-center flex-col bg-white w-11/12">
+            <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-xl md:text-xl lg:text-3xl font-bold bg-white pt-4 md:pt-6 lg:pt-8 ">{{chihuahua.chihuahua}}</h1>
+            <div class="text-center py-4 w-8/12">
+            <h2 class="font-semibold" v-if="chihuahua.region === 'southwest'">
+                  This dog is being fostered in Dallas TX and must be adopted within the Dallas, North Central Texas or the southern Oklahoma area.
+                </h2>
+               <h2 class="font-semibold" v-if="chihuahua.region === 'midwest'">
+                  All dogs listed here are adoptable in the following Midwestern states (OH / KY/ IL / MI / WI/ MN/). We do transport! They are spread out throughout the Midwest in foster homes.
+                </h2>
+                <h2 class="font-semibold" v-if="chihuahua.region === 'southeast'">
+                  North Carolina, South Carolina, Virginia, Tennessee (Nashville Area), Alabama, Georgia and Maryland
+                </h2>
+              </div>
            <div class="px-14">
               <div class="flex items-start  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
-                <div class="flex flex-col px-4 w-4/6">
+                <div class="flex flex-col px-2 w-4/6">
+                <div class="flex justify-center py-4">
+                <div class="w-4/6">
+                <div class="flex py-1">
+                  <div class="w-28">Name:</div>
+                  <div class="ml-10">{{chihuahua.chihuahua}}</div>
+                </div>
+                <div class="flex py-1">
+                  <div class="w-28">Gender:</div>
+                  <div class="ml-10">{{chihuahua.gender}}</div>
+                </div>
+                <div class="flex py-1">
+                  <div class="w-28">Age:</div>
+                  <div class="ml-10">{{chihuahua.age}}</div>
+                </div>
+                <div class="flex py-1">
+                  <div class="w-28">Weight:</div>
+                  <div class="ml-10">{{chihuahua.weight}}</div>
+                </div>
+                <div class="flex py-1">
+                  <div class="w-28">Dogs:</div>
+                  <div class="ml-10"></div>
+                </div>
+                <div class="flex py-1">
+                  <div class="w-28">Cats:</div>
+                  <div class="ml-10"></div>
+                </div>
+                <div class="flex py-1">
+                  <div class="w-28">Children:</div>
+                  <div class="ml-10"></div>
+                </div>
+              </div>
+              </div>
                   <block-content :blocks="child" v-for="child in chihuahua.description" :key="child._id" />
                   <div class="flex justify-center">
-                    <button class="h-12 px-4 mt-10 bg-maroon text-white">Adoption Application</button>
+                    <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black">Adoption Application</nuxt-link>
                   </div>
                 </div>
                 <div class="flex px-4 w-2/6 justify-end">
@@ -21,13 +60,11 @@
                   </div>
               </div>
             </div>
-
-    <div class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12">
-        <hr class="bg-starCommandBlue h-2 w-7/12">
-        <hr class="bg-tan h-2 w-7/12 bg-clip-padding">
-    </div>
+        <hr class="h-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
 </template>
+
+
 
 <script>
 import { groq } from '@nuxtjs/sanity'

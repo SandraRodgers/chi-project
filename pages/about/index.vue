@@ -61,6 +61,7 @@ export default {
 
 p {
  padding-bottom: 14px;
+ font-size: 18px;
 }
 
 </style>
