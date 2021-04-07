@@ -2,7 +2,8 @@
     <!-- <div>
 <p>Copyright &#169; {{getYear}}</p>
     </div> -->
-   <footer :class="{'hidden': hideFooter, 'flex flex-col': !hideFooter}"  class="footer bg-black opacity-90 relative pt-1  text-white lg:px-56 px-10">
+   <footer :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}"
+    class="footer bg-black opacity-90 relative pt-1  text-white lg:px-56 px-10">
     <div class="">
 
         <div class="sm:flex sm:mt-8">
@@ -54,7 +55,7 @@
             getYear(){
                 return new Date().getFullYear()
             },
-            hideFooter () {
+            showMobileMenu () {
                 return this.$store.state.showMobileMenu
             }
         }

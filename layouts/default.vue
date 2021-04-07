@@ -2,7 +2,9 @@
   <div class="">
     <mobile-menu/>
     <navbar/>
-    <Nuxt />
+    <Nuxt 
+    :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}" 
+    />
     <footer-main/>
   </div>
 </template>
@@ -10,12 +12,11 @@
 <script>
 
 export default {
-  components: {  },
-  data(){
-    return {
-      logo: {}
-    }
-  },
+  computed: {
+            showMobileMenu () {
+                return this.$store.state.showMobileMenu
+            }
+        },
   
   }
 </script>

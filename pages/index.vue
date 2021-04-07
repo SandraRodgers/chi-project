@@ -34,6 +34,12 @@ export default {
 
     return { missionFirstParagraph, ourImpact, mostInNeed}
         },
+    
+    computed: {
+            showMobileMenu () {
+                return this.$store.state.showMobileMenu
+            }
+        },
         
   
   }
