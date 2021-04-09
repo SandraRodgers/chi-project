@@ -8,8 +8,8 @@
               <h2 class="font-semibold">Please fill out the form with your inquiry or message for CRT.</h2>
             </div>
           </div>
-          <!-- Contact Form -->
 
+          <!-- Contact Form -->
           <div class="flex flex-col items-center justify-center w-11/12 py-8">
             <h1 class="title text-2xl md:text-2xl lg:text-2xl font-bold">
               Contact Form
@@ -44,15 +44,15 @@
               </div>
             </div>
 
-            <div class="field flex justify-around border border-gray-300 w-12/12 py-4 px-2 is-grouped">
+            <div class="field flex justify-around w-12/12 py-4 px-2 is-grouped">
             <div class="w-2/6 flex justify-around">
               <div class="control">
-                <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border border-middleYellow  text-black" @click="sendMessage">
+                <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border rounded-sm border-middleYellow  text-black" @click="sendMessage">
                   Send Message
                 </button>
               </div>
               <div class="control">
-                <button class="button is-text border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8  text-black" @click="cancelMessage">
+                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8  text-black" @click="cancelMessage">
                   Cancel
                 </button>
               </div>

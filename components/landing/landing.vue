@@ -1,6 +1,7 @@
 <template>
     <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-whitesmoke w-full">
         <banner/>
+        <banner-sub/>
         <mission 
             :missionFirstParagraph="missionFirstParagraph"
         />
@@ -18,12 +19,13 @@
 <script>
 import mission from './mission.vue'
 import banner from './banner.vue'
+import bannerSub from './banner-sub.vue'
 import MostInNeed from './mostInNeed.vue'
 import happytailsLanding from './happytails-landing'
 import ourImpact from './our-impact'
 
     export default {
-        components: { banner, mission, MostInNeed, happytailsLanding, ourImpact },
+        components: { banner, bannerSub, mission, MostInNeed, happytailsLanding, ourImpact },
         props: ['missionFirstParagraph', 'ourImpact', 'logo', 'mostInNeed'],
         computed: {
             hidePage () {

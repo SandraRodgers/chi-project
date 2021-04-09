@@ -1,11 +1,10 @@
 <template>
-    <div class="flex flex-col items-center bg-whitesmoke py-6 w-full">
+    <div class="flex justify-center bg-whitesmoke py-6 w-full">
         <!-- desktop -->
-        <hr class="sm:flex hidden items-center h-2 w-5/6 bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <div class="shadow-lg flex flex-col items-center w-10/12 shadow-2xl rounded-md">
+        <hr class="sm:flex hidden items-center h-2 w-full bg-clip-padding rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         <div class="sm:flex hidden justify-center">
-            
-            
-            <div class="h-full flex bg-white w-5/6 ">
+            <div class="h-full flex bg-white">
                 <div class="flex flex-col items-center justify-center w-3/6 pt-6 pb-10">
                     <h3 class="title volunteer-heading text-2xl md:text-3xl lg:text-3xl font-bold pb-3 pt-6">Happy Tails</h3>
                     <h5 class="text-xl font-semibold">PB and Sandra</h5>
@@ -17,11 +16,12 @@
                 </div>
             </div>
         </div>
-        <hr class="sm:flex hidden items-center h-2 w-5/6 bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <hr class="sm:flex hidden items-center h-2 w-full bg-clip-padding rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        </div>
         <!-- mobile -->
         <div class="sm:hidden flex flex-col items-center">
             <div class="flex justify-center w-11/12">
-                <hr class="h-2 w-full bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+                <hr class="h-2 w-full bg-clip-padding rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
             </div>
         <div class="flex items-center justify-center flex-col bg-whitesmoke bg-clip-padding">
             <h1 class="flex justify-center w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white pt-8">Happy Tails</h1>
@@ -35,8 +35,8 @@
             </div>
             
         </div>
-        <div class="flex sm:hidden justify-center w-11/12 pt-6 bg-white">
-            <hr class="h-2 w-full bg-clip-padding" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <div class="flex sm:hidden justify-center w-11/12 pt-6 bg-white rounded-b-md">
+            <hr class="h-2 w-full bg-clip-padding rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         </div>
         </div>
     </div>

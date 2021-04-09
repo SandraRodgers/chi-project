@@ -1,11 +1,11 @@
 <template>
     <div class="campaign fixed z-40 w-full">
         <!-- desktop -->
-        <div class="bg-black flex justify-center opacity-90 text-center py-2 sm:flex hidden">
+        <div class="bg-black flex justify-center opacity-90 text-center sm:flex hidden py-2">
             <nuxt-link :to="'/'">
                 <img :src="imageUrlFor(logo)" class="lg:flex md:hidden hidden mr-4 -mt-8 absolute top-0 h-72 -left-0 z-50"/>
             </nuxt-link>
-            <p class="text-white text-xl">Save Shala. Be her Christmas miracle. CLICK HERE to donate now!</p>
+            <p class="flex text-white text-xl">Sponsor a pup's journey to becoming heartworm free! <nuxt-link :to="{ path: '/donate' }"><div class="cursor-pointer transform hover:text-middleYellow transition-all duration-500 font-medium hover:scale-125 hover:font-black ml-6">DONATE NOW</div></nuxt-link></p>
         </div>
         <!-- mobile -->
         <div class="bg-black opacity-90 text-center py-2 sm:hidden">

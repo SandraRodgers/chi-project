@@ -1,7 +1,7 @@
 <template>
     <div class="nav-sub absolute z-20">
-        <div class="pt-24 lg:flex flex-row-reverse content-around bg-transparent right-0 hidden fixed mt-2">
-            <div class="relative z-20 flex space-x-12 text-lg bg-carolinaBlue  px-4 text-white rounded-b-lg border-b border-opacity-25 border-davysGrey">
+        <div class="pt-20 lg:flex flex-row-reverse content-around bg-transparent right-0 hidden fixed mt-6">
+            <div class="relative z-20 flex space-x-12 text-lg bg-carolinaBlue  px-4 py-2 text-white rounded-b-lg border-b border-opacity-25 border-starCommandBlue">
                 <p @mouseenter="showDropdown" class="hover:text-black cursor-pointer">
                     CHIHUAHUAS 
                     <span class="icon"><font-awesome-icon :icon="['fas', 'caret-down']"/></span>
