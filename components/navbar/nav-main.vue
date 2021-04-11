@@ -65,14 +65,6 @@
               return imageBuilder.image(source);
             },
         },
- 
-        // updated(){
-        //     return this.setLogo
-        // },
-        
-        // asyncData({from}){
-        // console.log(from)
-// } 
     }
 </script>
 
