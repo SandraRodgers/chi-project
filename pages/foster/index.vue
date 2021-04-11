@@ -15,97 +15,88 @@
               Foster Application Form
             </h1>
 
-          <!-- <article v-for="msg in messages"
-            :key="msg.text"
-            class="message"
-            :class="msg.type === 'success' ? 'is-success' : 'is-danger'">
-            <div class="message-body">
-              {{ msg.text  }}
-            </div>
-          </article> -->
-
-          <section class="contact-form w-11/12 py-4">
+          <section class="contact-form w-9/12 py-4">
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Name:</label>
               <div class="control w-8/12">
-                <input v-model="contactName" class="input w-full bg-gray-200 border border-gray-300 py-1 py-1" type="text">
+                <input v-model="entireMessage.contactName" class="input w-full bg-gray-200 border border-gray-300 py-1 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Email</label>
               <div class="control w-8/12">
-                <input v-model="contactEmail" class="input w-full bg-gray-200 border border-gray-300 py-1" type="email">
+                <input v-model="entireMessage.contactEmail" class="input w-full bg-gray-200 border border-gray-300 py-1" type="email">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Address First Line</label>
               <div class="control w-8/12">
-                <input v-model="contactAddressFirstLine" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAddressFirstLine" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Address Second Line</label>
               <div class="control w-8/12">
-                <input v-model="contactAddressSecondLine" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAddressSecondLine" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">City</label>
               <div class="control w-8/12">
-                <input v-model="contactAddressCity" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAddressCity" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">State</label>
               <div class="control w-8/12">
-                <input v-model="contactAddressState" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAddressState" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Zipcode</label>
               <div class="control w-8/12">
-                <input v-model="contactAddressZipcode" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAddressZipcode" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Personal Phone Number</label>
               <div class="control w-8/12">
-                <input v-model="contactPersonalPhone" class="input w-full bg-gray-200 border border-gray-300 py-1" type="tel">
+                <input v-model="entireMessage.contactPersonalPhone" class="input w-full bg-gray-200 border border-gray-300 py-1" type="tel">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Work Phone Number</label>
               <div class="control w-8/12">
-                <input v-model="contactWorkPhone" class="input w-full bg-gray-200 border border-gray-300 py-1" type="tel">
+                <input v-model="entireMessage.contactWorkPhone" class="input w-full bg-gray-200 border border-gray-300 py-1" type="tel">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Age</label>
               <div class="control w-8/12">
-                <input v-model="contactAge" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAge" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Current Employer</label>
               <div class="control w-8/12">
-                <input v-model="contactEmployer" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactEmployer" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">I have read the CRT About page</label>
               <div class="control w-8/12">
-                <select v-model="contactHasReadCRTAbout" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactHasReadCRTAbout" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -116,7 +107,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">I have read CRT's Policy and Procedures</label>
               <div class="control w-8/12">
-                <select v-model="contactHasReadCRTPolicy" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactHasReadCRTPolicy" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -127,7 +118,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Have you volunteered previously with a breed rescue group?</label>
               <div class="control w-8/12">
-                <select v-model="contactHasVolunteered" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactHasVolunteered" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -138,7 +129,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Have you fostered previously?</label>
               <div class="control w-8/12">
-                <select v-model="contactHasFostered" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactHasFostered" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -149,7 +140,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Do you have any children in your household?</label>
               <div class="control w-8/12">
-                <select v-model="contactHasChildren" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactHasChildren" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -160,21 +151,21 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Number of children and ages</label>
               <div class="control w-8/12">
-                <input v-model="contactChildrenAges" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactChildrenAges" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Long range plans within the next year?</label>
               <div class="control w-8/12">
-                <textarea v-model="contactLongRangePlans" class="input w-full bg-gray-200 border border-gray-300 py-1"/>
+                <textarea v-model="entireMessage.contactLongRangePlans" class="input w-full bg-gray-200 border border-gray-300 py-1"/>
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Residence Type</label>
               <div class="control w-8/12">
-                <select v-model="contactResidence" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactResidence" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Apt/Condo</option>
                   <option>Townhouse</option>
@@ -189,7 +180,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Own or rent?</label>
               <div class="control w-8/12">
-                <select v-model="contactOwnOrRent" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactOwnOrRent" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Own</option>
                   <option>Rent</option>
@@ -200,14 +191,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If renting, please provide landlord's name, address and telephone #</label>
               <div class="control w-8/12">
-                <textarea v-model="contactLandlordDetails" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+                <textarea v-model="entireMessage.contactLandlordDetails" class="w-full bg-gray-200 border border-gray-300 py-1"/>
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Fence type?</label>
               <div class="control w-8/12">
-                <select v-model="contactFence" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactFence" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>No Fence</option>
                   <option>Wooden Fence</option>
@@ -219,21 +210,21 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Size of living area</label>
               <div class="control w-8/12">
-                <input v-model="contactSizeOfLivingArea" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactSizeOfLivingArea" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Size of fenced area</label>
               <div class="control w-8/12">
-                <input v-model="contactSizeOfFencedArea" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactSizeOfFencedArea" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If there is not a fenced yard, will you provide leashed walks</label>
               <div class="control w-8/12">
-                <select v-model="contactWillProvideLeashedWalks" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactWillProvideLeashedWalks" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Frequently</option>
                   <option>Occasionally</option>
@@ -245,14 +236,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Please list the names of all non-related residents/Housemates</label>
               <div class="control w-8/12">
-                <textarea v-model="contactNamesNonRelatedResidents" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+                <textarea v-model="entireMessage.contactNamesNonRelatedResidents" class="w-full bg-gray-200 border border-gray-300 py-1"/>
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are you willing to permit a home check by a CRT representative?</label>
               <div class="control w-8/12">
-                <select v-model="contactPermitHomeCheck" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactPermitHomeCheck" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -263,42 +254,42 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">How many hours will the foster(s) be left alone per day?</label>
               <div class="control w-8/12">
-                <input v-model="contactHoursAlone" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactHoursAlone" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Where will the dog be kept when alone during day?</label>
               <div class="control w-8/12">
-                <input v-model="contactWhereKeptAloneDay" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactWhereKeptAloneDay" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Where will the dog be kept when alone during night?</label>
               <div class="control w-8/12">
-                <input v-model="contactWhereKeptAloneNight" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactWhereKeptAloneNight" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Where will the dog be kept when alone when family is home?</label>
               <div class="control w-8/12">
-                <input v-model="contactWhereKeptAloneFamilyHome" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactWhereKeptAloneFamilyHome" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If there is any aspect of your home that a dog could affect (white carpet, antiques, etc.), please identify:</label>
               <div class="control w-8/12">
-                <input v-model="contactAspectHome" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactAspectHome" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">What is the level of activity in your household?</label>
               <div class="control w-8/12">
-                <select v-model="contactLevelActivity" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactLevelActivity" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Laid Back</option>
                   <option>Constantly on the run</option>
@@ -311,7 +302,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Does anyone in your household have allergies to hair or dust?</label>
               <div class="control w-8/12">
-                <select v-model="contactAllergies" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactAllergies" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -322,7 +313,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are you often away for extended periods?</label>
               <div class="control w-8/12">
-                <select v-model="contactAwayExtendedPeriodsOne" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactAwayExtendedPeriodsOne" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -333,7 +324,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If so, will you:</label>
               <div class="control w-8/12">
-                <select v-model="contactAwayExtendedPeriodsTwo" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactAwayExtendedPeriodsTwo" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Board</option>
                   <option>Hire a pet sitter</option>
@@ -345,7 +336,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Do you currently own any dogs?</label>
               <div class="control w-8/12">
-                <select v-model="contactCurrentDogs" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactCurrentDogs" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -356,14 +347,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If so, please provide breed(s), sex(es), and age(s)</label>
               <div class="control w-8/12">
-                <input v-model="contactCurrentDogsBreedSexAge" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactCurrentDogsBreedSexAge" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Do you currently own any cats?</label>
               <div class="control w-8/12">
-                <select v-model="contactCatsSexAge" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactCatsSexAge" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -374,14 +365,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If so, please provide sex(es), and age(s):</label>
               <div class="control w-8/12">
-                <input v-model="contactCatsSexAge" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactCatsSexAge" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Do you own any other type of pets?</label>
               <div class="control w-8/12">
-                <select v-model="contactOtherPetsOne" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactOtherPetsOne" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -392,14 +383,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If so, what kind?</label>
               <div class="control w-8/12">
-                <input v-model="contactOtherPetsTwo" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactOtherPetsTwo" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are all your pets up to date on vaccines?</label>
               <div class="control w-8/12">
-                <select v-model="contactCurrentPetsVaccines" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactCurrentPetsVaccines" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -410,7 +401,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are all current pets spayed or neutered?</label>
               <div class="control w-8/12">
-                <select v-model="contactCurrentPetsSpayedNeutered" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactCurrentPetsSpayedNeutered" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -421,7 +412,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Have you owned animals not listed above in the past?</label>
               <div class="control w-8/12">
-                <select v-model="contactPastAnimals" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactPastAnimals" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -432,7 +423,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If yes, please answer the following:</label>
               <div class="control w-8/12">
-                <select v-model="contactPastAnimalsDisposition" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactPastAnimalsDisposition" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Ran away</option>
                   <option>Stolen</option>
@@ -450,7 +441,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Do you have a gender preference?</label>
               <div class="control w-8/12">
-                <select v-model="contactGenderPreference" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactGenderPreference" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -461,7 +452,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Any special circumstances CRT should be aware of?</label>
               <div class="control w-8/12">
-                <select v-model="contactSpecialCircumstance" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactSpecialCircumstance" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -472,14 +463,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If so, please describe</label>
               <div class="control w-8/12">
-                <textarea v-model="contactSpecialCircumstanceTwo" class="input w-full bg-gray-200 border border-gray-300 py-1"/>
+                <textarea v-model="entireMessage.contactSpecialCircumstanceTwo" class="input w-full bg-gray-200 border border-gray-300 py-1"/>
               </div>
             </div>
 
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are you willing to groom the animal?</label>
               <div class="control w-8/12">
-                <select v-model="contactWillingToGroom" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactWillingToGroom" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -490,7 +481,7 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are you willing to foster an animal that has health problems?</label>
               <div class="control w-8/12">
-                <select v-model="contactWillingHealthProblemsNotAccepted" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactWillingHealthProblemsNotAccepted" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -501,14 +492,14 @@
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">If yes, any problem not accepted?</label>
               <div class="control w-8/12">
-                <input v-model="contactWillingHealthProblemsNotAccepted" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
+                <input v-model="entireMessage.contactWillingHealthProblemsNotAccepted" class="input w-full bg-gray-200 border border-gray-300 py-1" type="text">
               </div>
             </div>
 
            <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">What age are you willing to foster?</label>
               <div class="control w-8/12">
-                <select v-model="contactAgePreference" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactAgePreference" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Any age</option>
                   <option>Adult</option>
@@ -521,7 +512,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Are you willing to provide basic training and socialization?</label>
               <div class="control w-8/12">
-                <select v-model="contactWillingProvideTraining" class="w-full bg-gray-200 border border-gray-300 py-1">
+                <select v-model="entireMessage.contactWillingProvideTraining" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
@@ -532,7 +523,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">If you have any children in the household, how much of the responsibility will your child be given in the care and management of the dog?</label>
             <div class="control w-8/12">
-              <select v-model="contactChildrenResponsibility" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactChildrenResponsibility" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Maximum</option>
                 <option>Some</option>
@@ -545,7 +536,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">How much adult supervision will the dog and child be provided?</label>
             <div class="control w-8/12">
-              <select v-model="contactChildrenAdultSupervision" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactChildrenAdultSupervision" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Maximum</option>
                 <option>Some</option>
@@ -558,7 +549,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">How many interactions will the dog have with neighborhood children?</label>
             <div class="control w-8/12">
-              <select v-model="contactInteractionsNeighborhoodChildren" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactInteractionsNeighborhoodChildren" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Maximum</option>
                 <option>Some</option>
@@ -571,21 +562,21 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">How would you encourage or reinforce the foster dog's appropriate (*good*) behavior?</label>
             <div class="control w-8/12">
-              <textarea v-model="contactPositiveBehaviorReinforcement" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactPositiveBehaviorReinforcement" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">How would you prevent or manage the foster dog's inappropriate (*not so good*) ill-timed behavior?</label>
             <div class="control w-8/12">
-              <textarea v-model="contactInappropriateBehaviorManagement" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactInappropriateBehaviorManagement" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Are all members of your household aware that you will be fostering?</label>
             <div class="control w-8/12">
-              <select v-model="contactAllMembersAware" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactAllMembersAware" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -596,7 +587,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Do they all approve?</label>
             <div class="control w-8/12">
-              <select v-model="contactAllMembersApprove" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactAllMembersApprove" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -607,7 +598,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Are you prepared to keep the foster dog for an indefinite period of time, until the dog can be placed into an approved home?</label>
             <div class="control w-8/12">
-              <select v-model="contactPreparedIndefiniteTime" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactPreparedIndefiniteTime" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -618,7 +609,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Are you aware that you must notify the CRT Board of any routine medical care necessary for the dog BEFORE the medical care is performed?</label>
             <div class="control w-8/12">
-              <select v-model="contactNotifyMedicalCare" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactNotifyMedicalCare" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -629,7 +620,7 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Are you aware that your application must be approved before you are enlisted as a CRT volunteer?</label>
             <div class="control w-8/12">
-              <select v-model="contactAwareApproval" class="w-full bg-gray-200 border border-gray-300 py-1">
+              <select v-model="entireMessage.contactAwareApproval" class="w-full bg-gray-200 border border-gray-300 py-1">
                 <option></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -640,46 +631,39 @@
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Do you know another CRT volunteer whom we can contact for a reference? If not just put N/A. If so, please list their name and contact information below:</label>
             <div class="control w-8/12">
-              <textarea v-model="contactCRTVolunteerReference" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactCRTVolunteerReference" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Do you work with any other rescue groups who we can contact for a reference? If so, please list group(s) and contact information below</label>
             <div class="control w-8/12">
-              <textarea v-model="contactOtherRescueReference" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactOtherRescueReference" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Please provide the name, address and phone number of the veterinarian for your pets.</label>
             <div class="control w-8/12">
-              <textarea v-model="contactVetReference" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactVetReference" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Please provide name, address and phone number for your first personal reference who is not a relative.</label>
             <div class="control w-8/12">
-              <textarea v-model="contactPersonalReferenceOne" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactPersonalReferenceOne" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
           <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
             <label class="flex items-center label w-4/12 pl-4">Please provide name, address and phone number for your second personal reference who is not a relative.</label>
             <div class="control w-8/12">
-              <textarea v-model="contactPersonalReferenceTwo" class="w-full bg-gray-200 border border-gray-300 py-1"/>
+              <textarea v-model="entireMessage.contactPersonalReferenceTwo" class="w-full bg-gray-200 border border-gray-300 py-1"/>
             </div>
           </div>
 
-            <!-- <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
-              <label class="label w-4/12 pl-4">Your Message</label>
-              <div class="control w-8/12">
-                <textarea v-model="contactMessage" class="textarea w-full bg-gray-200 border border-gray-300" />
-              </div>
-            </div> -->
-
-            <div class="field flex justify-around border border-gray-300 w-12/12 py-2 px-2 is-grouped">
+            <div class="field flex justify-around w-12/12 py-2 px-2 is-grouped">
             <div class="w-2/6 flex justify-around">
               <div class="control">
                 <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border border-middleYellow  text-black" @click="sendMessage">
@@ -716,163 +700,9 @@ export default {
   data () {
         return {
           messages: [],
-          contactName: '',
-          contactEmail: '',
-          contactAddressFirstLine: '',
-          contactAddressSecondLine: '',
-          contactAddressCity: '',
-          contactAddressState: '',
-          contactAddressZipcode: '',
-          contactPersonalPhone: '',
-          contactWorkPhone: '',
-          contactAge: '',
-          contactEmployer: '',
-          contactHasReadCRTAbout: '',
-          contactHasReadCRTPolicy: '',
-          contactHasVolunteered: '',
-          contactHasFostered: '',
-          contactHasChildren: '',
-          contactChildrenAges: '',
-          contactLongRangePlans: '',
-          contactResidence: '',
-          contactOwnOrRent: '',
-          contactLandlordDetails: '',
-          contactFence: '',
-          contactSizeOfLivingArea: '',
-          contactSizeOfFencedArea: '',
-          contactWillProvideLeashedWalks: '',
-          contactNamesNonRelatedResidents: '',
-          contactPermitHomeCheck: '',
-          contactHoursAlone: '',
-          contactWhereKeptAloneDay: '',
-          contactWhereKeptAloneNight: '',
-          contactWhereKeptAloneFamilyHome: '',
-          contactAspectHome: '',
-          contactLevelActivity: '',
-          contactAllergies: '',
-          contactAwayExtendedPeriodsOne: '',
-          contactAwayExtendedPeriodsTwo: '',
-          contactCurrentDogs: '',
-          contactCurrentDogsBreedSexAge: '',
-          contactCats: '',
-          contactCatsSexAge: '',
-          contactOtherPetsOne: '',
-          contactOtherPetsTwo: '',
-          contactCurrentPetsVaccines: '',
-          contactCurrentPetsSpayedNeutered: '',
-          contactPastAnimals: '',
-          contactPastAnimalsDisposition: '',
-          contactGenderPreference: '',
-          contactSpecialCircumstance: '',
-          contactSpecialCircumstanceTwo: '',
-          contactWillingToGroom: '',
-          contactWillingHealthProblems: '',
-          contactWillingHealthProblemsNotAccepted: '',
-          contactAgePreference: '',
-          contactWillingProvideTraining: '',
-          contactChildrenResponsibility: '',
-          contactChildrenAdultSupervision: '',
-          contactInteractionsNeighborhoodChildren: '',
-          contactPositiveBehaviorReinforcement: '',
-          contactInappropriateBehaviorManagement: '',
-          contactAllMembersAware: '',
-          contactAllMembersApprove: '',
-          contactPreparedIndefiniteTime: '',
-          contactNotifyMedicalCare: '',
-          contactAwareApproval: '',
-          contactCRTVolunteerReference: '',
-          contactOtherRescueReference: '',
-          contactVetReference: '',
-          contactPersonalReferenceOne: '',
-          contactPersonalReferenceTwo: '',
-          // contactMessage: ''
-        }
-      },
-      methods: {
-        sendMessage () {
-          this.messages = []
-          this.triggerSendMessageFunction()
-        },
-        cancelMessage (){
-
-        },
-        resetForm () {
-          this.messages = []
-          this.contactName = ''
-          this.contactEmail = ''
-          this.contactAddressFirstLine = ''
-          this.contactAddressSecondLine = ''
-          this.contactAddressCity = ''
-          this.contactAddressState = ''
-          this.contactAddressZipcode = ''
-          this.contactPersonalPhone = ''
-          this.contactWorkPhone = ''
-          this.contactAge = ''
-          this.contactEmployer = ''
-          this.contactHasReadCRTAbout = ''
-          this.contactHasReadCRTPolicy = ''
-          this.contactHasVolunteered = ''
-          this.contactHasFostered = ''
-          this.contactHasChildren = ''
-          this.contactChildrenAges = ''
-          this.contactLongRangePlans = ''
-          this.contactResidence = ''
-          this.contactOwnOrRent = ''
-          this.contactLandlordDetails = ''
-          this.contactFence = ''
-          this.contactSizeOfLivingArea = ''
-          this.contactSizeOfFencedArea = ''
-          this.contactWillProvideLeashedWalks = ''
-          this.contactNamesNonRelatedResidents = ''
-          this.contactPermitHomeCheck = ''
-          this.contactHoursAlone = ''
-          this.contactWhereKeptAloneDay = ''
-          this.contactWhereKeptAloneNight = ''
-          this.contactWhereKeptAloneFamilyHome = ''
-          this.contactAspectHome = ''
-          this.contactLevelActivity = ''
-          this.contactAllergies = ''
-          this.contactAwayExtendedPeriodsOne = ''
-          this.contactAwayExtendedPeriodsTwo = ''
-          this.contactCurrentDogs = ''
-          this.contactCurrentDogsBreedSexAge = ''
-          this.contactCats = ''
-          this.contactCatsSexAge = ''
-          this.contactOtherPetsOne = ''
-          this.contactOtherPetsTwo = ''
-          this.contactCurrentPetsVaccines = ''
-          this.contactCurrentPetsSpayedNeutered = ''
-          this.contactPastAnimals = ''
-          this.contactPastAnimalsDisposition = ''
-          this.contactGenderPreference = ''
-          this.contactSpecialCircumstance = ''
-          this.contactSpecialCircumstanceTwo = ''
-          this.contactWillingToGroom = ''
-          this.contactWillingHealthProblems = ''
-          this.contactWillingHealthProblemsNotAccepted = ''
-          this.contactAgePreference = ''
-          this.contactWillingProvideTraining = ''
-          this.contactChildrenResponsibility = ''
-          this.contactChildrenAdultSupervision = ''
-          this.contactInteractionsNeighborhoodChildren = ''
-          this.contactPositiveBehaviorReinforcement = ''
-          this.contactInappropriateBehaviorManagement = ''
-          this.contactAllMembersAware = ''
-          this.contactAllMembersApprove = ''
-          this.contactPreparedIndefiniteTime = ''
-          this.contactNotifyMedicalCare = ''
-          this.contactAwareApproval= ''
-          this.contactCRTVolunteerReference = ''
-          this.contactOtherRescueReference = ''
-          this.contactVetReference = ''
-          this.contactPersonalReferenceOne = ''
-          this.contactPersonalReferenceTwo = ''
-          // this.contactMessage = ''
-        },
-        async triggerSendMessageFunction () {
-          try {
-            const response = await this.$axios.$post('/.netlify/functions/foster-application-email', {
-              contactName: this.contactName,
+          copyMessages: [],
+          entireMessage: {
+            contactName: this.contactName,
               contactEmail: this.contactEmail,
               contactAddressFirstLine: this.contactAddressFirstLine,
               contactAddressSecondLine: this.contactAddressSecondLine,
@@ -941,14 +771,124 @@ export default {
               contactVetReference: this.contactVetReference,
               contactPersonalReferenceOne: this.contactPersonalReferenceOne,
               contactPersonalReferenceTwo: this.contactPersonalReferenceTwo,
-              // message: this.contactMessage
-            })
-            this.resetForm()
-            this.messages.push({ type: 'success', text: response })
-          } catch (error) {
-            this.messages.push({ type: 'error', text: error.response.data })
           }
         }
+      },
+      methods: {
+        sendMessage () {
+          this.messages = []
+          this.copyMessages = []
+          this.triggerSendMessageFunction()
+          // this.sendCopyMessage()
+        },
+        // sendCopyMessage () {
+        //   this.copyMessages = []
+        //   console.log(this.entireMessage)
+        //   this.triggerSendCopyMessageFunction()
+        // },
+        cancelMessage (){
+
+        },
+        resetForm () {
+          this.entireMessage.messages = []
+          this.entireMessage.copyMessages = []
+          this.entireMessage.contactName = ''
+          this.entireMessage.contactEmail = ''
+          this.entireMessage.contactAddressFirstLine = ''
+          this.entireMessage.contactAddressSecondLine = ''
+          this.entireMessage.contactAddressCity = ''
+          this.entireMessage.contactAddressState = ''
+          this.entireMessage.contactAddressZipcode = ''
+          this.entireMessage.contactPersonalPhone = ''
+          this.entireMessage.contactWorkPhone = ''
+          this.entireMessage.contactAge = ''
+          this.entireMessage.contactEmployer = ''
+          this.entireMessage.contactHasReadCRTAbout = ''
+          this.entireMessage.contactHasReadCRTPolicy = ''
+          this.entireMessage.contactHasVolunteered = ''
+          this.entireMessage.contactHasFostered = ''
+          this.entireMessage.contactHasChildren = ''
+          this.entireMessage.contactChildrenAges = ''
+          this.entireMessage.contactLongRangePlans = ''
+          this.entireMessage.contactResidence = ''
+          this.entireMessage.contactOwnOrRent = ''
+          this.entireMessage.contactLandlordDetails = ''
+          this.entireMessage.contactFence = ''
+          this.entireMessage.contactSizeOfLivingArea = ''
+          this.entireMessage.contactSizeOfFencedArea = ''
+          this.entireMessage.contactWillProvideLeashedWalks = ''
+          this.entireMessage.contactNamesNonRelatedResidents = ''
+          this.entireMessage.contactPermitHomeCheck = ''
+          this.entireMessage.contactHoursAlone = ''
+          this.entireMessage.contactWhereKeptAloneDay = ''
+          this.entireMessage.contactWhereKeptAloneNight = ''
+          this.entireMessage.contactWhereKeptAloneFamilyHome = ''
+          this.entireMessage.contactAspectHome = ''
+          this.entireMessage.contactLevelActivity = ''
+          this.entireMessage.contactAllergies = ''
+          this.entireMessage.contactAwayExtendedPeriodsOne = ''
+          this.entireMessage.contactAwayExtendedPeriodsTwo = ''
+          this.entireMessage.contactCurrentDogs = ''
+          this.entireMessage.contactCurrentDogsBreedSexAge = ''
+          this.entireMessage.contactCats = ''
+          this.entireMessage.contactCatsSexAge = ''
+          this.entireMessage.contactOtherPetsOne = ''
+          this.entireMessage.contactOtherPetsTwo = ''
+          this.entireMessage.contactCurrentPetsVaccines = ''
+          this.entireMessage.contactCurrentPetsSpayedNeutered = ''
+          this.entireMessage.contactPastAnimals = ''
+          this.entireMessage.contactPastAnimalsDisposition = ''
+          this.entireMessage.contactGenderPreference = ''
+          this.entireMessage.contactSpecialCircumstance = ''
+          this.entireMessage.contactSpecialCircumstanceTwo = ''
+          this.entireMessage.contactWillingToGroom = ''
+          this.entireMessage.contactWillingHealthProblems = ''
+          this.entireMessage.contactWillingHealthProblemsNotAccepted = ''
+          this.entireMessage.contactAgePreference = ''
+          this.entireMessage.contactWillingProvideTraining = ''
+          this.entireMessage.contactChildrenResponsibility = ''
+          this.entireMessage.contactChildrenAdultSupervision = ''
+          this.entireMessage.contactInteractionsNeighborhoodChildren = ''
+          this.entireMessage.contactPositiveBehaviorReinforcement = ''
+          this.entireMessage.contactInappropriateBehaviorManagement = ''
+          this.entireMessage.contactAllMembersAware = ''
+          this.entireMessage.contactAllMembersApprove = ''
+          this.entireMessage.contactPreparedIndefiniteTime = ''
+          this.entireMessage.contactNotifyMedicalCare = ''
+          this.entireMessage.contactAwareApproval= ''
+          this.entireMessage.contactCRTVolunteerReference = ''
+          this.entireMessage.contactOtherRescueReference = ''
+          this.entireMessage.contactVetReference = ''
+          this.entireMessage.contactPersonalReferenceOne = ''
+          this.entireMessage.contactPersonalReferenceTwo = ''
+        },
+        async triggerSendMessageFunction () {
+          // try {
+          //   const response1 = await this.$axios.$post('/.netlify/functions/foster-application-email', {entireMessage: this.entireMessage})
+          //   this.messages.push({ type: 'success1', text: response1 })
+          // } catch (error) {
+          //   this.messages.push({ type: 'error1', text: error.response1.data })
+          // }
+          try {
+            console.log('hit')
+            console.log(this.entireMessage)
+            const response = await this.$axios.$post('/.netlify/functions/foster-application-email-copy', {entireMessage: this.entireMessage})
+            
+            // this.resetForm()
+            this.copyMessages.push({ type: 'success2', text: response })
+          } catch (error) {
+            this.copyMessages.push({ type: 'error2', text: error.response.data })
+          }
+        },
+        // async triggerSendCopyMessageFunction(){
+        //   try {
+        //     const response = await this.$axios.$post('/.netlify/functions/foster-application-email-copy', {entireMessage: this.entireMessage})
+        //     this.resetForm()
+        //     this.copyMessages.push({ type: 'success', text: response })
+        //   } catch (error) {
+        //     this.copyMessages.push({ type: 'error', text: error.response.data })
+        //   }
+        // }
       }
   
   }

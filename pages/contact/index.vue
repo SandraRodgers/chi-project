@@ -96,15 +96,35 @@ export default {
         },
         async triggerSendMessageFunction () {
           try {
-            const response = await this.$axios.$post('/.netlify/functions/foster-application-email', {
+            const response = await this.$axios.$post('/.netlify/functions/contact-form-email', {
               contactName: this.contactName,
               contactEmail: this.contactEmail,
               contactPhone: this.contactPhone,
               contactMessage: this.contactMessage
             })
+            this.$toast.show({
+              type: 'success',
+              title: 'Success',
+              message: 'Message sent',
+              classToast: 'bg-seaGreen-dark',
+              classTitle: 'text-seaGreen-light',
+              classMessage: 'text-seaGreen-light',
+              classClose: 'text-seaGreen-light',
+              classTimeout: 'bg-seaGreen',
+            })
             this.resetForm()
             this.messages.push({ type: 'success', text: response })
           } catch (error) {
+            this.$toast.show({
+              type: 'danger',
+              title: 'Error',
+              message: 'Please Try Again',
+              classToast: 'bg-red-600',
+              classTitle: 'text-red-100',
+              classMessage: 'text-red-100',
+              classClose: 'text-red-100',
+              classTimeout: 'bg-red-400'
+            })
             this.messages.push({ type: 'error', text: error.response.data })
           }
         }

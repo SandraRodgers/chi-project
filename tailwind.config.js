@@ -55,6 +55,11 @@ module.exports = {
         DEFAULT: '#8a0000',
         dark: '',
       },
+      seaGreen: {
+        light: '#eafce8',
+        DEFAULT: '#8cc686',
+        dark: '#1bb279'
+      },
 
       black: colors.black,
       white: colors.white,

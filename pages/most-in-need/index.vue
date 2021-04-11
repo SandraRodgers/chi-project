@@ -6,6 +6,7 @@
                 <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white py-4 md:pt-6 lg:pt-8">Most In Need</h1>
                 <div class="flex flex-col px-4 w-11/12 mb-8">
                     <block-content :blocks="child" v-for="child in mostInNeedIntro[0].description" :key="child._id" />
+                    <p>Scroll down to see our most-in-need chihuahuas.</p>
                 </div>
             </div>
             <hr class="h-2 w-11/12 mb-10" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">

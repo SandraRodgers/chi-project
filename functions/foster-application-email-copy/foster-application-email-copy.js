@@ -8,16 +8,15 @@ exports.handler = async (event) => {
 
   const data = JSON.parse(event.body)
   if (!data.entireMessage.contactName || !data.entireMessage.contactEmail) {
-    console.log(data)
     return { statusCode: 422, body: 'Name, email, and message are required.' }
   }
 
   const mailgunData = {
-    //Sent from applicant
-    from: data.entireMessage.contactEmail,
-    //Send to CRT
-    to: CONTACT_TO_EMAIL_ADDRESS,
-    'h:Reply-To': data.entireMessage.contactEmail,
+    //From address is CRT:
+    from: CONTACT_TO_EMAIL_ADDRESS,
+    //Send copy to applicant:
+    to: data.entireMessage.contactEmail,
+    'h:Reply-To': CONTACT_TO_EMAIL_ADDRESS,
     subject: `New contact from ${data.entireMessage.contactName}`,
     html: `
     <p>Name: ${data.entireMessage.contactName}</p>
