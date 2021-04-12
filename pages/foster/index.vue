@@ -700,7 +700,6 @@ export default {
   data () {
         return {
           messages: [],
-          copyMessages: [],
           entireMessage: {
             contactName: this.contactName,
               contactEmail: this.contactEmail,
@@ -777,17 +776,38 @@ export default {
       methods: {
         sendMessage () {
           this.messages = []
-          this.copyMessages = []
           this.triggerSendMessageFunction()
-          // this.sendCopyMessage()
         },
-        // sendCopyMessage () {
-        //   this.copyMessages = []
-        //   console.log(this.entireMessage)
-        //   this.triggerSendCopyMessageFunction()
-        // },
         cancelMessage (){
-
+          this.$toast.show({
+            title: 'Cancel submission',
+            message: 'Do you want to cancel your submission?',
+            classToast: 'bg-white',
+            classTitle: 'text-carolinaBlue',
+            classMessage: 'text-carolinaBlue',
+            classClose: 'text-carolinaBlue',
+            classTimeout: 'bg-carolinaBlue',
+            classLabel: 'text-carolinaBlue',
+            primary: {
+              label: 'Yes', action: () => {
+                this.resetForm() 
+              }
+            },
+            secondary: { 
+              label: 'No, continue working on form', action: () => {
+                  this.$toast.show({
+                    type: 'success',
+                    title: 'Continue form',
+                    message: '',
+                    classToast: 'bg-seaGreen-dark',
+                    classTitle: 'text-seaGreen-light',
+                    classMessage: 'text-seaGreen-light',
+                    classClose: 'text-seaGreen-light',
+                    classTimeout: 'bg-seaGreen',
+                  })
+              }},
+            timeout: false,
+          })
         },
         resetForm () {
           this.entireMessage.messages = []
@@ -862,35 +882,38 @@ export default {
           this.entireMessage.contactPersonalReferenceOne = ''
           this.entireMessage.contactPersonalReferenceTwo = ''
         },
+        //POST to Mailgun via netlify
         async triggerSendMessageFunction () {
-          // try {
-          //   const response1 = await this.$axios.$post('/.netlify/functions/foster-application-email', {entireMessage: this.entireMessage})
-          //   this.messages.push({ type: 'success1', text: response1 })
-          // } catch (error) {
-          //   this.messages.push({ type: 'error1', text: error.response1.data })
-          // }
-          try {
-            console.log('hit')
-            console.log(this.entireMessage)
-            const response = await this.$axios.$post('/.netlify/functions/foster-application-email-copy', {entireMessage: this.entireMessage})
-            
-            // this.resetForm()
-            this.copyMessages.push({ type: 'success2', text: response })
-          } catch (error) {
-            this.copyMessages.push({ type: 'error2', text: error.response.data })
+          try{
+            const response = await this.$axios.$post('/.netlify/functions/foster-application-email', {entireMessage: this.entireMessage})
+            this.$toast.show({
+              type: 'success',
+              title: 'Success',
+              message: 'Message sent',
+              classToast: 'bg-seaGreen-dark',
+              classTitle: 'text-seaGreen-light',
+              classMessage: 'text-seaGreen-light',
+              classClose: 'text-seaGreen-light',
+              classTimeout: 'bg-seaGreen',
+            })
+            this.resetForm()
+            this.messages.push({ type: 'success1', text: response })
           }
-        },
-        // async triggerSendCopyMessageFunction(){
-        //   try {
-        //     const response = await this.$axios.$post('/.netlify/functions/foster-application-email-copy', {entireMessage: this.entireMessage})
-        //     this.resetForm()
-        //     this.copyMessages.push({ type: 'success', text: response })
-        //   } catch (error) {
-        //     this.copyMessages.push({ type: 'error', text: error.response.data })
-        //   }
-        // }
+          catch (error) {
+            this.$toast.show({
+              type: 'danger',
+              title: 'Error',
+              message: 'Please Try Again',
+              classToast: 'bg-red-600',
+              classTitle: 'text-red-100',
+              classMessage: 'text-red-100',
+              classClose: 'text-red-100',
+              classTimeout: 'bg-red-400'
+            })
+            this.messages.push({ type: 'error1', text: error.response.data })
+          }
+        }
       }
-  
   }
 </script>
 
@@ -898,5 +921,9 @@ export default {
 p {
  padding-bottom: 14px;
  font-size: 18px;
+}
+
+.-mb-px.flex.items-center.justify-center {
+  color: orange !important;
 }
 </style>

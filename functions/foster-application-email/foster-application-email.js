@@ -13,10 +13,9 @@ exports.handler = async (event) => {
   }
 
   const mailgunData = {
-    //Sent from applicant
-    from: data.entireMessage.contactEmail,
-    //Send to CRT
-    to: CONTACT_TO_EMAIL_ADDRESS,
+    from: `Chihuahua-Rescue-And-Transport ${FROM_EMAIL_ADDRESS}`,
+    //In test mode can only send to verified emails
+    to: `${CONTACT_TO_EMAIL_ADDRESS}, ${data.entireMessage.contactEmail}`,
     'h:Reply-To': data.entireMessage.contactEmail,
     subject: `New contact from ${data.entireMessage.contactName}`,
     html: `
