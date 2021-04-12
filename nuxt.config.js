@@ -62,7 +62,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/fontawesome',
     "@nuxtjs/sanity",
-    '@nuxt/http'
+    '@nuxt/http',
+    ['nuxt-tailvue', {toast: true}],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
