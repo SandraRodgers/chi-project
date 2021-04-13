@@ -9,22 +9,15 @@
             </div>
             <block-content :blocks="child" v-for="child in fosterInfo[0].description" :key="child._id" />
           </div>
+          
           <!-- Foster Application Form -->
           <div class="flex flex-col items-center justify-center w-12/12 py-8">
             <h1 class="title text-2xl md:text-2xl lg:text-2xl font-bold">
               Foster Application Form
             </h1>
 
-          <!-- <article v-for="msg in messages"
-            :key="msg.text"
-            class="message"
-            :class="msg.type === 'success' ? 'is-success' : 'is-danger'">
-            <div class="message-body">
-              {{ msg.text  }}
-            </div>
-          </article> -->
-
           <section class="contact-form w-11/12 py-4">
+            
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">Name:</label>
               <div class="control w-8/12">
