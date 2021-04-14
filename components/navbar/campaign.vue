@@ -5,7 +5,7 @@
             <nuxt-link :to="'/'">
                 <img :src="imageUrlFor(logo)" class="lg:flex md:hidden hidden mr-4 -mt-8 absolute top-0 h-72 -left-0 z-50"/>
             </nuxt-link>
-            <p class="flex text-white text-xl">Sponsor a pup's journey to becoming heartworm free! <nuxt-link :to="{ path: '/donate' }"><div class="cursor-pointer transform hover:text-middleYellow transition-all duration-500 font-medium hover:scale-125 hover:font-black ml-6">DONATE NOW</div></nuxt-link></p>
+            <nuxt-link :to="{ path: '/donate' }"><div class="flex text-white text-xl">Sponsor a pup's journey to becoming heartworm free! <div class="cursor-pointer transform hover:text-middleYellow transition-all duration-500 font-medium hover:scale-125 hover:font-black ml-6">DONATE NOW</div></div></nuxt-link>
         </div>
         <!-- mobile -->
         <div class="bg-black opacity-90 text-center py-2 sm:hidden">

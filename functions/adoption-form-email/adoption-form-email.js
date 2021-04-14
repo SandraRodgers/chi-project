@@ -7,16 +7,22 @@ exports.handler = async (event) => {
   }
 
   const data = JSON.parse(event.body)
-  if (!data.message || !data.contactName || !data.contactEmail) {
+  if ( !data.Name || !data.Email) {
     return { statusCode: 422, body: 'Name, email, and message are required.' }
   }
+
+  let messages = [];
+
+  Object.entries(data).forEach(([key, value]) => {
+    messages.push(`<b>${key }:</b> ` + `<div>${ value}</div>`);
+  })
 
   const mailgunData = {
     from: FROM_EMAIL_ADDRESS,
     to: CONTACT_TO_EMAIL_ADDRESS,
-    'h:Reply-To': data.contactEmail,
-    subject: `New contact from ${data.contactName}`,
-    text: `Name: ${data.contactName}\nEmail: ${data.contactEmail}\nMessage: ${data.message}`
+    'h:Reply-To': data.Email,
+    subject: `New contact from ${data.Name}`,
+    html: messages
   }
 
   return mailgun.messages().send(mailgunData).then(() => ({

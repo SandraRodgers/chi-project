@@ -13,11 +13,12 @@
           <!-- Adoption Application Form -->
           <div class="flex flex-col items-center justify-center w-12/12 py-8">
             <h1 class="title text-2xl md:text-2xl lg:text-2xl font-bold">
-
+              Adoption Application Form
             </h1>
+          
           <section class="contact-form w-11/12 py-4">
           <div v-for="(formQuestion) in adoptApplicationQuestions" :key="formQuestion.id">
-       
+      
           <div v-if="formQuestion.type === 'input'">
             <div class="field flex border border-gray-300 w-12/12 py-2 px-2">
               <label class="flex items-center label w-4/12 pl-4">{{formQuestion.question}}</label>
@@ -106,11 +107,69 @@ const queryAdoptApplication = groq `*[_type == 'formQuestionAdoptionApplication'
           this.triggerSendMessageFunction()
         },
         cancelMessage (){
-
+          this.$toast.show({
+            title: 'Cancel submission',
+            message: 'Do you want to cancel your submission?',
+            classToast: 'bg-white',
+            classTitle: 'text-carolinaBlue',
+            classMessage: 'text-carolinaBlue',
+            classClose: 'text-carolinaBlue',
+            classTimeout: 'bg-carolinaBlue',
+            classLabel: 'text-carolinaBlue',
+            primary: {
+              label: 'Yes', action: () => {
+                this.resetForm() 
+              }
+            },
+            secondary: { 
+              label: 'No, continue working on form', action: () => {
+                  this.$toast.show({
+                    type: 'success',
+                    title: 'Continue form',
+                    message: '',
+                    classToast: 'bg-seaGreen-dark',
+                    classTitle: 'text-seaGreen-light',
+                    classMessage: 'text-seaGreen-light',
+                    classClose: 'text-seaGreen-light',
+                    classTimeout: 'bg-seaGreen',
+                  })
+              }},
+            timeout: false,
+          })
         },
         resetForm () {
           this.response = []
-        }
+        },
+        async triggerSendMessageFunction () {
+        console.log('hit')
+          try {
+            const response = await this.$axios.$post('/.netlify/functions/adoption-form-email', this.applicationObj)
+            this.$toast.show({
+              type: 'success',
+              title: 'Success',
+              message: 'Message sent',
+              classToast: 'bg-seaGreen-dark',
+              classTitle: 'text-seaGreen-light',
+              classMessage: 'text-seaGreen-light',
+              classClose: 'text-seaGreen-light',
+              classTimeout: 'bg-seaGreen',
+            })
+            this.resetForm()
+            this.messages.push({ type: 'success', text: response })
+          } catch (error) {
+            this.$toast.show({
+              type: 'danger',
+              title: 'Error',
+              message: 'Please Try Again',
+              classToast: 'bg-red-600',
+              classTitle: 'text-red-100',
+              classMessage: 'text-red-100',
+              classClose: 'text-red-100',
+              classTimeout: 'bg-red-400'
+            })
+            this.messages.push({ type: 'error', text: error.response.data })
+          }
+        } 
       },
       watch: {
         applicationArr(){
@@ -120,15 +179,6 @@ const queryAdoptApplication = groq `*[_type == 'formQuestionAdoptionApplication'
           console.log(this.applicationObj)
         }
       },
-      async triggerSendMessageFunction () {
-          try {
-            const response = await this.$axios.$post('/.netlify/functions/adoption-form-email', this.applicationObj)
-            this.resetForm()
-            this.messages.push({ type: 'success', text: response })
-          } catch (error) {
-            this.messages.push({ type: 'error', text: error.response.data })
-          }
-        } 
     }
 </script>
 
