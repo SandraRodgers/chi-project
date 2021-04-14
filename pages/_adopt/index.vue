@@ -16,7 +16,7 @@
               Adoption Application Form
             </h1>
           
-          <section class="contact-form w-11/12 py-4">
+          <section class="contact-form w-9/12 py-4">
           <div v-for="(formQuestion) in adoptApplicationQuestions" :key="formQuestion.id">
       
           <div v-if="formQuestion.type === 'input'">
@@ -51,12 +51,12 @@
             <div class="w-2/6 flex justify-around">
 
               <div class="control">
-                <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border border-middleYellow  text-black" @click="sendMessage">
+                <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border rounded-sm border-middleYellow  text-black" @click="sendMessage">
                   Send Message
                 </button>
               </div>
               <div class="control">
-                <button class="button is-text border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8  text-black" @click="cancelMessage">
+                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8 text-black" @click="cancelMessage">
                   Cancel
                 </button>
               </div>
@@ -78,7 +78,6 @@ const queryAdoptApplication = groq `*[_type == 'formQuestionAdoptionApplication'
       async fetch() {
         this.adoptInfo = await this.$sanity.fetch(queryAdopt)
         this.adoptApplicationQuestions = await this.$sanity.fetch(queryAdoptApplication)
-            // return { adoptInfo, adoptApplicationQuestions }
         },
       data(){
         return {
@@ -111,11 +110,11 @@ const queryAdoptApplication = groq `*[_type == 'formQuestionAdoptionApplication'
             title: 'Cancel submission',
             message: 'Do you want to cancel your submission?',
             classToast: 'bg-white',
-            classTitle: 'text-carolinaBlue',
-            classMessage: 'text-carolinaBlue',
-            classClose: 'text-carolinaBlue',
+            classTitle: 'text-gray-800',
+            classMessage: 'text-gray-700',
+            classClose: 'text-gray-700',
             classTimeout: 'bg-carolinaBlue',
-            classLabel: 'text-carolinaBlue',
+            classLabel: 'text-gray-700',
             primary: {
               label: 'Yes', action: () => {
                 this.resetForm() 
@@ -141,7 +140,6 @@ const queryAdoptApplication = groq `*[_type == 'formQuestionAdoptionApplication'
           this.response = []
         },
         async triggerSendMessageFunction () {
-        console.log('hit')
           try {
             const response = await this.$axios.$post('/.netlify/functions/adoption-form-email', this.applicationObj)
             this.$toast.show({

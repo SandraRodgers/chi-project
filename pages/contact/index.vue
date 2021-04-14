@@ -52,7 +52,7 @@
                 </button>
               </div>
               <div class="control">
-                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8  text-black" @click="cancelMessage">
+                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8 text-black" @click="cancelMessage">
                   Cancel
                 </button>
               </div>
