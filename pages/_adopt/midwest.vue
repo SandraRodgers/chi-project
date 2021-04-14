@@ -24,12 +24,12 @@
         </div> -->
         <div class="flex justify-center w-10/12 md:w-10/12 lg:w-11/12">
         <div class="cards-container items-center  py-3 flex flex-wrap md:flex-row lg:flex-row xl:flex-row w-10/12 md:w-10/12 lg:w-11/12 lg:w-screen">
-        <div v-for="(chihuahua) in chihuahuas" :key="chihuahua.id" class="card shadow-md rounded w-72 md:w-64 lg:w-64 sm:w-72  flex flex-col mx-10 m-6">
+        <div v-for="(chihuahua) in chihuahuas" :key="chihuahua.id" class="card shadow-md rounded w-72 md:w-64 lg:w-64 sm:w-72 flex flex-col mx-10 m-6 shadow-lg">
             <img class="img rounded-t h-40 object-cover" :src="imageUrlFor(chihuahua.mainImage)"/>
             <div class="rounded-b flex flex-col justify-around items-center card-text bg-white h-36">
                 <p class="card-text-description text-md sm:text-md md:text-sm lg:text-sm font-normal px-4"> {{
                 chihuahua.tagline}}</p>
-                <nuxt-link :to="chihuahua.slug.current" tag="button" class="text-sm bg-middleYellow w-5/6 text-black font-semibold py-1 px-2">
+                <nuxt-link :to="chihuahua.slug.current" tag="button" class="text-sm bg-middleYellow w-4/6 text-black py-2 px-2 rounded-sm hover:opacity-70">
                 Read More
                 </nuxt-link>
             </div>

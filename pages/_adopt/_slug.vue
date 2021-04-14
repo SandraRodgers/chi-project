@@ -51,7 +51,7 @@
               </div>
                   <block-content :blocks="child" v-for="child in chihuahua.description" :key="child._id" />
                   <div class="flex justify-center">
-                    <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black">Adoption Application</nuxt-link>
+                    <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black hover:opacity-70 rounded-sm">Adoption Application</nuxt-link>
                   </div>
                 </div>
                 <div class="flex px-4 w-2/6 justify-end">

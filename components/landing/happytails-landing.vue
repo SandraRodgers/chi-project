@@ -9,7 +9,7 @@
                     <h3 class="title volunteer-heading text-2xl md:text-3xl lg:text-3xl font-bold pb-3 pt-6">Happy Tails</h3>
                     <h5 class="text-xl font-semibold">PB and Sandra</h5>
                     <p class="py-6 md:py-6 lg:py-8 px-11 text-center overflow-scroll text-sm md:text-lg lg:text-lg font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.</p>
-                    <nuxt-link :to="{ path: `/happy-tails`}" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black">Read More</nuxt-link>
+                    <nuxt-link :to="{ path: `/happy-tails`}" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black rounded-sm hover:opacity-70">Read More</nuxt-link>
                 </div>
                 <div class="flex justify-center items-center w-3/6 py-6">
                 <img class="volunteer-pic h-64 md:h-72 lg:h-80" src="~assets/images/MeandPB.jpg"/>

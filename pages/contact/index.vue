@@ -47,12 +47,12 @@
             <div class="field flex justify-around w-12/12 py-4 px-2 is-grouped">
             <div class="w-2/6 flex justify-around">
               <div class="control">
-                <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border rounded-sm border-middleYellow  text-black" @click="sendMessage">
+                <button class="button is-link bg-middleYellow text-sm p-1 md:p-2 lg:p-4 my-8 border rounded-sm border-middleYellow text-black hover:opacity-70" @click="sendMessage">
                   Send Message
                 </button>
               </div>
               <div class="control">
-                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8 text-black" @click="cancelMessage">
+                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-1 md:p-2 lg:p-4 my-8 text-black hover:opacity-70 hover:opacity-70" @click="cancelMessage">
                   Cancel
                 </button>
               </div>
