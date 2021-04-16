@@ -1,6 +1,6 @@
 <template>
-    <div class="nav-sub absolute z-20">
-        <div class="pt-20 lg:flex md:flex flex-row-reverse content-around bg-transparent right-0 hidden fixed mt-6">
+    <div class="nav-sub z-20">
+        <div class="lg:flex md:flex flex-row-reverse content-around bg-transparent right-0 hidden">
             <div class="relative z-20 flex lg:space-x-12 space-x-12 md:space-x-6 text-lg md:text-md bg-carolinaBlue  px-4 py-2 text-white rounded-b-lg border-b border-opacity-25 border-starCommandBlue">
                 <p @mouseenter="showDropdown" class="transform hover:text-black transition-all duration-500 font-medium hover:scale-105 cursor-pointer">
                     CHIHUAHUAS 

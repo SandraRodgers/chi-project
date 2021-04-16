@@ -2,9 +2,9 @@
     <div class="w-screen">
 
         <!-- Mobile Menu Closed -->
-        <div class="fixed bg-transparent z-20 lg:hidden md:hidden w-screen">
-            <div class="w-screen absolute h-24 flex items-end bg-white">
-                <div @click="toggleMobileMenu" class="flex justify-center items-end pl-4 pb-5 w-16 h-full relative">
+        <div class="bg-transparent z-20 lg:hidden md:hidden w-screen">
+            <div class="w-screen flex items-end bg-white h-16">
+                <div @click="toggleMobileMenu" class="flex pl-4 pb-5 w-16 relative">
                     <div class="">
                         <svg class="fill-current text-black" viewBox="0 0 100 70" width="40" height="20">
                             <rect width="90" height="10"></rect>
@@ -22,7 +22,7 @@
         </div>
 
         <!-- Desktop -->
-        <div class="w-full nav-main pt-16 pb-4 fixed z-30 lg:flex md:flex flex-row-reverse content-around py-2 pr-8 bg-white hidden" @mouseenter="hideDropdown">
+        <div class="w-full nav-main pb-4 z-30 lg:flex md:flex flex-row-reverse content-around py-2 pr-8 bg-white hidden" @mouseenter="hideDropdown">
             <div class="flex space-x-20 lg:space-x-20 md:space-x-12 text-lg lg:text-lg md:text-md">
                 <nuxt-link :to="{ path: `/about` }">
                     <p class="cursor-pointer z-50 relative cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">ABOUT</p>

@@ -2,7 +2,7 @@
 
 <div>
     <!-- Desktop -->
-    <div class="bg-opacity-80 hidden xl:flex lg:flex sm:hidden md:flex shadow-lg">
+    <div class="bg-opacity-80 hidden xl:flex lg:flex sm:hidden md:flex shadow-lg z-10">
         <img  @mouseenter="hideDropdown" src="@/assets/images/banner_desktop11.png"/>
     </div>
     <!-- Mobile -->

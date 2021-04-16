@@ -1,6 +1,6 @@
 <template>
   <landing
-    class="w-screen" 
+    class="" 
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
     :mostInNeed="mostInNeed"
@@ -51,15 +51,12 @@ export default {
 }
 
 .body {
-  height: 150vh;
 }
 
 html {
   background-color: black;
   font-family: "Poppins";
   font-weight: 300;
-  width: 100vw;
-
 }
 
 .title {

@@ -1,7 +1,7 @@
 <template>
-    <div class="campaign fixed z-40 w-full">
+    <div class="campaign z-40 w-screen relative">
         <!-- desktop -->
-        <div class="bg-black flex justify-center opacity-90 text-center sm:hidden md:flex hidden lg:flex flex hidden py-2">
+        <div class="bg-black flex justify-center opacity-100 text-center sm:hidden md:flex hidden lg:flex flex hidden py-2 z-60 relative">
             <nuxt-link :to="'/'">
                 <img :src="imageUrlFor(logo)" class="lg:flex md:hidden hidden mr-4 -mt-8 absolute top-0 h-72 :h-40 -left-0 z-50"/>
             </nuxt-link>

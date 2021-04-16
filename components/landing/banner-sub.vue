@@ -1,5 +1,5 @@
 <template>
-    <div class="h-40 mx-10 pt-4 relative bottom-0 lg:flex md:flex sm:hidden hidden">
+    <div class="h-40 mx-10 relative bottom-0 lg:flex md:flex sm:hidden hidden">
         <div class="h-full flex items-center">
             <div class="flex flex-col w-1/3">
                 <div class="flex justify-center items-center ">
