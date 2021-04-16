@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen flex flex-col sticky top-0 z-50" :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}">
+    <div class="w-screen flex flex-col sticky top-0 z-40" :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}">
 <campaign/>
 <nav-main/>
 <nav-sub/>

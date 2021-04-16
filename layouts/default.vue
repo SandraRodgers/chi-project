@@ -1,11 +1,12 @@
 <template>
-  <div class="">
+  <div>
     <mobile-menu/>
     <navbar/>
     <Nuxt 
+    class="relative -top-12"
     :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}" 
     />
-    <!-- <footer-main/> -->
+    <footer-main/>
   </div>
 </template>
 
@@ -24,6 +25,5 @@ export default {
 <style>
 html {
   margin: 0;
-  /* width: 100vw; */
 }
 </style>

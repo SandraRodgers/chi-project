@@ -3,7 +3,7 @@
 <p>Copyright &#169; {{getYear}}</p>
     </div> -->
    <footer :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}"
-    class="footer bg-black opacity-90 relative pt-1  text-white lg:px-56 px-10">
+    class="footer bg-black opacity-90 relative pt-1  text-white lg:px-56 px-10 z-10">
     <div class="">
 
         <div class="sm:flex sm:mt-8">

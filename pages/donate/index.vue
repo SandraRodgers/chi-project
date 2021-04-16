@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-whitesmoke pt-28 lg:pt-40 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-    <hr class="h-2 mt-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+  <div class="bg-whitesmoke pt-10 lg:pt-10 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
+    <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     <div class="title text-4xl pt-10 font-bold bg-white w-11/12 flex justify-center">Donate</div>
       <p class="bg-white w-11/12 text-lg flex justify-center text-center pt-10">There are several ways to donate. You may donate by check, on our Facebook page, or right here on this page using your debit/credit card or Paypal.</p>
         <div class="title text-2xl pt-10 font-bold bg-white w-11/12 flex justify-center">Check or Money Order</div>

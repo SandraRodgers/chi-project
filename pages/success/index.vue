@@ -1,6 +1,6 @@
 <template>
   <div class="bg-whitesmoke pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-    <div class="bg-whitesmoke pt-28 lg:pt-40 flex flex-col items-center justify-center w-full">
+    <div class="bg-whitesmoke pt-10 lg:pt-10 flex flex-col items-center justify-center w-full">
       <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         <h3 class="title bg-white text-2xl md:text-3xl lg:text-3xl font-bold pt-6 w-11/12 flex justify-center">{{successIntro[0].title}}</h3>
         <div class="w-11/12">
