@@ -5,7 +5,7 @@
     <Nuxt 
     :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}" 
     />
-    <footer-main/>
+    <!-- <footer-main/> -->
   </div>
 </template>
 

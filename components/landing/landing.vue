@@ -1,5 +1,5 @@
 <template>
-    <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-whitesmoke w-full">
+    <div :class="{'hidden': hidePage, 'flex flex-col': !hidePage}" class="pt-24 bg-whitesmoke w-screen">
         <banner/>
         <banner-sub/>
         <mission 
@@ -12,7 +12,7 @@
         <our-impact
             :ourImpact="ourImpact" 
         />
-        <footer/>
+        <!-- <footer/> -->
     </div>
 </template>
 

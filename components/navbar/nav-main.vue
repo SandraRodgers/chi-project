@@ -2,7 +2,7 @@
     <div class="w-screen">
 
         <!-- Mobile Menu Closed -->
-        <div class="fixed bg-transparent z-20 lg:hidden w-screen">
+        <div class="fixed bg-transparent z-20 lg:hidden md:hidden w-screen">
             <div class="w-screen absolute h-24 flex items-end bg-white">
                 <div @click="toggleMobileMenu" class="flex justify-center items-end pl-4 pb-5 w-16 h-full relative">
                     <div class="">
@@ -22,13 +22,23 @@
         </div>
 
         <!-- Desktop -->
-        <div class="w-full nav-main pt-16 pb-4 fixed z-30 lg:flex flex-row-reverse content-around py-2 pr-8 bg-white hidden" @mouseenter="hideDropdown">
-            <div class="flex space-x-20 text-lg">
-                <nuxt-link :to="{ path: `/about` }"><p class="cursor-pointer z-50 relative cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">ABOUT</p></nuxt-link>
-                <nuxt-link :to="{ path: `/events` }"><p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">EVENTS</p></nuxt-link>
-                <nuxt-link :to="{ path: `/policies` }"><p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">POLICIES</p></nuxt-link>
-                <nuxt-link :to="{ path: `/success` }"><p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">SUCCESS STORIES</p></nuxt-link>
-                <nuxt-link :to="{ path: `/contact` }"><p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">CONTACT US</p></nuxt-link>
+        <div class="w-full nav-main pt-16 pb-4 fixed z-30 lg:flex md:flex flex-row-reverse content-around py-2 pr-8 bg-white hidden" @mouseenter="hideDropdown">
+            <div class="flex space-x-20 lg:space-x-20 md:space-x-12 text-lg lg:text-lg md:text-md">
+                <nuxt-link :to="{ path: `/about` }">
+                    <p class="cursor-pointer z-50 relative cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">ABOUT</p>
+                </nuxt-link>
+                <nuxt-link :to="{ path: `/events` }">
+                    <p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">EVENTS</p>
+                </nuxt-link>
+                <nuxt-link :to="{ path: `/policies` }">
+                    <p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">POLICIES</p>
+                </nuxt-link>
+                <nuxt-link :to="{ path: `/success` }">
+                    <p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">SUCCESS STORIES</p>
+                </nuxt-link>
+                <nuxt-link :to="{ path: `/contact` }">
+                    <p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">CONTACT US</p>
+                </nuxt-link>
             </div>
         </div>
     </div>

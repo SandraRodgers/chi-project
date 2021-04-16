@@ -78,12 +78,9 @@ module.exports = {
     },
     extend: {
       backgroundImage: theme => ({
-        'banner1': "url('~assets/images/banner_1.png')",
-        'banner2': "url('~assets/images/banner_2.png')",
-        'banner3a': "url('~assets/images/banner3a.png')",
+      'banner-desktop': "url('~assets/images/banner_desktop11.png')",
+      'banner-background': "url('~assets/images/banner_background.png')",
        'blue-dots': "url('~assets/images/bluebackground.png')",
-       'yellow-stars': "url('~assets/images/yellowstars.jpg')",
-
       })
     }
   },
