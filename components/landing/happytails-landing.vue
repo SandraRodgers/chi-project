@@ -1,53 +1,49 @@
 <template>
-    <div class="flex justify-center bg-whitesmoke py-6 w-full">
+    <div class="bg-whitesmoke flex justify-center">
+        <div class="flex flex-col mt-5 md:mt-10 lg:mt-10 w-11/12 lg:w-9/12 md:w-9/12 sm:w-11/12 shadow-2xl rounded-md">
+        <div class="flex bg-white rounded-md" >
+            <hr class="bg-starCommandBlue h-2 w-full rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        </div>
         <!-- desktop -->
-        <div class="shadow-lg flex flex-col items-center w-10/12 shadow-2xl rounded-md">
-        <hr class="sm:flex hidden items-center h-2 w-full bg-clip-padding rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
-        <div class="sm:flex hidden justify-center">
-            <div class="h-full flex bg-white">
-                <div class="flex flex-col items-center justify-center w-3/6 pt-6 pb-10">
-                    <h3 class="title volunteer-heading text-2xl md:text-3xl lg:text-3xl font-bold pb-3 pt-6">Happy Tails</h3>
-                    <h5 class="text-xl font-semibold">PB and Sandra</h5>
-                    <p class="py-6 md:py-6 lg:py-8 px-11 text-center overflow-scroll text-sm md:text-lg lg:text-lg font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.</p>
-                    <nuxt-link :to="{ path: `/happy-tails`}" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black rounded-sm hover:opacity-70">Read More</nuxt-link>
+        <div class="flex justify-center flex-col bg-clip-padding py-0 bg-white px-4">
+            <div class="flex flex-col items-center">
+                <h1 class="title flex justify-center text-2xl md:text-3xl lg:text-3xl bg-white pt-4 md:pt-6 lg:pt-8 sm:pt-4 font-bold">Happy Tails</h1>
+                <h2 class="py-4 font-semibold">Read about our most recent adoptions!</h2>
+            </div>
+            <div class="flex flex-col items-center py-6 md:py-6 lg:py-4 bg-white text-sm lg:text-base md:text:lg sm:text-sm font-light">
+                <div class="flex w-11/12 px-6">
+                    <div class="flex w-full">
+                        <block-content :blocks="child" v-for="child in happyTailsLanding.teaser" :key="child._id" /> 
+                    </div>
+                    <div class="flex w-full ml-4 h-52 justify-center">
+                        <img :src="imageUrlFor(happyTailsLanding.mainImage)"/>
+                    </div>
                 </div>
-                <div class="flex justify-center items-center w-3/6 py-6">
-                <img class="volunteer-pic h-64 md:h-72 lg:h-80" src="~assets/images/MeandPB.jpg"/>
-                </div>
+                
+                <nuxt-link :to="{ path: `/happytails` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-4 md:mt-6 lg:mt-6 w-3/5 md:w-2/5 lg:w-5/12 text-black rounded-sm hover:opacity-70">Learn More</nuxt-link>
             </div>
         </div>
-        <hr class="sm:flex hidden items-center h-2 w-full bg-clip-padding rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
-        </div>
-        <!-- mobile -->
-        <div class="sm:hidden flex flex-col items-center">
-            <div class="flex justify-center w-11/12">
-                <hr class="h-2 w-full bg-clip-padding rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
-            </div>
-        <div class="flex items-center justify-center flex-col bg-whitesmoke bg-clip-padding">
-            <h1 class="flex justify-center w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white pt-8">Happy Tails</h1>
-            <div class="flex justify-center w-11/12 py-6 bg-white">
-                <img class="volunteer-pic h-40" src="~assets/images/MeandPB.jpg"/>
-            </div>
-            <p class="flex flex-col items-center text-center w-11/12 py-4 px-6 bg-white text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh praesent tristique magna. Neque viverra justo nec ultrices dui sapien eget mi proin. Volutpat diam ut venenatis tellus in metus vulputate. Nam libero justo laoreet sit amet cursus sit amet.
-            </p>
-            <div class="flex justify-center w-11/12 bg-white">
-            <nuxt-link :to="{ path: `/happy-tails` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black">Read More</nuxt-link>
-            </div>
-            
-        </div>
-        <div class="flex sm:hidden justify-center w-11/12 pt-6 bg-white rounded-b-md">
-            <hr class="h-2 w-full bg-clip-padding rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <div class="flex justify-center pt-0 sm:pt-0 lg:pt-6 md:pt-6 bg-white rounded-b-md">
+            <hr class="bg-starCommandBlue h-2 w-full rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         </div>
         </div>
     </div>
 </template>
 
 <script>
+import sanity from "../../sanityClient"
+import imageUrlBuilder from "@sanity/image-url";
+const imageBuilder = imageUrlBuilder(sanity);
+
     export default {
-        
+        props: ['happyTailsLanding'],
+        methods: {
+            imageUrlFor(source) {
+                return imageBuilder.image(source);
+            },
+        },
+        mounted(){
+
+        }
     }
 </script>
-
-<style scoped>
-
-</style>

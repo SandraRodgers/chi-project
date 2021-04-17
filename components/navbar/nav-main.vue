@@ -15,7 +15,7 @@
                 </div>
                 <span class="w-screen flex justify-center bg-transparent mr-16 z-40">
                     <nuxt-link :to="'/'">
-                        <img :src="imageUrlFor(logo)" class="sm:h-40 md:h-56 h-40 relative top-20 md:top-36 sm:top-20"/>
+                        <img :src="imageUrlFor(logo)" class="sm:h-28 md:h-56 h-28 relative top-10 md:top-36 sm:top-10"/>
                     </nuxt-link>
                 </span>
             </div>

@@ -4,6 +4,7 @@
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
     :mostInNeed="mostInNeed"
+    :happyTailsLanding="happyTailsLanding"
   />
 </template>
 
@@ -24,15 +25,15 @@ export default {
       }`
       const ourImpact = await $sanity.fetch(queryOurImpact)
 
-    //Logo
-    // const queryLogo = groq`*[_type == 'landingBannerAndLogo']{imageFile}`
-    // const logo = await $sanity.fetch(queryLogo)
-
     //Most in Need
     const queryMostInNeed = groq`*[_type == 'mostInNeed' && current==true]`
     const mostInNeed = await $sanity.fetch(queryMostInNeed)
 
-    return { missionFirstParagraph, ourImpact, mostInNeed}
+    //HappyTails
+    const queryHappyTailsLanding = groq`*[_type == "happyTails"][0]`
+    const happyTailsLanding = await $sanity.fetch(queryHappyTailsLanding)
+
+    return { missionFirstParagraph, ourImpact, mostInNeed, happyTailsLanding }
         },
     
     computed: {

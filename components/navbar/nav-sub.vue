@@ -18,7 +18,7 @@
                 </nuxt-link>
             </div>
             <div :class="{'opacity-0 invisible': !this.$store.state.showAdoptDropdown, 'flex flex-col opacity-100 visible': this.$store.state.showAdoptDropdown}" 
-            class="absolute z-10 bg-white top-24 left-0 border border-opacity-25 border-davysGrey transition-opacity duration-800 ease-in rounded-sm">
+            class="absolute z-10 bg-white top-24 pt-6 right-96 border border-opacity-25 border-davysGrey transition-opacity duration-800 ease-in rounded-sm mr-24">
                 <div @mouseleave="hideDropdown" class="pt-8">
                 <nuxt-link :to="{ path: `/adopt/midwest` }" @click.native="hideDropdown"><p class="flex justify-center px-4 py-3 transform hover:text-black transition-all duration-500 font-medium hover:scale-110 hover:bg-gray-200">MIDWEST DOGS</p></nuxt-link>
                 <nuxt-link :to="{ path: `/adopt/southeast` }" @click.native="hideDropdown"><p class="flex justify-center px-4 py-3 transform hover:text-black transition-all duration-500 font-medium hover:scale-110 hover:bg-gray-200">SOUTHEAST DOGS</p></nuxt-link>

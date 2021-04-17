@@ -36,7 +36,3 @@ const imageBuilder = imageUrlBuilder(sanity);
         }
     }
 </script>
-
-<style scoped>
-
-</style>

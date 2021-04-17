@@ -2,13 +2,13 @@
 
 <div>
     <!-- Desktop -->
-    <div class="bg-opacity-80 hidden xl:flex lg:flex sm:hidden md:flex shadow-lg z-10">
-        <img  @mouseenter="hideDropdown" src="@/assets/images/banner_desktop11.png"/>
+    <div class="hidden w-screen xl:flex lg:flex sm:hidden md:flex shadow-lg z-10 ">
+        <img class="w-screen"  @mouseenter="hideDropdown" src="@/assets/images/banner_desktop11.png"/>
     </div>
     <!-- Mobile -->
     <div class="sm:flex flex-col lg:hidden md:hidden xl:hidden bg-opacity-80 z-10 w-screen">
         <div class="flex justify-center"> 
-            <img class="w-80 z-10 shadow-lg w-screen" src="@/assets/images/mobile_banner.png"/>
+            <img class="z-10 shadow-lg w-screen" src="@/assets/images/mobile_banner.png"/>
         </div>  
         
         <div class="flex items-center mt-4">

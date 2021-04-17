@@ -8,7 +8,7 @@
         <most-in-need
             :mostInNeed="mostInNeed"
         />
-        <happytails-landing/>
+        <happytails-landing :happyTailsLanding="happyTailsLanding"/>
         <our-impact
             :ourImpact="ourImpact" 
         />
@@ -26,7 +26,7 @@ import ourImpact from './our-impact'
 
     export default {
         components: { banner, bannerSub, mission, MostInNeed, happytailsLanding, ourImpact },
-        props: ['missionFirstParagraph', 'ourImpact', 'logo', 'mostInNeed'],
+        props: ['missionFirstParagraph', 'ourImpact', 'logo', 'mostInNeed', 'happyTailsLanding'],
         computed: {
             hidePage () {
                 return this.$store.state.showMobileMenu
