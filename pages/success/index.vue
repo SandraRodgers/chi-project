@@ -1,7 +1,8 @@
 <template>
   <div class="bg-whitesmoke pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
     <div class="bg-whitesmoke pt-10 lg:pt-10 flex flex-col items-center justify-center w-full">
-      <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+      <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+      <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
         <h3 class="title bg-white text-2xl md:text-3xl lg:text-3xl font-bold pt-6 w-11/12 flex justify-center">{{successIntro[0].title}}</h3>
         <div class="w-11/12">
           <div class="flex flex-col justify-content  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
@@ -13,13 +14,13 @@
             </div>
           </div>
         </div>
-
-      <hr class="h-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+      </div>
+      <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
   <!-- Success Story 1 -->
         <div class="bg-whitesmoke pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-        <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
-        <div class="flex items-center justify-center flex-col bg-white w-11/12">
+        <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
             <h1 class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-xl md:text-xl lg:text-3xl bg-white pt-4 md:pt-6 lg:pt-8 ">{{successStories[0].title}}</h1>
             <h2 class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-xl md:text-xl lg:text-xl bg-white pt-4 md:pt-6 lg:pt-8 ">{{successStories[0].subtitle}}</h2>
            <div class="px-14">
@@ -33,7 +34,7 @@
               </div>
             </div>
           </div>
-    <hr class="h-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+    <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
 
     <!-- Success Story 1 -->
     <div class="bg-whitesmoke pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
@@ -53,7 +54,7 @@
                   </div>
               </div>
             </div> 
-    <hr class="h-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+    <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
     </div>
     </div>
