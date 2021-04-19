@@ -4,9 +4,9 @@
       <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
         <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white py-4 md:pt-6 lg:pt-8">{{policy[0].title}}</h1>
           <div class="flex flex-col px-4 w-11/12 bg-white">
-            <div class="text-center py-4">
+            <div class="py-4 text-md lg:text-base">
+              <block-content :blocks="child" v-for="child in policy[0].description" :key="child._id" />
             </div>
-            <block-content :blocks="child" v-for="child in policy[0].description" :key="child._id" />
           </div>
         </div>
         <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
@@ -29,14 +29,14 @@ import groq from 'groq'
 
 p {
  padding-bottom: 14px;
- font-size: 18px;
 }
 
 h3 {
     font-size: 24px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    margin-top: 24px;
 }
 
 </style>
