@@ -42,35 +42,35 @@
                 <div class="w-1/4">
                     <img :src="imageUrlFor(event.image)"/>
                 </div>
-                <div class="w-2/4 ml-10">
-                    <div class="flex font-semibold">
-                        <div class="pr-5">{{event.event}}</div>
-                        <div>{{eventDate(event.date)}}</div>
+                <div class="w-3/4 lg:w-2/4 sm:w-3/4 ml-4 lg:ml-10 sm:ml-4 text-base lg:text-md md:text-base sm:text-base">
+                    <div class="w-4/4 flex flex-col lg:flex-row md:flex-row sm:flex-col font-semibold">
+                        <div class="pr-0 sm:pr-0 md:pr-5 lg:pr-5 pb-2">{{event.event}}</div>
+                        <div class="w-2/4 flex justify-end pb-2">{{eventDate(event.date)}}</div>
                     </div>
-                <div>{{event.address}}</div>
+                <div class="pb-2">{{event.address}}</div>
                 <div class="flex">
-                    <div class="pr-2">{{eventTime(event.startTime)}}</div>-<div class="pl-2">{{eventTime(event.endTime)}}</div>
+                    <div class="pr-2 pb-2">{{eventTime(event.startTime)}}</div>-<div class="pl-2 pb-2">{{eventTime(event.endTime)}}</div>
                 </div>
                 <div>
                     <block-content :blocks="event.description[0]" :key="event.description[0]._id" v-if="event.description.length" />
                 </div>
             </div>
         </div>
-    </div>
+        </div>
         <!-- Southwest -->
         <div class="flex items-center justify-center flex-col bg-white w-11/12" v-for="event in southWestEvents" :key="event.id">
             <div v-if="region === 'southwest'" class="flex justify-center py-10 text-lg">
                 <div class="w-1/4">
                     <img :src="imageUrlFor(event.image)"/>
                 </div>
-                <div class="w-2/4 ml-10">
-                    <div class="flex font-semibold">
-                        <div class="pr-5">{{event.event}}</div>
-                        <div>{{eventDate(event.date)}}</div>
+                <div class="w-3/4 lg:w-2/4 sm:w-3/4 ml-4 lg:ml-10 sm:ml-4 text-base lg:text-md md:text-base sm:text-base">
+                    <div class="w-4/4 flex flex-col lg:flex-row md:flex-row sm:flex-col font-semibold">
+                        <div class="pr-0 sm:pr-0 md:pr-5 lg:pr-5 pb-2">{{event.event}}</div>
+                        <div class="w-2/4 flex justify-end pb-2">{{eventDate(event.date)}}</div>
                     </div>
-                <div>{{event.address}}</div>
+                <div class="pb-2">{{event.address}}</div>
                 <div class="flex">
-                    <div class="pr-2">{{eventTime(event.startTime)}}</div>-<div class="pl-2">{{eventTime(event.endTime)}}</div>
+                    <div class="pr-2 pb-2">{{eventTime(event.startTime)}}</div>-<div class="pl-2 pb-2">{{eventTime(event.endTime)}}</div>
                 </div>
                 <div>
                     <block-content :blocks="event.description[0]" :key="event.description[0]._id" v-if="event.description.length" />

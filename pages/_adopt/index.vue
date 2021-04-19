@@ -137,10 +137,10 @@ const queryAdoptApplication = groq `*[_type == 'formQuestionAdoptionApplication'
       },
       watch: {
         applicationArr(){
-          console.log(this.application)
+          //
         },
         applicationObj(){
-          console.log(this.applicationObj)
+          //
         }
       },
     }
