@@ -6,10 +6,11 @@
     <div class="cards-container items-center md:justify-center lg:justify-center  py-3 flex flex-col md:flex-row lg:flex-row xl:flex-row w-6/6 md:w-5/6 sm-6/6 lg:w-screen">
         <div v-for="(chi, i) in mostInNeed" :key="chi.id" class="card w-72 md:w-64 lg:w-64 sm:w-72  flex flex-col mx-10 m-6 transition-opacity duration-500 shadow-lg">
             <img class="img rounded-t-md h-40 object-cover" :src="imageUrlFor(chi.mainImage)"/>
-            <div class="rounded-b-md flex flex-col justify-around items-center card-text bg-white h-36">
-                <p class="card-text-description text-md sm:text-md md:text-sm lg:text-sm"> {{
+            <div class="rounded-b-md flex flex-col justify-around items-center card-text bg-white h-40">
+                <p class="font-bold">{{chi.name}}</p>
+                <p class="card-text-description text-sm sm:text-sm md:text-sm lg:text-sm py-2"> {{
                 chi.tagline}}</p>
-                <nuxt-link :to="{ path: '/most-in-need', hash:`${mostInNeed[i].name}`}" tag="button" class="text-sm bg-middleYellow w-5/6 text-black py-2 px-2 rounded-sm hover:opacity-70">
+                <nuxt-link :to="{ path: '/most-in-need', hash:`${mostInNeed[i].name}`}" tag="button" class="text-sm bg-middleYellow w-5/6 text-black py-2 px-2 mt-2 rounded-sm hover:opacity-70">
                 Read More
                 </nuxt-link>
             </div>

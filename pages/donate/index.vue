@@ -8,7 +8,7 @@
         <div class="title text-lg lg:text-2xl sm:text-lg pt-10 font-bold bg-white w-11/12 flex justify-center text-center">Check or Money Order</div>
         <p class="bg-white w-11/12 pt-4 text-base lg:text-lg sm:text-base flex justify-center text-center px-1 lg:px-10 sm:px-1">You can send a check by mail. All checks or money orders should be made out to CRT. Please be sure to include your email address so that we can send you an electronic tax receipt! Mail your check to the following address:</p>
         <div class="bg-white flex justify-center w-11/12 py-10 text-xl">
-          <div class="flex flex-col font-semibold">
+          <div class="flex flex-col font-semibold border border-black p-4">
             <div>CRT</div>
             <div>P.O. Box 2844</div>
             <div>Durham, NC  27715</div>
@@ -16,19 +16,13 @@
         </div>
         
         <div class="flex justify-around items-center bg-white w-11/12">
-                    <img class="h-10 my-2" src="~assets/images/chi-sil-1-transparent.png"/>
-                    <img class="h-10 my-2 hidden lg:flex" src="~assets/images/chi-sil-2-transparent.png"/>
-                    <div class="title text-2xl my-2 font-bold">Credit/Debit</div>
-                    <img class="h-10 my-2" src="~assets/images/chi-sil-4-transparent.png"/>
-                    <img class="h-10 my-2 hidden lg:flex" src="~assets/images/chi-sil-5-transparent.png"/>
-                </div>
+          <img class="h-10 my-2" src="~assets/images/chi-sil-1-transparent.png"/>
+          <img class="h-10 my-2 hidden lg:flex" src="~assets/images/chi-sil-2-transparent.png"/>
+          <div class="title text-2xl my-2 font-bold">Credit/Debit</div>
+          <img class="h-10 my-2" src="~assets/images/chi-sil-4-transparent.png"/>
+          <img class="h-10 my-2 hidden lg:flex" src="~assets/images/chi-sil-5-transparent.png"/>
+        </div>
         <div class="flex justify-center py-8 bg-white w-11/12">
-          <!-- <div class="flex flex-col mt-16 items-center w-3/6">
-            <div class="flex justify-center text-center w-6/6">
-              <div class="title text-xl font-bold mb-10 w-4/6">Dexter thanks you for your donation!</div>
-            </div>
-            <img class="w-3/6" src="@/assets/images/chihuahua-sidewalk.jpeg"/>
-          </div> -->
           <iframe allowpaymentrequest="" frameborder="0" height="650px" name="donorbox" scrolling="no" seamless="seamless" src="https://donorbox.org/embed/crt-donations" style="max-width: 400px; min-width: 250px;" width="100%"></iframe>
         </div>
       </div>

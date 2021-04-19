@@ -29,6 +29,7 @@
               </div>
             </div>
           </div>
+          
           <div v-else>
             <div class="field flex border border-gray-300 w-12/12 py-2 px-1 lg:px-2 sm:px-1">
               <label class="flex items-center label w-4/12 pl-1 lg:pl-4 sm:pl-1 text-xs lg:text-base sm:text-xs">{{formQuestion.question}}</label>
@@ -51,15 +52,9 @@
           </div>
             <div class="field flex justify-around w-12/12 py-2 px-2 is-grouped">
             <div class="w-5/6 lg:w-2/6 sm:w-5/6 flex justify-around">
-
               <div class="control">
                 <button class="button is-link bg-middleYellow text-sm p-2 md:p-2 lg:p-4 sm:p-2 my-8 border rounded-sm border-middleYellow text-black hover:opacity-70" @click="sendMessage">
                   Send Message
-                </button>
-              </div>
-              <div class="control">
-                <button class="button is-text rounded-sm border border-carolinaBlue text-sm p-2 md:p-2 lg:p-4 sm:p-2 my-8 text-black hover:opacity-70" @click="cancelMessage">
-                  Cancel
                 </button>
               </div>
               </div>
@@ -89,7 +84,6 @@ const queryFosterApplication = groq `*[_type == 'formQuestionFosterApplication']
           messages: [],
           applicationArr: [],
           applicationObj: {}
-
         }
       },  
       methods:{
@@ -106,39 +100,6 @@ const queryFosterApplication = groq `*[_type == 'formQuestionFosterApplication']
           this.createMessage()
           this.messages = []
           this.triggerSendMessageFunction()
-        },
-        cancelMessage (){
-          this.$toast.show({
-            title: 'Cancel submission',
-            message: 'Do you want to cancel your submission?',
-            classToast: 'bg-white',
-            classTitle: 'text-gray-800',
-            classMessage: 'text-gray-700',
-            classClose: 'text-gray-700',
-            classTimeout: 'bg-carolinaBlue',
-            classLabel: 'text-gray-700',
-            classPrimary: 'text-red-800 bg-purple-200 border border-red',
-            classSecondary: 'text-red-800 bg-purple-200',
-            primary: {
-              label: 'Yes', action: () => {
-                this.resetForm() 
-              }
-            },
-            secondary: { 
-              label: 'No, continue working on form', action: () => {
-                  this.$toast.show({
-                    type: 'success',
-                    title: 'Continue form',
-                    message: '',
-                    classToast: 'bg-seaGreen-dark',
-                    classTitle: 'text-seaGreen-light',
-                    classMessage: 'text-seaGreen-light',
-                    classClose: 'text-seaGreen-light',
-                    classTimeout: 'bg-seaGreen',
-                  })
-              }},
-            timeout: false,
-          })
         },
         resetForm () {
           this.response = []

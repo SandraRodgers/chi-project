@@ -9,7 +9,7 @@
         </div>
         <!-- mobile -->
         <div class="bg-black opacity-90 text-center py-2 flex sm:flex md:hidden lg:hidden z-40 justify-center">
-            <p class="font-sans text-white text-sm justify-center">Save Shala. CLICK HERE</p>
+            <p class="font-sans text-white text-sm justify-center">Save a chihuahua. DONATE NOW</p>
         </div>
     </div>
 </template>

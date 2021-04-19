@@ -8,7 +8,7 @@
             <h1 class="title flex justify-center text-2xl md:text-3xl lg:text-3xl bg-white pt-4 md:pt-6 lg:pt-8 sm:pt-4 font-bold">Our Mission</h1>
             <div class="flex flex-col items-center text-center py-6 md:py-6 lg:py-8 bg-white text-sm lg:text-lg md:text:lg sm:text-sm font-light">
                 <block-content :blocks="child" v-for="child in missionFirstParagraph" :key="child._id" /> 
-                <nuxt-link :to="{ path: `/about` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-8 md:mt-6 lg:mt-10 w-3/5 md:w-2/5 lg:w-2/5 text-black rounded-sm hover:opacity-70">Learn More</nuxt-link>
+                <nuxt-link :to="{ path: `/about` }" tag="button" class="text-sm bg-middleYellow w-5/6 text-black py-2 px-2 mt-2 rounded-sm hover:opacity-70">Learn More</nuxt-link>
             </div>
         </div>
         <div class="flex justify-center pt-0 sm:pt-0 lg:pt-6 md:pt-6 bg-white rounded-b-md">
