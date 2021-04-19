@@ -10,7 +10,7 @@
           </div>
 
           <!-- Contact Form -->
-          <div class="flex flex-col items-center justify-center w-12/12 py-4 lg:py-8 sm:py-4">
+          <div class="flex flex-col items-center justify-center w-full py-4 lg:py-8 sm:py-4">
             <h1 class="title text-xl md:text-2xl lg:text-2xl sm:text-xl font-bold text-center">
               Contact Form
             </h1>
