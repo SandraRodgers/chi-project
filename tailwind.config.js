@@ -4,6 +4,7 @@ module.exports = {
   purge: {
     enabled: true,
     content: ['./node_modules/tv-toast/**/*.vue'],
+    './pages/**/*.{js,ts,jsx,tsx}',
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
