@@ -18,7 +18,7 @@ exports.handler = async (event) => {
   })
 
   const mailgunData = {
-    from: data.contactEmail,
+    from: data.Email,
     to: `${CONTACT_TO_EMAIL_ADDRESS}, ${data.Email}`,
     'h:Reply-To': data.Email,
     subject: `New Adoption Application from ${data.Name}`,

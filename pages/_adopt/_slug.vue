@@ -70,7 +70,7 @@
               </div>
             </div>
             <div class="flex justify-center">
-                  <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-2 md:p-2 lg:p-3 my-2 md:my-6 lg:my-10 w-5/5 md:w-5/5 lg:w-5/5 text-black hover:opacity-70 rounded-sm">Adoption Application</nuxt-link>
+                  <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-2 md:p-2 lg:p-4 sm:p-2 my-2 md:my-6 lg:my-10 w-5/5 md:w-5/5 lg:w-5/5 text-black hover:opacity-70 rounded-sm">Adoption Application</nuxt-link>
                 </div>
           </div>
         <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">

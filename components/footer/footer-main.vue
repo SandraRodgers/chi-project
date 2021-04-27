@@ -1,9 +1,9 @@
 <template>
    <footer :class="{'hidden': showMobileMenu, 'flex': !showMobileMenu}"
-    class="footer bg-black relative text-white mb-8 my-4">
+    class="footer flex justify-center bg-black relative text-white mb-8 my-4">
     <!-- desktop -->
-    <div>
-    <div class="hidden lg:flex md:flex sm:hidden w-full  px-10 lg:px-24 md:px-10">
+    <div class="">
+    <div class="hidden lg:flex md:flex  sm:hidden w-full  px-10 lg:px-24 md:px-10">
         <div class="flex w-7/12">
             <div class="flex flex-col w-7/12">
                 <span class="font-bold uppercase mb-2">SUPPORT US</span>

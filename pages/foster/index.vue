@@ -8,9 +8,9 @@
             <h2 class="font-semibold">If you would like to help by fostering a CRT rescue, please read the following information.</h2>
           </div>
           <div class="text-xs lg:text-base sm:text-xs">
-          <block-content :blocks="child" v-for="child in fosterInfo[0].description" :key="child._id" />
+            <block-content :blocks="child" v-for="child in fosterInfo[0].description" :key="child._id" />
           </div>
-          </div>
+        </div>
 
           <!-- Foster Application Form -->
           <div class="flex flex-col items-center justify-center w-12/12 py-4 lg:py-8 sm:py-4">
@@ -24,7 +24,7 @@
           <div v-if="formQuestion.type === 'input'">
             <div class="field flex border border-gray-300 w-12/12 py-2 px-1 lg:px-2 sm:px-1">
               <label class="flex items-center label w-4/12 pl-1 lg:pl-4 sm:pl-1 text-xs lg:text-base sm:text-xs">{{formQuestion.question}}</label>
-              <div class="control w-8/12">
+              <div class="w-8/12">
                 <input v-model="response[formQuestion.order]" class="input w-full bg-gray-200 border border-gray-300 py-1 py-1" type="text">
               </div>
             </div>
@@ -33,7 +33,7 @@
           <div v-else>
             <div class="field flex border border-gray-300 w-12/12 py-2 px-1 lg:px-2 sm:px-1">
               <label class="flex items-center label w-4/12 pl-1 lg:pl-4 sm:pl-1 text-xs lg:text-base sm:text-xs">{{formQuestion.question}}</label>
-              <div class="control w-8/12">
+              <div class="w-8/12">
                 <select v-model="response[formQuestion.order]" class="w-full bg-gray-200 border border-gray-300 py-1">
                   <option v-if="formQuestion.selectOptionOne">{{formQuestion.selectOptionOne}}</option>   
                   <option v-if="formQuestion.selectOptionTwo">{{formQuestion.selectOptionTwo}}</option>
@@ -52,11 +52,13 @@
           </div>
             <div class="field flex justify-around w-12/12 py-2 px-2 is-grouped">
             <div class="w-5/6 lg:w-2/6 sm:w-5/6 flex justify-around">
-              <div class="control">
-                <button class="button is-link bg-middleYellow text-sm p-2 md:p-2 lg:p-4 sm:p-2 my-8 border rounded-sm border-middleYellow text-black hover:opacity-70" @click="sendMessage">
-                  Send Message
-                </button>
-              </div>
+              <div class="flex flex-col items-center">
+                  <button class="button is-link bg-middleYellow text-sm p-2 md:p-2 lg:p-4 sm:p-2 my-8 border rounded-sm border-middleYellow hover:opacity-70" @click="sendMessage">
+                    Send Application
+                  </button>
+                  <div v-if="error" class="text-lg text-center text-red-600 font-bold animate-bounce">{{errorMessage}}</div>
+                  <div v-if="success" class="text-lg text-center text-green-600 font-bold animate-bounce">{{successMessage}}</div>
+                </div>
               </div>
             </div>
           </section>
@@ -68,14 +70,17 @@
 
 <script>
 import { groq } from '@nuxtjs/sanity'
-const queryFoster = groq`*[_type == 'information'&& name=='foster-process']`
-const queryFosterApplication = groq `*[_type == 'formQuestionFosterApplication'] | order(order asc)`
+
 
     export default {
-      async fetch() {
-        this.fosterInfo = await this.$sanity.fetch(queryFoster)
-        this.fosterApplicationQuestions = await this.$sanity.fetch(queryFosterApplication)
-        },
+      async asyncData({ $sanity }) {
+        const queryFoster = groq`*[_type == 'information'&& name=='foster-process']`
+        const queryFosterApplication = groq `*[_type == 'formQuestionFosterApplication'] | order(order asc)`
+        const fosterInfo = await $sanity.fetch(queryFoster)
+        const fosterApplicationQuestions = await $sanity.fetch(queryFosterApplication)
+        return { fosterInfo, fosterApplicationQuestions }
+      },
+      
       data(){
         return {
           response: [],
@@ -83,7 +88,11 @@ const queryFosterApplication = groq `*[_type == 'formQuestionFosterApplication']
           fosterApplicationQuestions: '',
           messages: [],
           applicationArr: [],
-          applicationObj: {}
+          applicationObj: {},
+          error: false,
+          errorMessage: "Error. Please try again.",
+          success: false,
+          successMessage: "Success! Application submitted"
         }
       },  
       methods:{
@@ -107,41 +116,35 @@ const queryFosterApplication = groq `*[_type == 'formQuestionFosterApplication']
         async triggerSendMessageFunction () {
           try {
             const response = await this.$axios.$post('/.netlify/functions/foster-application-email', this.applicationObj)
-            this.$toast.show({
-              type: 'success',
-              title: 'Success',
-              message: 'Message sent',
-              classToast: 'bg-seaGreen-dark',
-              classTitle: 'text-seaGreen-light',
-              classMessage: 'text-seaGreen-light',
-              classClose: 'text-seaGreen-light',
-              classTimeout: 'bg-seaGreen',
-            })
             this.resetForm()
             this.messages.push({ type: 'success', text: response })
+            this.applicationObj = {};
+            this.error = false;
+            this.success = true;
+            setTimeout(()=>{
+              this.success = false;
+            }, 5000)
           } catch (error) {
-            this.$toast.show({
-              type: 'danger',
-              title: 'Error',
-              message: 'Please Try Again',
-              classToast: 'bg-red-600',
-              classTitle: 'text-red-100',
-              classMessage: 'text-red-100',
-              classClose: 'text-red-100',
-              classTimeout: 'bg-red-400'
-            })
             this.messages.push({ type: 'error', text: error.response.data })
+            this.error = true;
+            setTimeout(()=>{
+              this.error = false;
+            }, 5000)
           }
         } 
       },
       watch: {
-        applicationArr(){
-          console.log(this.application)
+        error(){
+          if(this.error === true){
+            this.success = false;
+          }
         },
-        applicationObj(){
-          console.log(this.applicationObj)
+        success(){
+          if(this.success === true){
+            this.error = false;
+          }
         }
-      },
+      }
     }
 </script>
 

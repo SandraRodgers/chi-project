@@ -15,7 +15,7 @@
               Contact Form
             </h1>
 
-          <section class="contact-form w-12/12 lg:w-9/12 sm:w-12/12 py-4">
+          <section class="contact-form w-12/12 lg:w-8/12 md:10/12 sm:w-12/12 py-4">
             <div class="field flex border border-gray-300 w-12/12 py-2 px-1 lg:px-2 sm:px-1">
               <label class="flex items-center label w-4/12 pl-1 lg:pl-4 sm:pl-1 text-xs lg:text-base sm:text-xs">Name:</label>
               <div class="control w-8/12">
@@ -46,11 +46,13 @@
 
             <div class="field flex justify-around w-12/12 py-2 px-2 is-grouped">
             <div class="w-5/6 lg:w-2/6 sm:w-5/6 flex justify-around">
-              <div class="control">
-                <button class="button is-link bg-middleYellow text-sm p-2 md:p-2 lg:p-4 sm:p-2 my-8 border rounded-sm border-middleYellow text-black hover:opacity-70" @click="sendMessage">
-                  Send Message
-                </button>
-              </div>
+              <div class="flex flex-col items-center">
+                  <button class="button is-link bg-middleYellow text-sm p-2 md:p-2 lg:p-4 sm:p-2 my-8 border rounded-sm border-middleYellow hover:opacity-70" @click="sendMessage">
+                    Send Message
+                  </button>
+                  <div v-if="error" class="text-lg text-center text-red-600 font-bold animate-bounce">{{errorMessage}}</div>
+                  <div v-if="success" class="text-lg text-center text-green-600 font-bold animate-bounce">{{successMessage}}</div>
+                </div>
               </div>
             </div>
           </section>
@@ -71,7 +73,11 @@ export default {
           contactName: '',
           contactEmail: '',
           contactPhone: '',
-          contactMessage: ''
+          contactMessage: '',
+          error: false,
+          errorMessage: "Error. Please try again.",
+          success: false,
+          successMessage: "Success! Application submitted"
         }
       },
       methods: {
@@ -94,30 +100,35 @@ export default {
               contactPhone: this.contactPhone,
               contactMessage: this.contactMessage
             })
-            this.$toast.show({
-              type: 'success',
-              title: 'Success',
-              message: 'Message sent',
-              classToast: 'bg-seaGreen-dark',
-              classTitle: 'text-seaGreen-light',
-              classMessage: 'text-seaGreen-light',
-              classClose: 'text-seaGreen-light',
-              classTimeout: 'bg-seaGreen',
-            })
             this.resetForm()
             this.messages.push({ type: 'success', text: response })
+            this.error = false;
+            this.success = true;
+            setTimeout(()=>{
+              this.success = false;
+            }, 5000)
+            contactName= "";
+            contactEmail= "";
+            contactPhone= "";
+            contactMessage= "";
           } catch (error) {
-            this.$toast.show({
-              type: 'danger',
-              title: 'Error',
-              message: 'Please Try Again',
-              classToast: 'bg-red-600',
-              classTitle: 'text-red-100',
-              classMessage: 'text-red-100',
-              classClose: 'text-red-100',
-              classTimeout: 'bg-red-400'
-            })
             this.messages.push({ type: 'error', text: error.response.data })
+            this.error = true;
+            setTimeout(()=>{
+              this.error = false;
+            }, 5000)
+          }
+        }
+      },
+      watch: {
+        error(){
+          if(this.error === true){
+            this.success = false;
+          }
+        },
+        success(){
+          if(this.success === true){
+            this.error = false;
           }
         }
       }

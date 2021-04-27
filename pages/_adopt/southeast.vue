@@ -11,7 +11,7 @@
         class="bg-white items-center md:justify-center lg:justify-center flex flex-col md:flex-row lg:flex-row xl:flex-row w-10/12 md:w-10/12 lg:w-11/12">
         <div class="flex justify-center">
         <div class="cards-container items-center md:justify-center lg:justify-center py-3 flex flex-col md:flex-row lg:flex-row xl:flex-row w-5/6 md:w-5/6 sm-5/6 lg:w-screen">
-        <div v-for="(chihuahua) in chihuahuas" :key="chihuahua.id" class="card w-72 md:w-64 lg:w-64 sm:w-72 flex flex-col mx-10 m-6 transition-opacity duration-500 shadow-lg">
+        <div v-for="(chihuahua) in chihuahuas" :key="chihuahua.id" class="card w-72 md:w-64 lg:w-64 sm:w-72 flex flex-col mx-10 m-6 transition-opacity duration-500 shadow-lg rounded-b">
             <img class="img rounded-t h-52 object-cover" :src="imageUrlFor(chihuahua.mainImage)"/>
             <div class="rounded-b flex flex-col justify-around items-center card-text bg-white h-40">
                 <div class="font-bold">{{chihuahua.chihuahua}}</div>
