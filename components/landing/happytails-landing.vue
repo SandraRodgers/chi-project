@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 
-                <nuxt-link :to="{ path: `/happytails` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 my-4 md:my-6 lg:my-6 w-3/5 md:w-2/5 lg:w-5/12 text-black rounded-sm hover:opacity-70">Read More</nuxt-link>
+                <nuxt-link :to="{ path: `/happy-tails` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 my-4 md:my-6 lg:my-6 w-3/5 md:w-2/5 lg:w-5/12 text-black rounded-sm hover:opacity-70">Read More</nuxt-link>
             </div>
         </div>
         <div class="flex justify-center pt-0 sm:pt-0 lg:pt-6 md:pt-6 bg-white rounded-b-md">

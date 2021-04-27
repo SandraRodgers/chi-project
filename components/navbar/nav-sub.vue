@@ -10,9 +10,11 @@
                     <p @mouseenter="hideDropdown" class="transform hover:text-black transition-all duration-500 font-medium hover:scale-110 cursor-pointer">FOSTER</p>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/adopt` }">
-                <p class="transform hover:text-black transition-all duration-500 font-medium hover:scale-110 cursor-pointer">ADOPT</p>
-                    </nuxt-link>
-                <p class="transform hover:text-black transition-all duration-500 font-medium hover:scale-110 cursor-pointer">NEWSLETTER</p>
+                    <p class="transform hover:text-black transition-all duration-500 font-medium hover:scale-110 cursor-pointer">ADOPT</p>
+                </nuxt-link>
+                <nuxt-link :to="{ path: '/newsletter' }">
+                    <p class="transform hover:text-black transition-all duration-500 font-medium hover:scale-110 cursor-pointer">NEWSLETTER</p>
+                </nuxt-link>
                 <nuxt-link :to="{ path: '/donate' }">
                     <p class="transform hover:text-black transition-all duration-500 font-medium hover:scale-110 cursor-pointer">DONATE</p>
                 </nuxt-link>
