@@ -6,7 +6,7 @@
             <h1 class="title font-bold text-xl md:text-xl lg:text-3xl">Upcoming Events</h1>
         </div>
         <div class="flex justify-center bg-white w-11/12 pt-10">
-            <select @change="showRegion" v-model="region" class="border border-opacity-25 border-davysGrey px-2 py-4">
+            <select v-model="region" class="border border-opacity-25 border-davysGrey px-2 py-4">
                 <option value="" disabled selected>Select your region</option>
                 <option v-for="(option, i) in options" :key="i" :value="option.value">
                     {{ option.text }}
@@ -102,9 +102,6 @@ export default {
         },
         eventTime(date) {
             return moment(date).format('h:mm a');
-        },
-        showRegion(){
-            // console.log(this.region)
         },
     },
         

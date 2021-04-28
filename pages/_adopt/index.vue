@@ -5,6 +5,15 @@
         <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white py-4 md:pt-6 lg:pt-8 text-center">{{adoptInfo[0].subtitle}}</h1>
         <div class="flex flex-col px-4 lg:px-4 sm:px-4 w-11/12 lg:w-11/12 sm:w-11/12 bg-white">
           <div class="text-center py-4">
+            <p class="font-semibold">View current dogs:</p>
+            <div class="flex justify-center bg-white pt-2">
+            <select v-model="region" v-on:change="changeRoute" class="border border-opacity-25 border-starCommandBlue px-4 mb-8 py-2 text-sm md:text-md lg:text-md">
+                <option value="" disabled selected>Select your region</option>
+                <option v-for="(option, i) in options" :key="i" :value="option.value">
+                  {{ option.text }}
+                </option>
+            </select>
+        </div>
             <h2 class="font-semibold">If you would like to adopt a CRT rescue, please read the following information.</h2>
           </div>
           <div class="text-xs lg:text-base sm:text-xs">
@@ -90,10 +99,19 @@ import { groq } from '@nuxtjs/sanity'
           error: false,
           errorMessage: "Error. Please try again.",
           success: false,
-          successMessage: "Success! Application submitted"
+          successMessage: "Success! Application submitted",
+          region:"",
+            options: [
+                { text: 'Midwest', value: 'midwest' },
+                { text: 'Southeast', value: 'southeast' },
+                { text: 'Southwest', value: 'southwest' }
+            ],
         }
       },  
       methods:{
+        changeRoute(e){
+           this.$router.push({path:`/adopt/${e.target.value}/`})
+        },
         createMessage(){
           this.response.forEach((response, i) => {
             this.applicationArr.push([

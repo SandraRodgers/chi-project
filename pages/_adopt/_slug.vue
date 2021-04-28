@@ -16,38 +16,56 @@
           </div>
           <div class="px-1 lg:px-14 md:px-14">
             <div class="flex items-start  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
-              <div class="flex flex-col px-2 w-5/6 lg:w-4/6">
+              <div class="flex flex-col px-2 w-6/6 sm:w-6/6 lg:w-4/6">
               <div class="flex justify-center py-4">
-              <div class="w-6/6">
+              <div class="w-full">
               <div class="flex py-1">
-                <div class="w-6/12 sm:w-6/12 lg:w-28 md:w-18 font-medium">Name:</div>
-                <div class="w-6/12 sm:w-6/1 ml-2 md:ml-10 lg:ml-10">{{chihuahua.chihuahua}}</div>
+                <div class="w-4/12 sm:w-4/12 lg:w-28 md:w-18 font-medium">Name:</div>
+                <div class="w-8/12 sm:w-8/12 lg:w-6/12 ml-4 md:ml-10 lg:ml-10">{{chihuahua.chihuahua}}</div>
               </div>
               <div class="flex py-1">
-                <div class="w-6/12 sm:w-6/12 lg:w-28 md:w-18 font-medium">Gender:</div>
-                <div class="w-6/12 sm:w-6/1 w-6/12 sm:w-6/1 ml-2 md:ml-10 lg:ml-10">{{chihuahua.gender}}</div>
+                <div class="w-4/12 sm:w-4/12 lg:w-28 md:w-18 font-medium">Gender:</div>
+                <div class="w-8/12 sm:w-8/12 w-6/12 sm:w-6/1 ml-4 md:ml-10 lg:ml-10">{{chihuahua.gender}}</div>
               </div>
               <div class="flex py-1">
-                <div class="w-6/12 sm:w-6/12 lg:w-28 md:w-18 font-medium">Age:</div>
-                <div class="w-6/12 sm:w-6/1 ml-2 md:ml-10 lg:ml-10">{{chihuahua.age}}</div>
+                <div class="w-4/12 sm:w-4/12 lg:w-28 md:w-18 font-medium">Age:</div>
+                <div class="w-8/12 sm:w-8/12 ml-4 md:ml-10 lg:ml-10">{{chihuahua.age}}</div>
               </div>
               <div class="flex py-1">
-                <div class="w-6/12 sm:w-6/12 lg:w-28 md:w-18 font-medium">Weight:</div>
-                <div class="w-6/12 sm:w-6/1 ml-2 md:ml-10 lg:ml-10">{{chihuahua.weight}}</div>
+                <div class="w-4/12 sm:w-4/12 lg:w-28 md:w-18 font-medium">Weight:</div>
+                <div class="w-8/12 sm:w-8/12 ml-4 md:ml-10 lg:ml-10">{{chihuahua.weight}}</div>
               </div>
               <div class="flex py-1">
-                <div class="w-6/12 sm:w-6/12 lg:w-28 md:w-18 font-medium">Dogs/Cats:</div>
-                <div class="w-6/12 sm:w-6/1 ml-2 md:ml-10 lg:ml-10">{{chihuahua.dogsCats}}</div>
+                <div class="w-4/12 sm:w-4/12 lg:w-28 md:w-18 font-medium">Dogs/Cats:</div>
+                <div class="w-8/12 sm:w-8/12 ml-4 md:ml-10 lg:ml-10">{{chihuahua.dogsCats}}</div>
               </div>
               <div class="flex py-1">
-                <div class="w-6/12 sm:w-6/12 lg:w-28 md:w-18 font-medium">Children:</div>
-                <div class="w-6/12 sm:w-6/1 ml-2 md:ml-10 lg:ml-10">{{chihuahua.children}}</div>
+                <div class="w-4/12 sm:w-4/12 lg:w-28 md:w-18 font-medium">Children:</div>
+                <div class="w-8/12 sm:w-8/12 ml-4 md:ml-10 lg:ml-10">{{chihuahua.children}}</div>
               </div>
             </div>
             </div>
-                <block-content :blocks="child" v-for="child in chihuahua.description" :key="child._id" />
-              </div>
-              <div class="flex flex-col ml-2 items-end w-2/6">
+            <div v-if="chihuahua.mainImage" class="flex sm:flex lg:hidden md:hidden px-2 py-1 flex justify-center">
+              <img class="h-52 pb-4" :src="imageUrlFor(chihuahua.mainImage)"/>
+            </div>
+            <block-content :blocks="child" v-for="child in chihuahua.description" :key="child._id" />
+                <div v-if="chihuahua.imageTwo" class="px-2 py-1 flex sm:flex lg:hidden md:hidden px-2 py-1 flex justify-center">
+                  <img class="h-52 pb-4" :src="imageUrlFor(chihuahua.imageTwo)"/>
+                </div>
+                <div v-if="chihuahua.imageThree" class="px-2 py-1 flex sm:flex lg:hidden md:hidden px-2 py-1 flex justify-center">
+                  <img class="h-52 pb-4" :src="imageUrlFor(chihuahua.imageThree)"/>
+                </div>
+                <div v-if="chihuahua.imageFour" class="px-2 py-1 flex sm:flex lg:hidden md:hidden px-2 py-1 flex justify-center">
+                  <img class="h-52 pb-4" :src="imageUrlFor(chihuahua.imageFour)"/>
+                </div>
+                <div v-if="chihuahua.imageFive" class="px-2 py-1 flex sm:flex lg:hidden md:hidden px-2 py-1 flex justify-center">
+                  <img class="h-52 pb-4" :src="imageUrlFor(chihuahua.imageFive)"/>
+                </div>
+                <div v-if="chihuahua.imageSix" class="px-2 py-1 flex sm:flex lg:hidden md:hidden px-2 py-1 flex justify-center">
+                  <img class="h-52 pb-4" :src="imageUrlFor(chihuahua.imageSix)"/>
+                </div>
+            </div>
+              <div class="hidden sm:hidden md:flex lg:flex flex-col ml-2 items-end w-2/6">
                 <div v-if="chihuahua.mainImage" class="px-2 py-1">
                   <img class="h-20 lg:h-80 sm:h-20" :src="imageUrlFor(chihuahua.mainImage)"/>
                 </div>
@@ -69,7 +87,7 @@
               </div>
               </div>
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center mb-8">
                   <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-2 md:p-2 lg:p-4 sm:p-2 my-2 md:my-6 lg:my-10 w-5/5 md:w-5/5 lg:w-5/5 text-black hover:opacity-70 rounded-sm">Adoption Application</nuxt-link>
                 </div>
           </div>
