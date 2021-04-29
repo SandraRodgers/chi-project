@@ -17,11 +17,6 @@
  */
 
 
-//! moment.js
-
-//! moment.js locale configuration
-
-
 /*
 object-assign
 (c) Sindre Sorhus
@@ -60,3 +55,8 @@ object-assign
  */
 
 /*! MIT License © Sindre Sorhus */
+
+
+//! moment.js
+
+//! moment.js locale configuration

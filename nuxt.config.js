@@ -1,6 +1,16 @@
 require('dotenv').config()
+import axios from 'axios'
 
 export default {
+  generate: {
+     routes() {
+      return axios.get(`https://05mmi4eq.api.sanity.io/v1/data/query/production?query=*[_type == 'chihuahua'] {slug}`).then(res => {
+        return res.data.result.map(chi => {
+          return '/adopt/' + chi.slug.current
+        })
+      })
+    }
+  },
   loading: {
     color: 'blue',
     height: '10px'
