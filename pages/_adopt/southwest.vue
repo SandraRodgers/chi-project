@@ -14,7 +14,7 @@
                         <div class="rounded-b flex flex-col justify-around items-center card-text bg-white h-36">
                         <p class="card-text-description text-sm font-normal text-center px-4"> {{
                         chihuahua.tagline}}</p>
-                        <nuxt-link :to="{ path: `/adopt/${chihuahua.slug.current}` }" tag="button" class="text-sm bg-middleYellow w-4/6 text-black py-2 px-2 rounded-sm hover:opacity-70">
+                        <nuxt-link v-if="chihuahua.slug.current" :to="{ path: `/adopt/${chihuahua.slug.current}` }" tag="button" class="text-sm bg-middleYellow w-4/6 text-black py-2 px-2 rounded-sm hover:opacity-70">
                             Read More
                         </nuxt-link>
                     </div>

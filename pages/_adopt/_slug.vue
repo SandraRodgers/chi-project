@@ -1,7 +1,7 @@
 <template>
     <div class="bg-whitesmoke pt-10 lg:pt-10 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
       <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
-        <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
+        <div v-if="chihuahua" class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
           <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white py-4 md:pt-6 lg:pt-8 text-center">{{chihuahua.chihuahua}}</h1>
           <div class="text-center text-sm lg:text-base py-4 w-10/12 lg:w-8/12">
             <h2 class="font-normal lg:font-semibold" v-if="chihuahua.region === 'southwest'">
@@ -90,7 +90,8 @@
             <div class="flex justify-center mb-8">
                   <nuxt-link :to="{ path: `/adopt` }" tag="button" class="bg-middleYellow text-sm md:text-sm lg:text-lg p-2 md:p-2 lg:p-4 sm:p-2 my-2 md:my-6 lg:my-10 w-5/5 md:w-5/5 lg:w-5/5 text-black hover:opacity-70 rounded-sm">Adoption Application</nuxt-link>
                 </div>
-          </div>
+        </div>
+        <div v-else class="text-2xl md:text-3xl lg:text-3xl font-bold text-red-600">Error - Please go back</div>
         <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
 </template>
