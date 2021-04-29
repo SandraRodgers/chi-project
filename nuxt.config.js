@@ -4,9 +4,9 @@ import axios from 'axios'
 export default {
   generate: {
      routes() {
-      return axios.get(`https://05mmi4eq.api.sanity.io/v1/data/query/production?query=*[_type == 'chihuahua'] {slug, region}`).then(res => {
+      return axios.get(`https://05mmi4eq.api.sanity.io/v1/data/query/production?query=*[_type == 'chihuahua'] {slug}`).then(res => {
         return res.data.result.map(chi => {
-          return '/adopt/' + chi.region + '/' + chi.slug.current
+          return '/adopt/' +  chi.slug.current
         })
       })
     }
