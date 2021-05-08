@@ -26,7 +26,7 @@ export default {
       const ourImpact = await $sanity.fetch(queryOurImpact)
 
     //Most in Need
-    const queryMostInNeed = groq`*[_type == 'mostInNeed' && current==true]`
+    const queryMostInNeed = groq`*[_type == 'mostInNeed' && landing==true]`
     const mostInNeed = await $sanity.fetch(queryMostInNeed)
 
     //HappyTails
