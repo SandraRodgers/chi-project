@@ -1,6 +1,6 @@
 <template>
     <div class="bg-whitesmoke pt-10 lg:pt-10 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-        <hr class="h-2 mt-10 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
 
         <div class="flex items-center justify-center flex-col bg-white w-11/12 md:w-10/12 lg:w-11/12">
             <h1 class="flex justify-center w-12/12 md:w-12/12 lg:w-12/12 text-xl md:text-xl lg:text-3xl font-bold bg-white pt-4 md:pt-6 lg:pt-8">Midwest Dogs</h1>
@@ -26,12 +26,12 @@
     </div>
        
     </div>
-    <hr class="h-2 w-11/12" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+    <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
 </template>
 
 <script>
-    import groq from 'groq'
+import groq from 'groq'
 import sanity from "../../sanityClient"
 import imageUrlBuilder from "@sanity/image-url";
 const imageBuilder = imageUrlBuilder(sanity);
@@ -52,10 +52,9 @@ const imageBuilder = imageUrlBuilder(sanity);
     }
   },
     async asyncData({ $sanity }) {
-        
-    const query = groq`*[_type == 'chihuahua' && region == 'midwest'] {_id, chihuahua, mainImage, slug, tagline}`
-    const chihuahuas = await $sanity.fetch(query)
-    return { chihuahuas }
+        const query = groq`*[_type == 'chihuahua' && region == 'midwest'] {_id, chihuahua, mainImage, slug, tagline}`
+        const chihuahuas = await $sanity.fetch(query)
+        return { chihuahuas }
   },
 
 

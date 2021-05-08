@@ -6,7 +6,7 @@
             <div class="w-11/12">
                 <div class="flex flex-col justify-content  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
                     <div class="flex px-4 w-6/6 justify-center">
-                        <img class="h-40" :src="imageUrlFor(newslettersIntro[0].mainImage)"/>
+                        <img class="h-40 rounded-md" :src="imageUrlFor(newslettersIntro[0].mainImage)"/>
                     </div>
                     <div class="flex pt-8 px-6 lg:px-16 md:px-10 sm:px-4 w-6/6 justify-center">
                         <block-content :blocks="child" v-for="child in newslettersIntro[0].description" :key="child._id" />

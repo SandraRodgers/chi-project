@@ -28,8 +28,9 @@
                 <span class="my-2 max-w-md text-sm mr-24">Sign up to receive our bi-yearly newsletter:</span>
                 <div class="field flex w-12/12 py-2">
                     <label class="flex items-center label w-2/12 text-xs lg:text-base sm:text-xs">Email</label>
-              <div class="control w-8/12">
+              <div class="control w-8/12 flex">
                 <input v-model="contactEmail" class="input w-full bg-black border border-white py-1" type="email">
+                <button @click="sendEmailAddress" class="text-sm bg-black border border-white w-6/12 mt-2 py-1 rounded-sm text-white rounded-sm hover:opacity-70 font-medium ml-4">SUBMIT</button>
               </div>
             </div>
             </div>
@@ -65,8 +66,9 @@
             <span class="my-2 max-w-md text-sm mr-24">Sign up to receive our bi-yearly newsletter:</span>
             <div class="field flex w-12/12 py-2">
                 <label class="flex items-center label w-3/12 text-xs lg:text-base sm:text-xs font-medium">Email</label>
-            <div class="control w-9/12">
+            <div class="control w-9/12 flex">
             <input v-model="contactEmail" class="input w-full bg-black border border-white py-1" type="email">
+            <button @click="sendEmailAddress" class="text-sm bg-black border border-white w-6/12 mt-2 py-1 rounded-sm text-white rounded-sm hover:opacity-70 font-medium ml-4">SUBMIT</button>
             </div>
         </div>
          <div class="flex sm:flex md:hidden lg:hidden flex-col mt-12 items-center">
@@ -83,7 +85,8 @@
     export default {
         data(){
             return {
-                contactEmail: ''
+                contactEmail: '',
+                messages: [],
             }
         },
         computed:{
@@ -93,8 +96,26 @@
             showMobileMenu () {
                 return this.$store.state.showMobileMenu
             }
+        },
+        methods: {
+            sendEmailAddress () {
+                this.messages = []
+                this.triggerSendEmailAddressToGoogleSheets()
+                },
+            resetForm () {
+                this.contactEmail = []
+            },
+            async triggerSendEmailAddressToGoogleSheets () {
+                try {
+                    const response = await this.$axios.$post('/.netlify/functions/google-sheets-newsletters', this.contactEmail)
+                    this.resetForm()
+                    this.messages.push({ type: 'success', text: response })
+                    this.contactEmail = '';
+                } catch (error) {
+                    this.messages.push({ type: 'error', text: error.response.data })
+                }
+            } 
         }
-        
     }
 </script>
 
