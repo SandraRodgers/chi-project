@@ -7,7 +7,7 @@
                 <div class="w-11/12">
                     <div class="flex flex-col justify-content  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
                         <div class="flex px-4 w-6/6 justify-center">
-                            <img class="h-40 rounded-md" :src="imageUrlFor(successIntro[0].mainImage)"/>
+                            <img class="h-28 lg:h-40 md:h-36 sm:h-28 rounded-md" :src="imageUrlFor(successIntro[0].mainImage)"/>
                         </div>
                         <div class="flex pt-8 px-6 lg:px-16 md:px-10 sm:px-4 w-6/6 justify-center text-center">
                             <block-content :blocks="child" v-for="child in successIntro[0].description" :key="child._id" />
@@ -31,8 +31,22 @@
                         <div class="flex flex-col px-4 w-6/6 sm:6/6 md:w-6/6 lg:w-3/6">
                             <block-content :blocks="child" v-for="child in story.description" :key="child._id" />
                         </div>
-                        <div class="hidden sm:hidden lg:flex px-4 w-3/6 justify-center">
-                            <img class="h-80 rounded-md" :src="imageUrlFor(story.mainImage)"/>
+                        <div class="flex flex-col hidden sm:hidden lg:flex px-4 w-3/6 items-center">
+                            <div>
+                                <img class="h-72 rounded-md" :src="imageUrlFor(story.mainImage)"/>
+                            </div>
+                            <div>
+                                <img v-if="story.imageTwo" class="h-72 rounded-md my-4" style="filter: contrast(110%);" :src="imageUrlFor(story.imageTwo)"/>
+                            </div>
+                            <div>
+                                <img v-if="story.imageThree" class="h-72 rounded-md my-4" style="filter: contrast(110%);" :src="imageUrlFor(story.imageThree)"/>
+                            </div>
+                            <div>
+                                <img v-if="story.imageFour" class="h-72 rounded-md my-4" style="filter: contrast(110%);" :src="imageUrlFor(story.imageFour)"/>
+                            </div>
+                            <div>
+                                <img v-if="story.imageFive" class="h-72 rounded-md my-4" style="filter: contrast(110%);" :src="imageUrlFor(story.imageFive)"/>
+                            </div>
                         </div>
                     </div>
                     </div>
