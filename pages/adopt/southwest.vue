@@ -56,7 +56,7 @@ export default {
         }
     },
     async asyncData({ $sanity }) {
-        const query = groq`*[_type == 'chihuahua' && region == 'southwest'] {_id, age, chihuahua, description, gender, weight, mainImage, slug, tagline}`
+        const query = groq`*[_type == 'chihuahua' && region == 'southwest'] {_id, age, chihuahua, description, gender, weight, mainImage, slug, tagline} | order(order asc)`
         const chihuahuas = await $sanity.fetch(query)
         return { chihuahuas }
     },

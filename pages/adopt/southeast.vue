@@ -54,7 +54,7 @@ const imageBuilder = imageUrlBuilder(sanity);
   },
     async asyncData({ $sanity }) {
         
-    const query = groq`*[_type == "chihuahuasSE"] {_id, chihuahua, mainImage, slug, tagline}`
+    const query = groq`*[_type == "chihuahuasSE"] {_id, chihuahua, mainImage, slug, tagline} | order(order asc)`
     const chihuahuas = await $sanity.fetch(query)
     return { chihuahuas }
   },
