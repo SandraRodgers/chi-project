@@ -30,7 +30,7 @@ export default {
     const mostInNeed = await $sanity.fetch(queryMostInNeed)
 
     //HappyTails
-    const queryHappyTailsLanding = groq`*[_type == "happyTails"][0]`
+    const queryHappyTailsLanding = groq`*[_type == "happyTails"][0] | order(order asc)`
     const happyTailsLanding = await $sanity.fetch(queryHappyTailsLanding)
 
     return { missionFirstParagraph, ourImpact, mostInNeed, happyTailsLanding }
