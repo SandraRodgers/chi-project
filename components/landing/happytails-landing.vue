@@ -15,7 +15,7 @@
                         <block-content :blocks="child" v-for="child in happyTailsLanding.teaser" :key="child._id" /> 
                     </div>
                     <div class="flex w-full mx-2 lg:mx-4 sm:mx-2 h-40 sm:h-40 lg:h-52 justify-center">
-                        <img :src="imageUrlFor(happyTailsLanding.mainImage)"/>
+                        <img class="rounded-md" :src="imageUrlFor(happyTailsLanding.mainImage)"/>
                     </div>
                 </div>
                 
