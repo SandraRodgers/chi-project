@@ -12,7 +12,7 @@
             </div>
             <div :class="{'hidden': !showMobileMenu, 'flex': showMobileMenu}" class="flex flex-col pt-14 pl-10 w-60 text-white text-2xl">
                 <p class="hover:text-middleYellow cursor-default py-4 border-b border-white pl-4" @click="close">Home</p>
-                <nuxt-link :to="{ path: `/adopt` }">
+                <nuxt-link :to="{ path: `/` }">
                     <p class="hover:text-middleYellow cursor-default py-4 border-b border-white pl-4" @click="close">Adopt</p>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/foster` }">
@@ -32,8 +32,6 @@
                 </nuxt-link>
             </div>
         </div>
-
-    
     </div>
 </template>
 
