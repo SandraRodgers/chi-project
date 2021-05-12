@@ -33,7 +33,9 @@
                     <img v-if="chi.imageFour" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFour)"/>
                     <img v-if="chi.imageFive" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFive)"/>
                 </div>
-                <nuxt-link :to="{ path: `/donate` }" tag="button" class="text-sm bg-middleYellow w-4/12 sm:4/12 md:2/12 lg:w:2/12 mt-2 py-2 mb-6 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">DONATE</nuxt-link>
+                <button class="text-sm bg-middleYellow w-4/12 sm:4/12 md:2/12 lg:w:2/12 mt-2 py-2 mb-6 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">
+                    <nuxt-link :to="{ path: `/donate` }">DONATE</nuxt-link>
+                </button>
             </div> 
             <hr class="h-2 w-11/12 mb-6 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         </div>

@@ -8,7 +8,10 @@
             <div class="flex flex-col w-7/12">
                 <span class="font-bold uppercase mb-2">SUPPORT US</span>
                 <span class="my-2 max-w-md text-sm mr-24">CRT is a nonprofit, public charity. We have no paid employees. Please consider supporting us through a donation or on a volunteer basis.</span>
-                <nuxt-link :to="{ path: `/donate` }" tag="button" class="text-sm bg-middleYellow w-6/12 mt-2 py-1 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">DONATE</nuxt-link>
+                <button class="text-sm bg-middleYellow w-6/12 mt-2 py-1 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">
+                    <nuxt-link :to="{ path: `/donate` }">DONATE</nuxt-link>
+                </button>
+                
             </div>
             <div class="flex flex-col w-6/12">
                 <span class="font-bold w-full uppercase mb-2">Connect</span>
@@ -53,7 +56,9 @@
         <div class="flex flex-col">
             <span class="font-bold uppercase mb-2">SUPPORT US</span>
             <span class="my-2 max-w-md text-sm mr-4">CRT is a nonprofit, public charity. We have no paid employees. Please consider supporting us through a donation or on a volunteer basis.</span>
-            <nuxt-link :to="{ path: `/donate` }" tag="button" class="text-sm bg-middleYellow w-6/12 mt-2 py-1 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">DONATE</nuxt-link>
+            <button class="text-sm bg-middleYellow w-6/12 mt-2 py-1 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">
+                <nuxt-link :to="{ path: `/donate` }">DONATE</nuxt-link>
+            </button>
         </div>
         <div class="flex flex-col">
             <span class="font-bold w-full uppercase mt-12 mb-2">Connect</span>

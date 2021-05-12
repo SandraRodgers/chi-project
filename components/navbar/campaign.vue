@@ -31,7 +31,6 @@ import { mapMutations, mapState } from 'vuex';
                 toggleMobileMenu: 'toggle',
                 showDropdown: 'show',
                 hideDropdown: 'hide',
-                setLogo: 'setLogo'
                 }),
             imageUrlFor(source) {
               return imageBuilder.image(source);

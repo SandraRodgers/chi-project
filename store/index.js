@@ -1,6 +1,5 @@
 import { groq } from '@nuxtjs/sanity'
 
-
 export const state = () => ({
   showMobileMenu: false,
   showAdoptDropdown: false,

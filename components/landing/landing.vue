@@ -31,10 +31,7 @@ import ourImpact from './our-impact'
             hidePage () {
                 return this.$store.state.showMobileMenu
             }
-        }, 
-        mounted(){
-            this.$store.commit('setLogo', this.logo)
-        } 
+        },
     }
 </script>
 
