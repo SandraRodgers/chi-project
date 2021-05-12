@@ -12,9 +12,10 @@
                     chi.tagline}}</p>
                     <button class="text-sm bg-middleYellow w-3/6 sm:w-3/6 lg:w-5/6  md:w-5/6 text-black my-4 py-2 px-2 mt-2 rounded-sm hover:opacity-70">
                         <nuxt-link :to="{ path: '/most-in-need', hash:`${mostInNeed[i].name}`}"></nuxt-link>
+                            Read More
+                        </nuxt-link>
                     </button>
-                    Read More
-                    </nuxt-link>
+                    
                 </div>
             </div>
         </div>
