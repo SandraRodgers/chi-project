@@ -25,7 +25,7 @@
         <div class="w-full nav-main pb-4 z-30 lg:flex md:flex flex-row-reverse content-around py-2 pr-8 bg-white hidden" @mouseenter="hideDropdown">
             <div class="flex space-x-20 lg:space-x-20 md:space-x-12 text-lg lg:text-lg md:text-md">
                 <nuxt-link :to="{ path: `/about` }">
-                    <p class="cursor-pointer z-50 relative cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">ABOUT</p>
+                    <p class="cursor-pointer z-20 relative cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">ABOUT</p>
                 </nuxt-link>
                 <nuxt-link :to="{ path: `/events` }">
                     <p class="cursor-pointer transform bg-white hover:text-starCommandBlue transition-all duration-500 font-medium hover:scale-125">EVENTS</p>
