@@ -24,7 +24,7 @@
                         <block-content :blocks="child" v-for="child in chi.bestFriends" :key="child._id" className="bestFriends" />
                     </div>
                 </div>
-                <div class="flex flex-col px-4 w-10/12 pt-6 pb-4">
+                <div class="story flex flex-col px-4 w-10/12 pt-6 pb-4">
                     <block-content :blocks="child" v-for="child in chi.description" :key="child._id" />
                 </div>
                 <div v-if="chi.imageTwo" class="flex justify-around w-10/12 my-4 h-40">
@@ -33,7 +33,7 @@
                     <img v-if="chi.imageFour" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFour)"/>
                     <img v-if="chi.imageFive" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFive)"/>
                 </div>
-                <button class="text-sm bg-middleYellow w-4/12 sm:4/12 md:2/12 lg:w:2/12 mt-2 py-2 mb-6 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">
+                <button class="text-sm bg-middleYellow w-4/12 sm:w-4/12 md:w-2/12 lg:w-2/12 mt-2 py-2 mb-6 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">
                     <nuxt-link :to="{ path: `/donate` }">DONATE</nuxt-link>
                 </button>
             </div> 
@@ -88,7 +88,7 @@ b, strong {
     font-weight: 600;
 }
 
-a {
+.story a {
     color: #13A3DC;
     font-weight: 600;
 }
