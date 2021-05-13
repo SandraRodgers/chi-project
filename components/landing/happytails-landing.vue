@@ -18,13 +18,13 @@
                         <img class="rounded-md" :src="imageUrlFor(happyTailsLanding.mainImage)"/>
                     </div>
                 </div>
-                <button class="bg-middleYellow text-sm md:text-sm lg:text-lg p-1 md:p-2 lg:p-3 mt-4 md:mt-6 lg:mt-6 w-3/5 md:w-2/5 lg:w-5/12 text-black rounded-sm hover:opacity-70">
-                    <nuxt-link :to="{ path: `/happy-tails` }" >Read More</nuxt-link>
+                <button class="mt-8 sm:mt-8 md:mt-8 lg:mt-12 bg-middleYellow hover:opacity-70">
+                    <nuxt-link class="bg-middleYellow text-sm md:text-sm lg:text-lg px-8 lg:px-24 md:px-16 sm:px-8 py-2 text-black rounded-sm" :to="{ path: `/happy-tails` }">Read More</nuxt-link>
                 </button>
             </div>
         </div>
         <div class="flex justify-center pt-0 sm:pt-0 lg:pt-6 md:pt-6 bg-white rounded-b-md">
-            <hr class="bg-starCommandBlue h-2 w-full rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+            <hr class="bg-starCommandBlue mt-4 h-2 w-full rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
         <div class="bg-whitesmoke pt-10 lg:pt-10 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
-        <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+        <hr class="h-2 mt-10 w-11/12 md:w-10/12 lg:w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
         <div class="flex items-center justify-center flex-col bg-white w-11/12 md:w-10/12 lg:w-11/12">
             <h1 class="flex justify-center w-12/12 md:w-12/12 lg:w-12/12 text-xl md:text-xl lg:text-3xl font-bold bg-white pt-4 md:pt-6 lg:pt-8">Southeast Dogs</h1>
             <p class="flex flex-col items-center text-center w-11/12 md:w-11/12 lg:w-11/12 px-2 py-2 sm:py-2 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">North Carolina, South Carolina, Virginia, Tennessee (Nashville Area), Alabama, Georgia and Maryland. Please read the profile as some of the dogs can only be adopted in NC/SC, VA, TN, AL, GA and MD.</p>
@@ -17,16 +17,18 @@
                 <p class="card-text-description text-sm font-normal text-center px-4 font-semibold"> {{chihuahua.chihuahua}}</p>
                 <p class="card-text-description text-sm font-normal text-center px-4"> {{
                 chihuahua.tagline}}</p>
-                <nuxt-link v-if="chihuahua.slug.current" :to="{ path: `/adopt/${chihuahua.slug.current}`}" tag="button" class="text-sm bg-middleYellow w-4/6 text-black py-2 mb-2 px-2 rounded-sm hover:opacity-70">
-                Read More
-                </nuxt-link>
+                <button class="mb-2">
+                  <nuxt-link class="text-sm bg-middleYellow w-4/6 text-black py-2 px-10  rounded-sm hover:opacity-70" v-if="chihuahua.slug.current" :to="{ path: `/adopt/${chihuahua.slug.current}`}">
+                      Read More
+                  </nuxt-link>
+                </button>   
             </div>
         </div>
         </div>
     </div>
        
     </div>
-    <hr class="h-2 w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
+    <hr class="h-2 w-11/12 md:w-10/12 lg:w-11/12 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     </div>
 </template>
 

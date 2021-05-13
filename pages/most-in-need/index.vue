@@ -17,7 +17,7 @@
                     <h3 class="w-11/12 bg-white text-2xl md:text-3xl lg:text-3xl font-bold py-2">{{chi.name}}</h3>
                     <h4 class="bg-white text-xl md:text-md lg:text-xl font-medium py-4">{{getRegion(chi)}} - {{chi.status}}</h4>
                 </div>
-                <img class="img rounded-t object-cover pb-4 h-72" style="filter: contrast(110%);" :src="imageUrlFor(chi.mainImage)"/>
+                <img class="img rounded object-cover mb-4 h-72" style="filter: contrast(110%);" :src="imageUrlFor(chi.mainImage)"/>
                 <div class="flex flex-col items-center px-4 w-8/12 pt-2 shadow-lg" v-if="chi.bestFriends && chi.bestFriends.length > 0">
                     <h4 class="font-semibold">Best Friends:</h4>
                     <div class="best-friends px-4 w-10/12 pt-6">
@@ -27,14 +27,14 @@
                 <div class="story flex flex-col px-4 w-10/12 pt-6 pb-4">
                     <block-content :blocks="child" v-for="child in chi.description" :key="child._id" />
                 </div>
-                <div v-if="chi.imageTwo" class="flex justify-around w-10/12 my-4 h-40">
-                    <img v-if="chi.imageTwo" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageTwo)"/>
-                    <img v-if="chi.imageThree" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageThree)"/>
-                    <img v-if="chi.imageFour" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFour)"/>
-                    <img v-if="chi.imageFive" class="rounded-sm h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFive)"/>
+                <div v-if="chi.imageTwo" class="flex flex-col sm:flex-col lg:flex-row md:flex-row justify-around my-4 h-full sm:h-full md:h-40 lg:h-40 w-3/6 lg:w-6/6 md:w-6/6 sm:w-3/6 p-4">
+                    <img v-if="chi.imageTwo" class="rounded my-2 mx-1 h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageTwo)"/>
+                    <img v-if="chi.imageThree" class="rounded my-2 mx-1 h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageThree)"/>
+                    <img v-if="chi.imageFour" class="rounded my-2 mx-1 h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFour)"/>
+                    <img v-if="chi.imageFive" class="rounded my-2 mx-1 h-full" style="filter: contrast(110%);" :src="imageUrlFor(chi.imageFive)"/>
                 </div>
-                <button class="text-sm bg-middleYellow w-4/12 sm:w-4/12 md:w-2/12 lg:w-2/12 mt-2 py-2 mb-6 rounded-sm text-black rounded-sm hover:opacity-70 font-medium">
-                    <nuxt-link :to="{ path: `/donate` }">DONATE</nuxt-link>
+                <button class="mt-8 sm:mt-8 md:mt-8 lg:mt-12 bg-middleYellow hover:opacity-70 mb-8">
+                    <nuxt-link class="bg-middleYellow text-sm md:text-sm lg:text-lg px-8 lg:px-24 md:px-16 sm:px-8 py-2 text-black rounded-sm" :to="{ path: `/donate` }">DONATE</nuxt-link>
                 </button>
             </div> 
             <hr class="h-2 w-11/12 mb-6 rounded-b-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
