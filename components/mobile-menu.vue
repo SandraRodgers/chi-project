@@ -1,7 +1,7 @@
 <template>
     <div>
         <div 
-            :class="{'h-0 transform scale-y-0': !showMobileMenu, 'flex h-screen transfrom scale-y-100 origin-top bg-starCommandBlue': showMobileMenu}" class="relative z-10 transition-transform duration-300 ease-in">
+            :class="{'h-0 transform scale-y-0': !showMobileMenu, 'flex h-screen transform scale-y-100 origin-top bg-starCommandBlue': showMobileMenu}" class="relative z-10 transition-transform duration-300 ease-in">
             <div @click="close" class="flex justify-center items-start pt-14 w-16 h-full relative pl-10">
                 <div class="">
                     <svg class="stroke-current text-white" width="50" height="25" viewBox="0 0 40 40" stroke-width="5" overflow="visible">
