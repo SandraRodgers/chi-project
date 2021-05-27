@@ -30,7 +30,7 @@
                 </button>
             </div>
             <div class="overflow-hidden shadow-lg mx-2">
-                <h2 class="js-show-on-scroll z-20 ml-8 lg:ml-40 sm:ml-8 absolute top-0 mt-2 font-semibold text-base md:text-3xl lg:text-4xl sm:text-base pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white hover:text-carolinaBlue">
+                <h2 class="js-show-on-scroll z-20 ml-4 lg:ml-40 sm:ml-4 absolute top-0 mt-2 font-semibold text-base md:text-3xl lg:text-4xl sm:text-base pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white hover:text-carolinaBlue">
                     <nuxt-link :to="{ path: '/adopt/southwest'}">Southwest</nuxt-link>
                 </h2>
                 <img 
