@@ -5,6 +5,7 @@
     :ourImpact="ourImpact" 
     :mostInNeed="mostInNeed"
     :happyTailsLanding="happyTailsLanding"
+    :adoptableDogs="adoptableDogs"
   />
 </template>
 
@@ -33,7 +34,11 @@ export default {
     const queryHappyTailsLanding = groq`*[_type == "happyTails"][0] | order(order asc)`
     const happyTailsLanding = await $sanity.fetch(queryHappyTailsLanding)
 
-    return { missionFirstParagraph, ourImpact, mostInNeed, happyTailsLanding }
+    //Adoptable Dogs
+    const queryAdoptableDogs = groq`*[_type == 'adoptableDogs'][0]`
+    const adoptableDogs = await $sanity.fetch(queryAdoptableDogs)
+
+    return { missionFirstParagraph, ourImpact, mostInNeed, happyTailsLanding, adoptableDogs }
         },
     
     computed: {

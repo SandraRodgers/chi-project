@@ -85,12 +85,21 @@ module.exports = {
       'banner-desktop': "url('~assets/images/banner_desktop11.png')",
       'banner-background': "url('~assets/images/banner_background.png')",
        'blue-dots': "url('~assets/images/bluebackground.png')",
-      })
+      }),
+      animation: {
+        fadeIn: "fadeIn 2s ease-in forwards"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 }
+        }
+      }
     }
   },
   variants: {
     extend: {
-      
+      animation: ["motion-safe"]
     },
     
   },
