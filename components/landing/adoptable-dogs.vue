@@ -4,42 +4,42 @@
             <h2
             class="js-show-on-scroll text-center mt-2 font-bold text-2xl md:text-3xl sm:text-2xl lg:text-4xl pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2">{{adoptableDogs.title}}</h2>
         </div>
-        <div class="flex lg:flex-row mt-4 lg:mt-6 sm:mt-4 h-2/3 lg:h-80 sm:h-2/3 relative">
+        <div class="flex justify-center mt-4 lg:mt-6 sm:mt-4 relative">
             <div class="overflow-hidden mx-2 shadow-lg">
-                <h2 class="js-show-on-scroll z-20 ml-4 absolute top-0 mt-2 font-semibold text-xs md:text-3xl lg:text-4xl sm:text-xs pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white">
+                <h2 class="js-show-on-scroll z-20 ml-4 absolute top-0 mt-2 font-semibold text-xs md:text-3xl lg:text-4xl sm:text-xs pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white hover:text-carolinaBlue">
                     <nuxt-link :to="{ path: '/adopt/southeast'}">Southeast</nuxt-link>
                 </h2>
                 <img 
                     :src="imageUrlFor(adoptableDogs.regionOneImage)"
-                    class="relative object-cover h-2/3 lg:h-80 sm:h-2/3 mr-2 transition transform hover:scale-125 duration-500 rounded-sm shadow-lg"
+                    class="relative object-cover w:1/3 mr-2 transition transform hover:scale-125 duration-500 rounded-sm shadow-lg h-40 md:h-64 lg:h-80 sm:h-40"
                 />
                 <button class="hidden sm:hidden lg:flex w-2/12 absolute bottom-0 mb-12 ml-4">
                     <nuxt-link class="text-sm font-bold bg-middleYellow w-3/6 sm:w-3/6 lg:w-5/6  md:w-5/6 text-black py-2 px-8 mt-2 rounded-sm hover:opacity-70" :to="{ path: '/adopt/southeast'}">View Dogs</nuxt-link>
                 </button>
             </div>
-             <div class="overflow-hidden shadow-lg">
-
-                <h2
-            class="js-show-on-scroll z-20 ml-4 lg:ml-24 sm:ml-4 absolute top-0 mt-2 font-semibold text-xs md:text-3xl lg:text-4xl sm:text-xs pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white"><nuxt-link :to="{ path: '/adopt/midwest'}">Midwest</nuxt-link></h2>
-
+            <div class="overflow-hidden shadow-lg">
+                <h2 class="js-show-on-scroll z-20 ml-4 lg:ml-24 sm:ml-4 absolute top-0 mt-2 font-semibold text-xs md:text-3xl lg:text-4xl sm:text-xs pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white hover:text-carolinaBlue">
+                    <nuxt-link :to="{ path: '/adopt/midwest'}">Midwest</nuxt-link>
+                </h2>
                 <img 
                     :src="imageUrlFor(adoptableDogs.regionTwoImage)"
-                    class="relative object-cover h-2/3 lg:h-80 sm:h-2/3 transition transform hover:scale-125 duration-500 rounded-sm shadow-lg"
+                    class="relative object-cover w:1/3 transition transform hover:scale-125 duration-500 rounded-sm shadow-lg h-40 md:h-64 lg:h-80 sm:h-40"
                 />
                 <button class="hidden sm:hidden lg:flex w-2/12 absolute bottom-0 mb-12 ml-16">
                     <nuxt-link class="text-sm font-bold bg-middleYellow w-3/6 sm:w-3/6 lg:w-5/6  md:w-5/6 text-black py-2 px-8 mt-2 rounded-sm hover:opacity-70" :to="{ path: '/adopt/southeast'}">View Dogs</nuxt-link>
                 </button>
             </div>
             <div class="overflow-hidden shadow-lg mx-2">
-            <h2
-            class="js-show-on-scroll z-20 ml-4 lg:ml-40 sm:ml-4 absolute top-0 mt-2 font-semibold text-xs md:text-3xl lg:text-4xl sm:text-xs pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white"><nuxt-link :to="{ path: '/adopt/southeast'}">Southwest</nuxt-link></h2>
-            <img 
-                :src="imageUrlFor(adoptableDogs.regionThreeImage)"
-                class="object-cover opacity-2 h-2/3 lg:h-80 sm:h-2/3 transition transform hover:scale-125 duration-500 rounded-sm shadow-lg"
-            />
-            <button class="hidden sm:hidden lg:flex w-2/12 absolute bottom-0 right-0 mb-12 mr-4">
-                <nuxt-link class="text-sm font-bold bg-middleYellow w-3/6 sm:w-3/6 lg:w-5/6  md:w-5/6 text-black py-2 px-8 mt-2 rounded-sm hover:opacity-70" :to="{ path: '/adopt/southwest'}">View Dogs</nuxt-link>
-            </button>
+                <h2 class="js-show-on-scroll z-20 ml-4 lg:ml-40 sm:ml-4 absolute top-0 mt-2 font-semibold text-xs md:text-3xl lg:text-4xl sm:text-xs pt-4 sm:pt-4 lg:pt-2 md:pt-2 mt-2 text-white hover:text-carolinaBlue">
+                    <nuxt-link :to="{ path: '/adopt/southeast'}">Southwest</nuxt-link>
+                </h2>
+                <img 
+                    :src="imageUrlFor(adoptableDogs.regionThreeImage)"
+                    class="object-cover opacity-2 w:1/3 transition transform hover:scale-125 duration-500 rounded-sm shadow-lg h-40 md:h-64 lg:h-80 sm:h-40"
+                />
+                <button class="hidden sm:hidden lg:flex w-2/12 absolute bottom-0 right-0 mb-12 mr-4">
+                    <nuxt-link class="text-sm font-bold bg-middleYellow w-3/6 sm:w-3/6 lg:w-5/6  md:w-5/6 text-black py-2 px-8 mt-2 rounded-sm hover:opacity-70" :to="{ path: '/adopt/southwest'}">View Dogs</nuxt-link>
+                </button>
             </div>
         </div>
     </div>
