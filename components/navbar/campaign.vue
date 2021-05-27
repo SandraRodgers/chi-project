@@ -5,11 +5,17 @@
             <nuxt-link :to="'/'">
                 <img :src="imageUrlFor(logo)" class="lg:flex md:flex hidden mr-4 -mt-8 absolute top-0 h-72 md:h-52 lg:h-72 -left-0 z-50"/>
             </nuxt-link>
-            <nuxt-link :to="{ path: '/campaign' }"><div class="flex text-white text-xl md:text-lg lg:text-xl">Celebrating Our Silver Anniversary - CRT Turns 25 Years Old <div class="cursor-pointer transform hover:text-middleYellow transition-all duration-500 font-medium hover:scale-125 hover:font-black ml-6">PRESIDENT'S MESSAGE</div></div></nuxt-link>
+            <nuxt-link :to="{ path: '/campaign' }">
+                <div class="flex text-white text-xl md:text-lg lg:text-xl">Celebrating Our Silver Anniversary - CRT Turns 25 Years Old 
+                    <div class="cursor-pointer transform hover:text-middleYellow transition-all duration-500 font-medium hover:scale-125 hover:font-black ml-6">PRESIDENT'S MESSAGE</div>
+                </div>
+            </nuxt-link>
         </div>
         <!-- mobile -->
         <div class="bg-black opacity-90 text-center py-2 flex sm:flex md:hidden lg:hidden z-40 justify-center">
-            <p class="font-sans text-white text-sm justify-center">CRT Turns 25 Years Old. PRESIDENT'S MESSAGE</p>
+             <nuxt-link :to="{ path: '/campaign' }">
+                <p class="font-sans text-white text-sm justify-center active:text-middleYellow">CRT Turns 25 Years Old. PRESIDENT'S MESSAGE</p>
+            </nuxt-link>
         </div>
     </div>
 </template>
