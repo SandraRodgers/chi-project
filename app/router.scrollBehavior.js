@@ -1,6 +1,12 @@
 export default async function(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition;
+      console.log('savedPosition', savedPosition.y, from.name)
+      if(from.name === 'adopt-southeast'){
+        console.log('hit')
+        return { x: 0, y: 0 }
+      } else {
+        return savedPosition;
+      }
     }
 
     const findEl = async (hash, x = 0) => {
@@ -12,6 +18,7 @@ export default async function(to, from, savedPosition) {
           }
           setTimeout(() => {
             resolve(findEl(hash, ++x || 1));
+
           }, 100);
         })
       );
