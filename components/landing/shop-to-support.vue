@@ -6,7 +6,7 @@
         </nuxt-link>
         <div class="items-center md:justify-center lg:justify-center py-3 flex flex-col md:flex-row lg:flex-row xl:flex-row w-6/6 lg:w-screen p-5">
             <div class="w-72 md:w-64 lg:w-64 sm:w-72 flex flex-col mx-10 m-6 transition-opacity duration-500 shadow-lg py-4 bg-white px-2 rounded-md">
-                <a href="smile.amazon.com" target="_blank"><img class="img rounded-t-md h-40 object-cover" src="~assets/images/amazonsmile.jpeg"/></a>
+                <a href="https://smile.amazon.com/" target="_blank"><img class="img rounded-t-md h-40 object-cover" src="~assets/images/amazonsmile.jpeg"/></a>
             </div>
             <div class="w-72 md:w-64 lg:w-64 sm:w-72 flex flex-col mx-10 m-6 transition-opacity duration-500 shadow-lg py-4 bg-white px-2 rounded-md">
                 <a href="https://www.kroger.com/i/community/community-rewards" target="_blank"><img class="img rounded-t-md h-40 object-cover" src="~assets/images/kroger-rewards.jpeg"/></a>
