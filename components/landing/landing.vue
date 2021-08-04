@@ -8,10 +8,11 @@
         <mission 
             :missionFirstParagraph="missionFirstParagraph"
         />
+        <shop-to-support></shop-to-support>
+        <happytails-landing :happyTailsLanding="happyTailsLanding"/>
         <most-in-need
             :mostInNeed="mostInNeed"
         />
-        <happytails-landing :happyTailsLanding="happyTailsLanding"/>
         <our-impact
             :ourImpact="ourImpact" 
         />
@@ -27,9 +28,10 @@ import MostInNeed from './mostInNeed.vue'
 import happytailsLanding from './happytails-landing'
 import ourImpact from './our-impact'
 import AdoptableDogs from './adoptable-dogs.vue'
+import ShopToSupport from './shop-to-support.vue'
 
     export default {
-        components: { banner, bannerSub, mission, MostInNeed, happytailsLanding, ourImpact, AdoptableDogs },
+        components: { banner, bannerSub, mission, MostInNeed, happytailsLanding, ourImpact, AdoptableDogs, ShopToSupport },
         props: ['missionFirstParagraph', 'ourImpact', 'logo', 'mostInNeed', 'happyTailsLanding', 'adoptableDogs'],
         computed: {
             hidePage () {

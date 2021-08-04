@@ -9,7 +9,7 @@
                     This dog is being fostered in Dallas TX and must be adopted within the Dallas, North Central Texas or the southern Oklahoma area.
                 </h2>
             </div>
-            <div class="px-1 lg:px-14 md:px-14">
+            <div class="px-1 lg:px-14 md:px-14 w-11/12">
                 <div class="flex items-start  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
                     <div class="flex flex-col px-2 w-6/6 sm:w-6/6 lg:w-4/6">
                         <div class="flex justify-center py-4">
@@ -96,7 +96,7 @@
               North Carolina, South Carolina, Virginia, Tennessee (Nashville Area), Alabama, Georgia and Maryland
             </h2>
           </div>
-          <div class="px-1 lg:px-14 md:px-14">
+          <div class="px-1 lg:px-14 md:px-14 w-11/12">
             <div class="flex items-start  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
               <div class="flex flex-col px-2 w-6/6 sm:w-6/6 lg:w-4/6">
               <div class="flex justify-center py-4">
@@ -184,7 +184,7 @@
               All dogs listed here are adoptable in the following Midwestern states (OH / KY/ IL / MI / WI/ MN/). We do transport! They are spread out throughout the Midwest in foster homes.
             </h2>
           </div>
-          <div class="px-1 lg:px-14 md:px-14">
+          <div class="px-1 lg:px-14 md:px-14 w-11/12">
             <div class="flex items-start  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
               <div class="flex flex-col px-2 w-6/6 sm:w-6/6 lg:w-4/6">
               <div class="flex justify-center py-4">

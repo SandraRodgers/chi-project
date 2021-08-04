@@ -1,6 +1,5 @@
 <template>
   <landing
-    class="" 
     :missionFirstParagraph="missionFirstParagraph"
     :ourImpact="ourImpact" 
     :mostInNeed="mostInNeed"
