@@ -2,7 +2,8 @@
   <div class="bg-whitesmoke pt-10 lg:pt-10 pb-6 md:pb-8 lg:pb-16 flex flex-col items-center justify-center w-full">
     <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
       <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
-        <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white py-4 md:pt-6 lg:pt-8 text-center">{{adoptInfo[0].subtitle}}</h1>
+      <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white py-4 md:pt-6 lg:pt-8 text-center">{{adoptInfo[0].title}}</h1>
+        <h3 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-lg md:text-lg lg:text-lg font-semi-bold bg-white text-center">{{adoptInfo[0].subtitle}}</h3>
         <div class="flex flex-col px-4 lg:px-4 sm:px-4 w-11/12 lg:w-11/12 sm:w-11/12 bg-white">
           <div class="text-center py-4">
             <p class="font-semibold">View current dogs:</p>
@@ -16,8 +17,8 @@
         </div>
             <h2 class="font-semibold">If you would like to adopt a CRT rescue, please read the following information.</h2>
           </div>
-          <div class="text-xs lg:text-base sm:text-xs">
-            <block-content :blocks="child" v-for="child in adoptInfo[0].description" :key="child._id" />
+          <div class="text-xs lg:text-base sm:text-xs prose">
+            <SanityContent :blocks="adoptInfo[0].description" />
           </div>
           
           </div>
@@ -106,6 +107,16 @@ import { groq } from '@nuxtjs/sanity'
                 { text: 'Southeast', value: 'southeast' },
                 { text: 'Southwest', value: 'southwest' }
             ],
+          // serializers: {
+          //   listItem: (props) => {
+          //     console.log("list", props);
+          //     props.type === "bullet" ? (
+          //       <li>{props.children}</li>
+          //       ) : (
+          //       <li>{props.children}</li>
+          //       );
+          //   },
+          // }
         }
       },  
       methods:{
@@ -165,7 +176,16 @@ import { groq } from '@nuxtjs/sanity'
 </script>
 
 <style scoped>
+
+
 p {
  padding-bottom: 14px;
 }
+
+.prose {
+  color: black;
+  max-width: none !important;
+}
+
+
 </style>
