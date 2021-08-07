@@ -177,11 +177,6 @@ import { groq } from '@nuxtjs/sanity'
 
 <style scoped>
 
-
-p {
- padding-bottom: 14px;
-}
-
 .prose {
   color: black;
   max-width: none !important;
