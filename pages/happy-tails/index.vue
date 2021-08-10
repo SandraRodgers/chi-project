@@ -3,7 +3,7 @@
         <div class="bg-whitesmoke pt-10 lg:pt-10 flex flex-col items-center justify-center w-full">
             <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
             <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
-                <h3 class="title bg-white text-2xl md:text-3xl lg:text-3xl font-bold pt-6 w-11/12 flex justify-center">{{happyTailsIntro[0].title}}</h3>
+                <h3 class="title bg-white text-2xl md:text-3xl lg:text-3xl font-bold pt-6 w-11/12 flex justify-center">{{happyTailsIntro[0].subtitle}}</h3>
                 <div class="w-11/12">
                     <div class="flex flex-col justify-content  py-4 md:py-6 lg:py-8 bg-white text-xs md:text-sm lg:text-base">
                         <div class="flex px-4 w-6/6 justify-center">

@@ -80,6 +80,17 @@
 
 <script>
 import { groq } from '@nuxtjs/sanity'
+// import Links from '~/components/serializers/Links.vue'
+// import Nested from '~/components/serializers/NestedBullets.vue'
+
+// const serializers = {
+//         types: {
+//           },
+//         marks: {
+//           link: Links,
+//         },
+//         listItem: Nested 
+// }
 
     export default {
       async asyncData({ $sanity }) {
@@ -107,16 +118,7 @@ import { groq } from '@nuxtjs/sanity'
                 { text: 'Southeast', value: 'southeast' },
                 { text: 'Southwest', value: 'southwest' }
             ],
-          // serializers: {
-          //   listItem: (props) => {
-          //     console.log("list", props);
-          //     props.type === "bullet" ? (
-          //       <li>{props.children}</li>
-          //       ) : (
-          //       <li>{props.children}</li>
-          //       );
-          //   },
-          // }
+          // serializers: serializers
         }
       },  
       methods:{
@@ -182,5 +184,18 @@ import { groq } from '@nuxtjs/sanity'
   max-width: none !important;
 }
 
+/* li > span {
+  background-color: gray;
+  
+} */
 
+/* .c-richt-text ol {
+    @apply list-decimal;
+    }
+
+.c-richt-text ul {
+    @apply list-disc;
+  } */
+
+ 
 </style>
