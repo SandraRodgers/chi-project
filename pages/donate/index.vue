@@ -3,7 +3,7 @@
     <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
       <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white pt-8 md:pt-6 lg:pt-8">{{ intro[0].subtitle }}</h1>
-        <p class="bg-white w-11/12 text-base lg:text-lg sm:text-base flex justify-center text-center pt-4 lg:pt-10 sm:pt-4">
+        <p class="bg-white w-10/12 text-base lg:text-lg sm:text-base flex justify-center pt-4 lg:pt-10 sm:pt-4">
           <block-content :blocks="intro[0].description" />
         </p>
         <div class="title text-lg lg:text-2xl sm:text-lg pt-10 font-bold bg-white w-11/12 flex justify-center text-center">{{ donateByCheck[0].subtitle }}</div>
@@ -57,5 +57,9 @@ export default {
 </script>
 
 <style scoped>
+
+p {
+  padding-bottom: 15px;
+}
 
 </style>

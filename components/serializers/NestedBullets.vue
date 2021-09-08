@@ -19,11 +19,4 @@ export default {
 
 <style>
 
-li::marker {
-    color: red;
-  }
-
-li {
-    list-style-type: disc;
-}
 </style>
