@@ -3,11 +3,13 @@
     <hr class="h-2 mt-10 w-11/12 rounded-t-md" style="background: linear-gradient(90deg, hsla(197, 84%, 47%, 1) 50%, hsla(55, 100%, 50%, 1) 100%);">
     <div class="flex items-center justify-center flex-col bg-white w-11/12 shadow-2xl">
       <h1 class="title flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-3xl lg:text-3xl font-bold bg-white pt-8 md:pt-6 lg:pt-8">{{ intro[0].subtitle }}</h1>
-        <p class="bg-white w-10/12 text-base lg:text-lg sm:text-base flex justify-center pt-4 lg:pt-10 sm:pt-4">
+        <h2 class="text-md font-semibold pt-4">Please consider donating to help us make a real difference.</h2>
+
+        <p class="bg-white w-10/12 text-base lg:text-md sm:text-base flex justify-center pt-4 lg:pt-6 sm:pt-4">
           <block-content :blocks="intro[0].description" />
         </p>
-        <div class="title text-lg lg:text-2xl sm:text-lg pt-10 font-bold bg-white w-11/12 flex justify-center text-center">{{ donateByCheck[0].subtitle }}</div>
-        <p class="bg-white w-11/12 pt-4 text-base lg:text-lg sm:text-base flex justify-center text-center px-1 lg:px-10 sm:px-1">
+        <div class="title text-md lg:text-2xl sm:text-md pt-10 font-bold bg-white w-11/12 flex justify-center text-center">{{ donateByCheck[0].subtitle }}</div>
+        <p class="bg-white w-11/12 pt-4 text-base lg:text-md sm:text-base flex justify-center text-center px-1 lg:px-10 sm:px-1">
           <block-content :blocks="donateByCheck[0].description" />
         </p>
         <div class="bg-white flex justify-center w-11/12 py-10 text-xl">
@@ -25,7 +27,7 @@
           <img class="h-10 my-2" src="~assets/images/chi-sil-4-transparent.png"/>
           <img class="h-10 my-2 hidden lg:flex" src="~assets/images/chi-sil-5-transparent.png"/>
         </div>
-        <p v-if="donateByCredit[0].description" class="bg-white w-11/12 pt-4 text-base lg:text-lg sm:text-base flex justify-center text-center px-1 lg:px-10 sm:px-1">
+        <p v-if="donateByCredit[0].description" class="bg-white w-11/12 pt-4 text-base lg:text-md sm:text-base flex justify-center text-center px-1 lg:px-10 sm:px-1">
           <block-content :blocks="donateByCredit[0].description" />
         </p>
         <div class="flex justify-center py-8 bg-white w-11/12">

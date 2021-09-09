@@ -9,7 +9,9 @@
                         <img class="h-56 rounded-md" :src="imageUrlFor(newslettersIntro[0].mainImage)"/>
                     </div>
                     <div class="flex pt-8 px-6 lg:px-16 md:px-10 sm:px-4 w-6/6 justify-center">
+                    <div class="font-normal">
                         <block-content :blocks="child" v-for="child in newslettersIntro[0].description" :key="child._id" />
+                    </div>
                     </div>
                 </div>
             </div>
@@ -52,5 +54,9 @@ const imageBuilder = imageUrlBuilder(sanity);
 </script>
 
 <style scoped>
+
+p {
+ padding-bottom: 14px;
+}
 
 </style>

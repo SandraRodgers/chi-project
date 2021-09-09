@@ -6,5 +6,4 @@ export default sanityClient({
   dataset: 'production',
   apiVersion: '2021-03-25',
   useCdn: true,
-  token: process.env.SANITY_WEBSITE_PREVIEW
 })
