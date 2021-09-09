@@ -7,8 +7,9 @@
           <div class="text-center py-4">
             <h2 class="font-semibold">If you would like to help by fostering a CRT rescue, please read the following information.</h2>
           </div>
-          <div class="text-xs lg:text-base sm:text-xs">
-            <block-content :blocks="child" v-for="child in fosterInfo[0].description" :key="child._id" />
+          <div class="text-xs lg:text-base sm:text-xs prose">
+            <!-- <block-content :blocks="child" v-for="child in fosterInfo[0].description" :key="child._id" /> -->
+            <SanityContent :blocks="fosterInfo[0].description" />
           </div>
         </div>
 
@@ -149,8 +150,13 @@ import { groq } from '@nuxtjs/sanity'
 </script>
 
 <style scoped>
-p {
- padding-bottom: 14px;
- 
+
+.prose {
+  color: black;
+  max-width: none !important;
+}
+
+.prose ul > li::before {
+  background-color: black;
 }
 </style>
