@@ -13,8 +13,8 @@
         <h2 class="flex justify-center w-11/12 md:w-11/12 lg:w-11/12 text-2xl md:text-xl lg:text-2xl bg-white pt-4 md:pt-6 lg:pt-8 font-bold">{{about.subtitle}}</h2>
         <div class="px-0 md:px-10 lg:px-14">
           <div class="flex items-start  py-4 md:py-6 lg:py-8 bg-white text-sm md:text-base lg:text-base sm:text-sm">
-            <div class="flex flex-col px-4 w-6/6">
-              <block-content :blocks="child" v-for="child in about.description" :key="child._id" />
+            <div class="flex flex-col px-4 w-6/6 prose text-xs lg:text-base sm:text-xs">
+               <SanityContent :blocks="about.description" />
             </div>
           </div>
         </div>
@@ -53,12 +53,22 @@ export default {
 
 <style scoped>
 
-p {
+/* p {
  padding-bottom: 14px;
 }
 
 b, strong {
   font-weight: 600;
+} */
+
+.prose {
+  color: black;
+  max-width: none !important;
 }
+
+.prose ul > li::before {
+  background-color: black;
+}
+
 
 </style>

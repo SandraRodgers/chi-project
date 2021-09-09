@@ -9,7 +9,7 @@
                         <div class="flex px-4 w-6/6 justify-center">
                             <img class="h-28 lg:h-40 md:h-36 sm:h-28 rounded-md" :src="imageUrlFor(successIntro[0].mainImage)"/>
                         </div>
-                        <div class="flex pt-8 px-6 lg:px-16 md:px-10 sm:px-4 w-6/6 justify-center text-center">
+                        <div class="flex pt-8 px-6 lg:px-16 md:px-10 sm:px-4 w-6/6 justify-center text-center flex-col">
                             <block-content :blocks="child" v-for="child in successIntro[0].description" :key="child._id" />
                         </div>
                     </div>

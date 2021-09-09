@@ -39,4 +39,8 @@ h3 {
     margin-top: 24px;
 }
 
+b, strong {
+  font-weight: 600;
+}
+
 </style>

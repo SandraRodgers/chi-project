@@ -184,6 +184,10 @@ import { groq } from '@nuxtjs/sanity'
   max-width: none !important;
 }
 
+.prose ul > li::before {
+  background-color: black;
+}
+
 /* li > span {
   background-color: gray;
   
