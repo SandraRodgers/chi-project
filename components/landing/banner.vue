@@ -13,8 +13,8 @@
     <div class="sm:flex flex-col lg:hidden md:hidden xl:hidden bg-opacity-80 z-10 w-screen relative">
         <div class="flex justify-center"> 
             <img class="z-10 shadow-lg w-screen" src="@/assets/images/mobile_banner.png"/>
-            <button class="-mt-6 w-6/6 left-3/4 top-2/3 absolute z-20">
-                <nuxt-link class="text-md  flex bg-black py-2 px-6 rounded-sm text-white rounded-sm hover:opacity-70 font-medium" :to="{ path: `/donate` }">DONATE</nuxt-link>
+            <button class="mobile-button -mt-6 w-6/6 top-2/3 absolute z-20">
+                <nuxt-link class="text-md  flex bg-black py-2 px-4 rounded-sm text-white rounded-sm hover:opacity-70 font-medium" :to="{ path: `/donate` }">DONATE!</nuxt-link>
         </button>
         </div>  
         
@@ -58,6 +58,10 @@ import { mapMutations } from 'vuex'
 </script>
 
 <style scoped>
+
+.mobile-button {
+    left: 70%;
+}
 
 
 </style>
